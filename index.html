@@ -787,7 +787,7 @@ img{max-width:100%;display:block}
 }
 .pricing-title em{font-family:'Instrument Serif',serif;color:var(--accent)}
 
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;max-width:880px;margin:0 auto}
 .plan{
   background:var(--paper);border:1px solid var(--line);
   border-radius:var(--r-lg);padding:2.2rem 1.8rem 2rem;
@@ -921,6 +921,35 @@ footer{
 .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
 .foot-col a{font-size:.88rem;transition:color .3s}
 .foot-col a:hover{color:var(--cream)}
+.foot-contact{
+  max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.6rem;
+  padding:2.4rem 0;border-top:1px solid rgba(248,245,236,.08);
+  border-bottom:1px solid rgba(248,245,236,.08);
+}
+.foot-contact .fc-eye{
+  display:block;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(248,245,236,.5);margin-bottom:.5rem;
+}
+.foot-contact .fc-line{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(1.6rem,2.8vw,2.4rem);line-height:1.1;letter-spacing:-.02em;
+  color:var(--cream);max-width:680px;
+}
+.foot-contact .fc-line em{font-family:'Instrument Serif',serif;color:var(--accent);font-style:italic}
+.foot-contact .fc-cta{
+  display:inline-flex;align-items:center;gap:.7rem;
+  padding:1rem 1.6rem;border-radius:999px;border:1px solid rgba(248,245,236,.4);
+  font-family:'Fraunces',serif;font-size:1rem;font-weight:500;letter-spacing:.02em;
+  color:var(--cream);text-decoration:none;
+  transition:background .35s var(--easing), color .35s var(--easing), border-color .35s;
+}
+.foot-contact .fc-cta:hover{background:var(--accent);border-color:var(--accent);color:var(--cream)}
+.foot-contact .fc-cta .btn-arrow{border-color:currentColor}
+@media(max-width:680px){
+  .foot-contact{flex-direction:column;align-items:flex-start;gap:1.2rem}
+}
+
 .foot-bottom{
   max-width:1400px;margin:0 auto;
   display:flex;justify-content:space-between;align-items:center;
@@ -1193,7 +1222,6 @@ footer{
 <header class="hero" id="hero">
   <div class="hero-meta">
     <span><i class="ln"></i> Edição 001</span>
-    <span>São Paulo · Lisboa</span>
     <span>MMXXVI <i class="ln"></i></span>
   </div>
 
@@ -1235,8 +1263,6 @@ footer{
         <div class="book-author">SÉRIE INAUGURAL</div>
       </div>
     </div>
-    <span class="hero-orb one">em essência</span>
-    <span class="hero-orb two">sem ruído.</span>
   </div>
 
   <div class="scroll-hint">
@@ -1868,26 +1894,14 @@ footer{
 
     <article class="plan featured">
       <div class="plan-badge">Mais escolhido</div>
-      <div class="plan-name">Estação</div>
-      <div class="plan-price">R$ 89<small>/ trimestre</small></div>
-      <p class="plan-desc">Quatro PDFs por estação. Curadoria casada com o que está em alta no pensamento contemporâneo.</p>
+      <div class="plan-name">Biblioteca · Anual</div>
+      <div class="plan-price">R$ 49,99<small>/ ano · acesso a tudo</small></div>
+      <p class="plan-desc">Acesso vitalício a todo o catálogo BREVIA por um ano. Cada novo título lançado entra na sua estante automaticamente.</p>
       <ul class="plan-feats">
-        <li class="plan-feat">4 PDFs curados por estação</li>
-        <li class="plan-feat">+ 2 PDFs surpresa por trimestre</li>
-        <li class="plan-feat">Acesso ao clube BREVIA Notes</li>
-        <li class="plan-feat">Encontros mensais ao vivo</li>
-      </ul>
-      <a href="#pricing" class="btn-ghost" data-link>Assinar Estação <span class="btn-arrow">→</span></a>
-    </article>
-
-    <article class="plan">
-      <div class="plan-name">Biblioteca</div>
-      <div class="plan-price">R$ 290<small>/ ano</small></div>
-      <p class="plan-desc">Acesso a tudo. Catálogo completo, lançamentos antecipados e edições limitadas.</p>
-      <ul class="plan-feats">
-        <li class="plan-feat">Biblioteca completa</li>
-        <li class="plan-feat">Lançamentos 30 dias antes</li>
-        <li class="plan-feat">Edições limitadas impressas (2/ano)</li>
+        <li class="plan-feat">Catálogo completo (24 títulos e contando)</li>
+        <li class="plan-feat">Lançamentos novos a cada semana</li>
+        <li class="plan-feat">Lançamentos antecipados (30 dias antes)</li>
+        <li class="plan-feat">Sem DRM · acesso vitalício ao baixado</li>
         <li class="plan-feat">Painel de leitura privado</li>
       </ul>
       <a href="#pricing" class="btn-ghost" data-link>Quero a biblioteca <span class="btn-arrow">→</span></a>
@@ -1970,16 +1984,28 @@ footer{
     <div class="foot-col">
       <h6>Contato</h6>
       <ul>
-        <li><a href="#">ola@brevia.co</a></li>
+        <li><a href="mailto:contato@brevia.co">contato@brevia.co</a></li>
         <li><a href="#">Imprensa</a></li>
         <li><a href="#">Termos</a></li>
         <li><a href="#">Privacidade</a></li>
       </ul>
     </div>
   </div>
+
+  <div class="foot-contact">
+    <div class="fc-text">
+      <span class="fc-eye">— Curtiu o site?</span>
+      <h5 class="fc-line">Fale com a gente. A gente <em>responde</em>.</h5>
+    </div>
+    <a href="mailto:contato@brevia.co?subject=Olá%20BREVIA" class="fc-cta">
+      contato@brevia.co
+      <span class="btn-arrow">→</span>
+    </a>
+  </div>
+
   <div class="foot-bottom">
     <span>© MMXXVI BREVIA Editions. Todos os direitos reservados.</span>
-    <span>Feito com tinta digital em São Paulo.</span>
+    <span>contato@brevia.co</span>
   </div>
 </footer>
 
@@ -2102,20 +2128,39 @@ document.addEventListener('click', e => {
   window.scrollTo({top, behavior: reduce ? 'auto' : 'smooth'});
 });
 
-/* ========== HERO BOOK 3D — mouse parallax ========== */
+/* ========== HERO BOOK 3D — strong tilt parallax ========== */
 const book = $('#book3d');
 const stage = $('#heroStage');
 if (book && stage && !matchMedia('(hover:none)').matches) {
-  stage.addEventListener('mousemove', e => {
+  let bx = 0, by = 0, tx = 0, ty = 0, tilting = false;
+  const onMove = e => {
     const r = stage.getBoundingClientRect();
-    const px = (e.clientX - r.left) / r.width - .5;
-    const py = (e.clientY - r.top) / r.height - .5;
-    book.classList.add('tilt');
-    book.style.transform = `translateY(${py * -10}px) rotateY(${-22 + px * 18}deg) rotateX(${8 - py * 12}deg)`;
-  });
-  stage.addEventListener('mouseleave', () => {
+    tx = (e.clientX - r.left) / r.width - .5;
+    ty = (e.clientY - r.top) / r.height - .5;
+    if (!tilting) {
+      tilting = true;
+      book.classList.add('tilt');
+      requestAnimationFrame(tiltLoop);
+    }
+  };
+  const tiltLoop = () => {
+    bx += (tx - bx) * 0.12;
+    by += (ty - by) * 0.12;
+    book.style.transform =
+      `translateY(${by * -22}px) ` +
+      `rotateY(${-15 + bx * 42}deg) ` +
+      `rotateX(${10 - by * 28}deg) ` +
+      `rotateZ(${bx * -3}deg)`;
+    if (tilting) requestAnimationFrame(tiltLoop);
+  };
+  // Use the whole hero, not just the stage, so tilt feels alive across the screen
+  const tiltZone = $('#hero') || stage;
+  tiltZone.addEventListener('mousemove', onMove, {passive:true});
+  tiltZone.addEventListener('mouseleave', () => {
+    tilting = false;
     book.classList.remove('tilt');
     book.style.transform = '';
+    bx = by = tx = ty = 0;
   });
 }
 
@@ -2429,40 +2474,52 @@ const BOOK_DETAILS = {
 };
 
 const pop = $('#bookPop');
-const POP_DWELL_MS = 550;
-let popTimer = null;
+const POP_DWELL_MS = 500;      // delay before popover opens (hover intent)
+const POP_GRACE_MS = 180;      // grace window after leaving target/popover
+const POP_FAR_PX   = 90;       // distance from either element to force-close
+
+// State machine: 'idle' | 'opening' | 'open' | 'closing'
+let popState = 'idle';
+let openTimer = null;
+let closeTimer = null;
+let activeCard = null;
 
 function positionPop(card){
   if (!pop) return;
   const r = card.getBoundingClientRect();
-  // measure popover (force reflow first)
+  // measure popover off-screen
+  pop.style.transition = 'none';
   pop.style.visibility = 'hidden';
-  pop.style.opacity = '0';
   pop.classList.add('show');
   const pw = pop.offsetWidth || 340;
   const ph = pop.offsetHeight || 380;
   pop.classList.remove('show');
   pop.style.visibility = '';
-  pop.style.opacity = '';
+  // restore transition next frame
+  requestAnimationFrame(() => { pop.style.transition = ''; });
 
   const gap = 16;
   let left = r.right + gap;
-  if (left + pw > window.innerWidth - gap) left = r.left - pw - gap;
+  let placedSide = 'right';
+  if (left + pw > window.innerWidth - gap) {
+    left = r.left - pw - gap;
+    placedSide = 'left';
+  }
   if (left < gap) {
-    // not enough side space: stack above or below
+    // stack above/below
     left = Math.max(gap, Math.min(window.innerWidth - pw - gap, r.left + (r.width - pw) / 2));
     let top = r.bottom + gap;
     if (top + ph > window.innerHeight - gap) top = r.top - ph - gap;
     if (top < gap) top = gap;
     pop.style.left = left + 'px';
-    pop.style.top = top + 'px';
+    pop.style.top  = top + 'px';
     return;
   }
   let top = r.top + (r.height - ph) / 2;
   if (top < gap) top = gap;
   if (top + ph > window.innerHeight - gap) top = window.innerHeight - ph - gap;
   pop.style.left = left + 'px';
-  pop.style.top = top + 'px';
+  pop.style.top  = top + 'px';
 }
 
 function showPopFor(card){
@@ -2480,33 +2537,92 @@ function showPopFor(card){
   const buyUrl = (window.BREVIA_LINKS && window.BREVIA_LINKS[sku]) || '#pricing';
   $('#bpCta').href = buyUrl;
   positionPop(card);
-  // trigger animation after a frame so transitions kick
+  // restart entry animation by toggling .show
   pop.classList.remove('show');
   requestAnimationFrame(() => {
     requestAnimationFrame(() => pop.classList.add('show'));
   });
+  popState = 'open';
+  activeCard = card;
 }
-function hidePop(){ if (pop) pop.classList.remove('show'); }
+function hidePopNow(){
+  if (!pop) return;
+  pop.classList.remove('show');
+  popState = 'idle';
+  activeCard = null;
+}
+
+function requestOpen(card){
+  clearTimeout(closeTimer); closeTimer = null;
+  if (popState === 'open' && activeCard === card) return;
+  // re-target (different card): jump open immediately if already open elsewhere
+  if (popState === 'open' && activeCard !== card) {
+    showPopFor(card);
+    return;
+  }
+  clearTimeout(openTimer);
+  popState = 'opening';
+  openTimer = setTimeout(() => {
+    openTimer = null;
+    showPopFor(card);
+  }, POP_DWELL_MS);
+}
+
+function requestClose(){
+  clearTimeout(openTimer); openTimer = null;
+  if (popState !== 'open' && popState !== 'opening') return;
+  if (popState === 'opening') { popState = 'idle'; activeCard = null; return; }
+  clearTimeout(closeTimer);
+  popState = 'closing';
+  closeTimer = setTimeout(hidePopNow, POP_GRACE_MS);
+}
+
+// Distance from a point to the nearest edge of a rect (0 if inside)
+function distToRect(x, y, r){
+  const dx = Math.max(r.left - x, 0, x - r.right);
+  const dy = Math.max(r.top  - y, 0, y - r.bottom);
+  return Math.sqrt(dx*dx + dy*dy);
+}
+function pointInRect(x, y, r){
+  return x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+}
+
+// Track mouse globally to enforce "far away closes immediately"
+let lastMx = 0, lastMy = 0;
+window.addEventListener('mousemove', e => {
+  lastMx = e.clientX; lastMy = e.clientY;
+  if (popState !== 'open' || !activeCard) return;
+  const cr = activeCard.getBoundingClientRect();
+  const pr = pop.getBoundingClientRect();
+  if (pointInRect(e.clientX, e.clientY, cr) || pointInRect(e.clientX, e.clientY, pr)) {
+    // cursor over either → keep open, cancel any pending close
+    clearTimeout(closeTimer); closeTimer = null;
+    popState = 'open';
+    return;
+  }
+  const d = Math.min(distToRect(e.clientX, e.clientY, cr), distToRect(e.clientX, e.clientY, pr));
+  if (d > POP_FAR_PX) {
+    // far enough → close immediately
+    clearTimeout(closeTimer); closeTimer = null;
+    hidePopNow();
+  }
+}, {passive:true});
 
 $$('.book-card').forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    clearTimeout(popTimer);
-    popTimer = setTimeout(() => showPopFor(card), POP_DWELL_MS);
-  });
-  card.addEventListener('mouseleave', e => {
-    clearTimeout(popTimer);
-    // give a small grace period so moving into popover doesn't hide it
-    setTimeout(() => {
-      const hovered = document.querySelector(':hover');
-      if (!hovered) { hidePop(); return; }
-      if (!hovered.closest('.book-popover') && !hovered.closest('.book-card')) hidePop();
-    }, 80);
-  });
+  card.addEventListener('mouseenter', () => requestOpen(card));
+  card.addEventListener('mouseleave', () => requestClose());
 });
-if (pop) {
-  pop.addEventListener('mouseleave', hidePop);
+if (pop){
+  pop.addEventListener('mouseenter', () => {
+    clearTimeout(closeTimer); closeTimer = null;
+    if (popState === 'closing') popState = 'open';
+  });
+  pop.addEventListener('mouseleave', () => requestClose());
 }
-window.addEventListener('scroll', hidePop, {passive:true});
+window.addEventListener('scroll', () => {
+  if (popState === 'open' || popState === 'opening') hidePopNow();
+  clearTimeout(openTimer); openTimer = null;
+}, {passive:true});
 
 /* ========== BOOT ========== */
 window.addEventListener('load', runLoader);
