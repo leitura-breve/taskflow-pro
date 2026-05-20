@@ -112,19 +112,31 @@ img{max-width:100%;display:block}
 }
 
 /* ============================================================
-   CUSTOM CURSOR
+   CUSTOM CURSOR — dot + ring (no blend-mode for visibility)
    ============================================================ */
-.cursor{
-  position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;
-  background:var(--ink);pointer-events:none;z-index:9500;
+.cursor,.cursor-ring{
+  position:fixed;top:0;left:0;border-radius:50%;
+  pointer-events:none;
   transform:translate(-50%,-50%);
-  transition:width .25s var(--easing), height .25s var(--easing), background .25s, mix-blend-mode .25s;
-  mix-blend-mode:difference;
   will-change:transform;
 }
-.cursor.is-link{width:48px;height:48px;background:var(--cream)}
-.cursor.is-dark{background:var(--cream)}
-@media(hover:none){.cursor{display:none}}
+.cursor{
+  width:8px;height:8px;background:var(--accent);z-index:9500;
+  transition:transform .2s var(--easing), background .25s, opacity .25s;
+  box-shadow:0 0 0 2px rgba(248,245,236,.85), 0 4px 12px rgba(14,14,12,.25);
+}
+.cursor-ring{
+  width:38px;height:38px;z-index:9499;
+  border:1.5px solid var(--ink);background:transparent;
+  transition:width .35s var(--easing), height .35s var(--easing),
+    border-color .25s, background .25s, opacity .25s;
+}
+.cursor.is-link{background:var(--cream);box-shadow:0 0 0 2px var(--accent),0 4px 14px rgba(14,14,12,.3)}
+.cursor-ring.is-link{width:60px;height:60px;border-color:var(--accent);background:rgba(255,78,29,.06)}
+.cursor.is-dark{box-shadow:0 0 0 2px rgba(14,14,12,.7),0 4px 12px rgba(0,0,0,.4)}
+.cursor-ring.is-dark{border-color:var(--cream)}
+.cursor.is-dark.is-link{background:var(--accent);box-shadow:0 0 0 2px var(--cream),0 4px 14px rgba(0,0,0,.5)}
+@media(hover:none){.cursor,.cursor-ring{display:none}}
 
 /* ============================================================
    NAVIGATION
@@ -184,10 +196,11 @@ img{max-width:100%;display:block}
     radial-gradient(circle at 90% 10%, rgba(14,92,58,.06), transparent 45%);
 }
 .hero-meta{
-  position:absolute;top:5rem;left:clamp(1.2rem,3vw,2.5rem);right:clamp(1.2rem,3vw,2.5rem);
-  display:flex;justify-content:space-between;font-size:.7rem;letter-spacing:.25em;
-  text-transform:uppercase;color:var(--mute);
+  position:absolute;top:5.6rem;left:clamp(1.2rem,3vw,2.5rem);right:calc(clamp(1.2rem,3vw,2.5rem) + 7rem);
+  display:flex;justify-content:space-between;font-size:.68rem;letter-spacing:.25em;
+  text-transform:uppercase;color:var(--mute);gap:1rem;flex-wrap:wrap;
 }
+@media(max-width:980px){.hero-meta{right:clamp(1.2rem,3vw,2.5rem)}}
 .hero-meta span{display:flex;align-items:center;gap:.5rem}
 .hero-meta .ln{width:18px;height:1px;background:currentColor;opacity:.5}
 
@@ -358,8 +371,8 @@ img{max-width:100%;display:block}
   opacity:0;transition:opacity 1.2s ease 1.2s;
 }
 .in-anim .hero-orb{opacity:1}
-.hero-orb.one{top:14%;right:6%;font-size:clamp(2rem,4vw,4rem);transform:rotate(-8deg)}
-.hero-orb.two{bottom:18%;left:42%;font-size:clamp(1.4rem,2.4vw,2.4rem);color:var(--accent-2);transform:rotate(6deg)}
+.hero-orb.one{top:8%;right:-2%;font-size:clamp(1.6rem,3vw,3rem);transform:rotate(-8deg);z-index:3}
+.hero-orb.two{bottom:6%;left:-4%;font-size:clamp(1.2rem,2vw,2rem);color:var(--accent-2);transform:rotate(6deg);z-index:3}
 
 /* Scroll hint */
 .scroll-hint{
@@ -956,6 +969,72 @@ footer{
 }
 .scroll-bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .12s linear}
 
+/* Rail visibility (fade in after leaving hero) */
+.rail{opacity:0;transform:translateY(-50%) translateX(12px);transition:opacity .55s var(--easing),transform .55s var(--easing)}
+.rail.in{opacity:1;transform:translateY(-50%) translateX(0)}
+
+/* ============================================================
+   BOOK DETAIL POPOVER (dwell on hover)
+   ============================================================ */
+.book-popover{
+  position:fixed;z-index:300;width:340px;max-width:calc(100vw - 2rem);
+  background:var(--paper);border:1px solid var(--line);border-radius:18px;
+  padding:1.5rem 1.5rem 1.3rem;box-shadow:var(--shadow-deep);
+  pointer-events:none;opacity:0;
+  transform:translateY(8px) scale(.96);
+  transition:opacity .35s var(--easing), transform .45s var(--easing);
+}
+.book-popover.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.bp-eye{
+  display:flex;align-items:center;gap:.55rem;
+  font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--mute);margin-bottom:.9rem;
+}
+.bp-eye i{width:8px;height:8px;border-radius:50%;background:var(--mute);display:inline-block;flex-shrink:0}
+.bp-eye.a i{background:var(--gold)}
+.bp-eye.b i{background:var(--accent-2)}
+.bp-eye.c i{background:var(--accent)}
+.bp-title{
+  font-family:'Fraunces',serif;font-weight:400;
+  font-size:1.5rem;line-height:1.05;letter-spacing:-.02em;margin-bottom:.4rem;
+}
+.bp-title em{font-family:'Instrument Serif',serif;color:var(--accent);font-style:italic}
+.bp-author{font-size:.78rem;color:var(--mute);margin-bottom:1rem;letter-spacing:.04em}
+.bp-synopsis{font-size:.9rem;line-height:1.55;color:var(--ink-soft);margin-bottom:1rem}
+.bp-key{
+  font-family:'Instrument Serif',serif;font-style:italic;font-size:1rem;line-height:1.4;
+  color:var(--ink);padding:.3rem 0 .3rem .8rem;border-left:2px solid var(--accent);
+  margin-bottom:1rem;
+}
+.bp-meta{
+  display:flex;gap:1.2rem;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mute);border-top:1px solid var(--line);padding-top:.9rem;margin-bottom:1rem;
+  flex-wrap:wrap;
+}
+.bp-meta strong{font-family:'Fraunces',serif;font-weight:500;color:var(--ink);letter-spacing:.05em}
+.bp-cta{
+  display:inline-flex;align-items:center;gap:.55rem;width:100%;justify-content:center;
+  background:var(--ink);color:var(--cream)!important;text-decoration:none;
+  padding:.85rem 1.2rem;border-radius:999px;
+  font-size:.78rem;font-weight:600;letter-spacing:.06em;
+  transition:background .35s var(--easing);
+}
+.bp-cta:hover{background:var(--accent)}
+
+/* Word-by-word stagger entry inside popover */
+.book-popover.show .bp-title,
+.book-popover.show .bp-synopsis,
+.book-popover.show .bp-key,
+.book-popover.show .bp-meta,
+.book-popover.show .bp-cta{
+  animation:bpFade .55s var(--easing) both;
+}
+.book-popover.show .bp-synopsis{animation-delay:.06s}
+.book-popover.show .bp-key{animation-delay:.12s}
+.book-popover.show .bp-meta{animation-delay:.18s}
+.book-popover.show .bp-cta{animation-delay:.24s}
+@keyframes bpFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
 /* ============================================================
    SHOWCASE — pinned 3D scrolling scene
    ============================================================ */
@@ -1078,7 +1157,8 @@ footer{
   <div class="loader-bar"></div>
 </div>
 
-<!-- ========== CUSTOM CURSOR ========== -->
+<!-- ========== CUSTOM CURSOR (dot + ring) ========== -->
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 
 <!-- ========== TOP SCROLL PROGRESS BAR ========== -->
@@ -1322,7 +1402,7 @@ footer{
   <!-- Panel: Filosofia -->
   <div class="cat-panel active" id="panel-filosofia" role="tabpanel">
     <div class="book-grid">
-      <article data-tier-card="c" class="book-card" style="--c1:#2C1810;--c2:#0e0e0c">
+      <article data-sku="FIL.001" data-tier-card="c" class="book-card" style="--c1:#2C1810;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.001</span><span>52 PG</span></div>
@@ -1336,7 +1416,7 @@ footer{
         </div>
       </article>
 
-      <article data-tier-card="a" class="book-card" style="--c1:#1B2E2A;--c2:#0e0e0c">
+      <article data-sku="FIL.002" data-tier-card="a" class="book-card" style="--c1:#1B2E2A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.002</span><span>48 PG</span></div>
@@ -1350,7 +1430,7 @@ footer{
         </div>
       </article>
 
-      <article data-tier-card="c" class="book-card" style="--c1:#2D1E3A;--c2:#0e0e0c">
+      <article data-sku="FIL.003" data-tier-card="c" class="book-card" style="--c1:#2D1E3A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.003</span><span>64 PG</span></div>
@@ -1364,7 +1444,7 @@ footer{
         </div>
       </article>
 
-      <article data-tier-card="b" class="book-card" style="--c1:#3A1F1F;--c2:#0e0e0c">
+      <article data-sku="FIL.004" data-tier-card="b" class="book-card" style="--c1:#3A1F1F;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.004</span><span>56 PG</span></div>
@@ -1383,7 +1463,7 @@ footer{
   <!-- Panel: Negócios -->
   <div class="cat-panel" id="panel-negocios" role="tabpanel">
     <div class="book-grid">
-      <article data-tier-card="b" class="book-card" style="--c1:#1F2A3D;--c2:#0e0e0c">
+      <article data-sku="NEG.001" data-tier-card="b" class="book-card" style="--c1:#1F2A3D;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.001</span><span>46 PG</span></div>
@@ -1396,7 +1476,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-tier-card="b" class="book-card" style="--c1:#27331E;--c2:#0e0e0c">
+      <article data-sku="NEG.002" data-tier-card="b" class="book-card" style="--c1:#27331E;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.002</span><span>52 PG</span></div>
@@ -1409,7 +1489,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-tier-card="a" class="book-card" style="--c1:#3A2B1A;--c2:#0e0e0c">
+      <article data-sku="NEG.003" data-tier-card="a" class="book-card" style="--c1:#3A2B1A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.003</span><span>40 PG</span></div>
@@ -1422,7 +1502,7 @@ footer{
           <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article data-tier-card="a" class="book-card" style="--c1:#1F3A36;--c2:#0e0e0c">
+      <article data-sku="NEG.004" data-tier-card="a" class="book-card" style="--c1:#1F3A36;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.004</span><span>58 PG</span></div>
@@ -1441,7 +1521,7 @@ footer{
   <!-- Panel: Hábitos -->
   <div class="cat-panel" id="panel-habitos" role="tabpanel">
     <div class="book-grid">
-      <article data-tier-card="b" class="book-card" style="--c1:#1A3030;--c2:#0e0e0c">
+      <article data-sku="HAB.001" data-tier-card="b" class="book-card" style="--c1:#1A3030;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.001</span><span>44 PG</span></div>
@@ -1454,7 +1534,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-tier-card="b" class="book-card" style="--c1:#2E1F2E;--c2:#0e0e0c">
+      <article data-sku="HAB.002" data-tier-card="b" class="book-card" style="--c1:#2E1F2E;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.002</span><span>50 PG</span></div>
@@ -1467,7 +1547,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-tier-card="a" class="book-card" style="--c1:#36211B;--c2:#0e0e0c">
+      <article data-sku="HAB.003" data-tier-card="a" class="book-card" style="--c1:#36211B;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.003</span><span>38 PG</span></div>
@@ -1480,7 +1560,7 @@ footer{
           <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article data-tier-card="b" class="book-card" style="--c1:#27292E;--c2:#0e0e0c">
+      <article data-sku="HAB.004" data-tier-card="b" class="book-card" style="--c1:#27292E;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.004</span><span>42 PG</span></div>
@@ -1499,7 +1579,7 @@ footer{
   <!-- Panel: Psicologia -->
   <div class="cat-panel" id="panel-psico" role="tabpanel">
     <div class="book-grid">
-      <article data-tier-card="c" class="book-card" style="--c1:#2A1B33;--c2:#0e0e0c">
+      <article data-sku="PSI.001" data-tier-card="c" class="book-card" style="--c1:#2A1B33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.001</span><span>60 PG</span></div>
@@ -1512,7 +1592,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-tier-card="b" class="book-card" style="--c1:#1B1F33;--c2:#0e0e0c">
+      <article data-sku="PSI.002" data-tier-card="b" class="book-card" style="--c1:#1B1F33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.002</span><span>48 PG</span></div>
@@ -1525,7 +1605,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-tier-card="c" class="book-card" style="--c1:#33231F;--c2:#0e0e0c">
+      <article data-sku="PSI.003" data-tier-card="c" class="book-card" style="--c1:#33231F;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.003</span><span>54 PG</span></div>
@@ -1538,7 +1618,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-tier-card="a" class="book-card" style="--c1:#1F3326;--c2:#0e0e0c">
+      <article data-sku="PSI.004" data-tier-card="a" class="book-card" style="--c1:#1F3326;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.004</span><span>46 PG</span></div>
@@ -1557,7 +1637,7 @@ footer{
   <!-- Panel: Ciência -->
   <div class="cat-panel" id="panel-ciencia" role="tabpanel">
     <div class="book-grid">
-      <article data-tier-card="c" class="book-card" style="--c1:#1B2C3A;--c2:#0e0e0c">
+      <article data-sku="CIE.001" data-tier-card="c" class="book-card" style="--c1:#1B2C3A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.001</span><span>62 PG</span></div>
@@ -1570,7 +1650,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-tier-card="b" class="book-card" style="--c1:#1F362C;--c2:#0e0e0c">
+      <article data-sku="CIE.002" data-tier-card="b" class="book-card" style="--c1:#1F362C;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.002</span><span>50 PG</span></div>
@@ -1583,7 +1663,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-tier-card="c" class="book-card" style="--c1:#36251F;--c2:#0e0e0c">
+      <article data-sku="CIE.003" data-tier-card="c" class="book-card" style="--c1:#36251F;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.003</span><span>58 PG</span></div>
@@ -1596,7 +1676,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-tier-card="a" class="book-card" style="--c1:#2C1F36;--c2:#0e0e0c">
+      <article data-sku="CIE.004" data-tier-card="a" class="book-card" style="--c1:#2C1F36;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.004</span><span>44 PG</span></div>
@@ -1615,7 +1695,7 @@ footer{
   <!-- Panel: Ficção -->
   <div class="cat-panel" id="panel-ficcao" role="tabpanel">
     <div class="book-grid">
-      <article data-tier-card="b" class="book-card" style="--c1:#1A1E36;--c2:#0e0e0c">
+      <article data-sku="FIC.001" data-tier-card="b" class="book-card" style="--c1:#1A1E36;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.001</span><span>40 PG</span></div>
@@ -1628,7 +1708,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-tier-card="c" class="book-card" style="--c1:#1F3320;--c2:#0e0e0c">
+      <article data-sku="FIC.002" data-tier-card="c" class="book-card" style="--c1:#1F3320;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.002</span><span>46 PG</span></div>
@@ -1641,7 +1721,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-tier-card="a" class="book-card" style="--c1:#33261B;--c2:#0e0e0c">
+      <article data-sku="FIC.003" data-tier-card="a" class="book-card" style="--c1:#33261B;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.003</span><span>52 PG</span></div>
@@ -1654,7 +1734,7 @@ footer{
           <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article data-tier-card="a" class="book-card" style="--c1:#241F33;--c2:#0e0e0c">
+      <article data-sku="FIC.004" data-tier-card="a" class="book-card" style="--c1:#241F33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.004</span><span>48 PG</span></div>
@@ -1903,6 +1983,20 @@ footer{
   </div>
 </footer>
 
+<!-- ========== BOOK DETAIL POPOVER ========== -->
+<aside class="book-popover" id="bookPop" aria-hidden="true">
+  <div class="bp-eye" id="bpEye"><i></i><span id="bpEyeText">FIL.001 · ESSENCIAL</span></div>
+  <h4 class="bp-title" id="bpTitle">Título</h4>
+  <div class="bp-author" id="bpAuthor">Autor</div>
+  <p class="bp-synopsis" id="bpSynopsis">Síntese.</p>
+  <blockquote class="bp-key" id="bpKey">Ideia-chave.</blockquote>
+  <div class="bp-meta" id="bpMeta"></div>
+  <a class="bp-cta" id="bpCta" href="#pricing" data-link>
+    <span id="bpCtaLabel">Comprar agora</span>
+    <span class="btn-arrow">→</span>
+  </a>
+</aside>
+
 <script>
 (function(){
 'use strict';
@@ -1947,31 +2041,43 @@ function startHero(){
   if (t) t.classList.add('in');
 }
 
-/* ========== CUSTOM CURSOR ========== */
+/* ========== CUSTOM CURSOR (dot + ring with lerp) ========== */
 const cursor = $('#cursor');
+const cursorRing = $('#cursorRing');
 let mx = window.innerWidth/2, my = window.innerHeight/2;
-let cx = mx, cy = my;
+let dotX = mx, dotY = my, ringX = mx, ringY = my;
 window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, {passive:true});
 function tickCursor(){
-  cx += (mx - cx) * 0.22;
-  cy += (my - cy) * 0.22;
-  if (cursor) cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%,-50%)`;
+  dotX += (mx - dotX) * 0.55;
+  dotY += (my - dotY) * 0.55;
+  ringX += (mx - ringX) * 0.18;
+  ringY += (my - ringY) * 0.18;
+  if (cursor) cursor.style.transform = `translate(${dotX}px, ${dotY}px) translate(-50%,-50%)`;
+  if (cursorRing) cursorRing.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%,-50%)`;
   requestAnimationFrame(tickCursor);
 }
 if (!matchMedia('(hover:none)').matches) {
   tickCursor();
   document.addEventListener('mouseover', e => {
     const t = e.target;
-    if (t.closest && t.closest('a, button, [data-link], .tab, .book-card, .faq-q')) cursor.classList.add('is-link');
-    else cursor.classList.remove('is-link');
+    const isLink = t.closest && t.closest('a, button, [data-link], .tab, .book-card, .faq-q, .rail-item');
+    cursor && cursor.classList.toggle('is-link', !!isLink);
+    cursorRing && cursorRing.classList.toggle('is-link', !!isLink);
   });
-  // dark sections
+  // detect dark sections (throttled via rAF)
+  let darkPending = false;
   document.addEventListener('mousemove', () => {
-    const el = document.elementFromPoint(mx, my);
-    if (!el) return;
-    const onDark = el.closest('.how, .cta, footer, .strip, .loader');
-    cursor.classList.toggle('is-dark', !!onDark);
-  });
+    if (darkPending) return;
+    darkPending = true;
+    requestAnimationFrame(() => {
+      darkPending = false;
+      const el = document.elementFromPoint(mx, my);
+      if (!el) return;
+      const onDark = !!el.closest('.how, .cta, footer, .strip, .showcase');
+      cursor && cursor.classList.toggle('is-dark', onDark);
+      cursorRing && cursorRing.classList.toggle('is-dark', onDark);
+    });
+  }, {passive:true});
 }
 
 /* ========== NAV SCROLLED ========== */
@@ -2200,41 +2306,53 @@ function updateHero(){
 window.addEventListener('scroll', updateHero, {passive:true});
 updateHero();
 
-/* ========== SHOWCASE — pinned 3D scroll scene ========== */
+/* ========== SHOWCASE — pinned 3D carousel ========== */
 const showcase = $('#showcase');
 const shelfBooks = $$('.shelf-book');
 const showcaseNum = $('#showcaseNum');
 function updateShowcase(){
   if (!showcase || shelfBooks.length === 0) return;
   const r = showcase.getBoundingClientRect();
-  const total = showcase.offsetHeight - window.innerHeight;
+  const total = Math.max(1, showcase.offsetHeight - window.innerHeight);
   const p = Math.max(0, Math.min(1, -r.top / total));
-  // active index based on progress
-  const active = Math.min(shelfBooks.length - 1, Math.floor(p * shelfBooks.length * .99));
+  const n = shelfBooks.length;
+  const cursor = p * (n - 1);
+  const active = Math.round(cursor);
   if (showcaseNum) showcaseNum.textContent = String(active + 1).padStart(2, '0');
 
-  // each book arranged in 3D, stacked, with the active one centered/forward
+  const vw = window.innerWidth;
+  const spread = Math.min(280, vw * 0.22);
+
   shelfBooks.forEach((b, i) => {
-    const offset = i - p * (shelfBooks.length - 1);
-    // distribute around a 3D arc
-    const tx = offset * 90; // horizontal spread
-    const tz = -Math.abs(offset) * 220; // depth (farther = behind)
-    const ty = Math.abs(offset) * 18; // slight lift on edges
-    const ry = offset * -14; // rotate Y toward camera
-    const rx = 6;
-    const opacity = Math.max(.15, 1 - Math.abs(offset) * .28);
+    const offset = i - cursor;
+    const abs = Math.abs(offset);
+    if (abs > 3.2) {
+      b.style.opacity = '0';
+      b.style.visibility = 'hidden';
+      return;
+    }
+    b.style.visibility = 'visible';
+    const tx = offset * spread;
+    const tz = -abs * 160 - (abs > 0 ? 40 : 0);
+    const ty = abs * abs * 8;
+    const ry = offset * -18;
+    const rx = 4;
+    const opacity = Math.max(.18, 1 - abs * 0.32);
     b.style.setProperty('--tx', tx + 'px');
     b.style.setProperty('--tz', tz + 'px');
     b.style.setProperty('--ty', ty + 'px');
     b.style.setProperty('--ry', ry + 'deg');
     b.style.setProperty('--rx', rx + 'deg');
     b.style.opacity = String(opacity);
-    b.style.zIndex = String(100 - Math.abs(Math.round(offset)));
+    b.style.zIndex = String(100 - Math.round(abs * 10));
   });
 }
 window.addEventListener('scroll', updateShowcase, {passive:true});
 window.addEventListener('resize', updateShowcase);
 updateShowcase();
+// re-run after fonts/layout settle
+setTimeout(updateShowcase, 150);
+setTimeout(updateShowcase, 600);
 
 /* ========== MAGNETIC BUTTONS ========== */
 $$('.btn, .btn-ghost').forEach(btn => {
@@ -2269,6 +2387,126 @@ $$('.btn, .btn-ghost').forEach(btn => {
     card.appendChild(a);
   });
 })();
+
+/* ========== RAIL VISIBILITY ========== */
+const railEl = $('#rail');
+function updateRailVis(){
+  if (!railEl) return;
+  const hero = $('#hero');
+  if (!hero) return;
+  const past = window.scrollY > (hero.offsetHeight * .55);
+  railEl.classList.toggle('in', past);
+}
+window.addEventListener('scroll', updateRailVis, {passive:true});
+updateRailVis();
+
+/* ========== BOOK DETAIL POPOVER (hover dwell) ========== */
+const BOOK_DETAILS = {
+  'FIL.001': {title:'Meditações <em>essenciais</em>',author:'Marco Aurélio · Estoicismo',synopsis:'Como um imperador-filósofo destilou disciplina e virtude em frases para si mesmo. Reagrupado em 12 frentes — de coragem à morte —, abre o estoicismo sem floreios.',key:'"Você tem poder sobre sua mente — não sobre eventos externos. Perceba isso e encontrará força."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'24 min',pages:52},
+  'FIL.002': {title:'O suficiente <em>basta?</em>',author:'Sêneca · Cartas a Lucílio',synopsis:'Sêneca conversa com Lucílio sobre tempo, prazer, dor e a brevidade da vida. Viver bem é querer pouco.',key:'"Não é que tenhamos pouco tempo, é que perdemos muito dele."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'22 min',pages:48},
+  'FIL.003': {title:'A caverna, <em>de novo</em>',author:'Platão · República, livro VII',synopsis:'O mito da caverna lido com olhos contemporâneos: o que sai à luz quando algoritmos fabricam nossa visão? Síntese do Livro VII da República.',key:'"A educação não consiste em dar visão ao olho — mas em virá-lo na direção certa."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'30 min',pages:64},
+  'FIL.004': {title:'Sobre o <em>eterno retorno</em>',author:'Nietzsche · Zaratustra',synopsis:'Zaratustra explicado em prosa direta: o teste do eterno retorno como bússola de vida. O que você desejaria viver de novo, idêntico?',key:'"Tornar-se aquilo que se é."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'26 min',pages:56},
+  'NEG.001': {title:'Zero a <em>um</em>',author:'Peter Thiel · Startups',synopsis:'Como criar do nada o que ainda não existe. Monopólios, segredos, segredos contraintuitivos — o manual contraculturalista do Vale do Silício.',key:'"Qual verdade importante poucas pessoas concordam com você?"',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'21 min',pages:46},
+  'NEG.002': {title:'O dilema da <em>inovação</em>',author:'Clayton Christensen',synopsis:'Por que empresas excelentes falham. A teoria do innovator’s dilemma: tecnologias disruptivas começam piores e vencem por baixo.',key:'"Servir bem clientes atuais é o motivo pelo qual organizações maduras perdem."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'24 min',pages:52},
+  'NEG.003': {title:'Bom para <em>ótimo</em>',author:'Jim Collins',synopsis:'O salto: o que faz empresas medianas se tornarem extraordinárias. Liderança nível 5, conceito do ouriço, flywheel.',key:'"Confronte os fatos brutais — mas nunca perca a fé."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'18 min',pages:40},
+  'NEG.004': {title:'A estratégia do <em>oceano</em>',author:'Kim & Mauborgne',synopsis:'Em vez de competir em mercados saturados (oceano vermelho), criar espaços inexplorados (oceano azul). A matriz eliminar/reduzir/levantar/criar.',key:'"O melhor competidor é aquele que recusa competir."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'27 min',pages:58},
+  'HAB.001': {title:'Hábitos <em>atômicos</em>',author:'James Clear',synopsis:'Mudanças de 1% que se acumulam. As 4 leis: torne óbvio, atraente, fácil, satisfatório. Sistemas em vez de objetivos.',key:'"Você não sobe ao nível dos seus objetivos. Cai ao nível dos seus sistemas."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'20 min',pages:44},
+  'HAB.002': {title:'Trabalho <em>profundo</em>',author:'Cal Newport',synopsis:'A habilidade rara e valiosa: concentração sem distração. Como projetar rotinas que produzem trabalho denso num mundo raso.',key:'"O foco é o novo QI."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'23 min',pages:50},
+  'HAB.003': {title:'Faça a <em>cama</em>',author:'William McRaven',synopsis:'10 lições do treinamento Navy SEAL para viver — começando por uma tarefa simples cumprida pela manhã.',key:'"Se quer mudar o mundo, comece arrumando sua cama."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'17 min',pages:38},
+  'HAB.004': {title:'Mindset',author:'Carol Dweck',synopsis:'Mentalidade fixa versus mentalidade de crescimento. Como suas crenças sobre habilidade moldam o que você se torna.',key:'"O esforço é o que torna você inteligente."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'19 min',pages:42},
+  'PSI.001': {title:'Rápido e <em>devagar</em>',author:'Daniel Kahneman',synopsis:'Os dois sistemas que pensam por você. Sistema 1 é intuitivo e rápido; Sistema 2 é lento e racional. As armadilhas cognitivas que isso cria.',key:'"Nada na vida é tão importante quanto você pensa que é, enquanto está pensando nele."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'28 min',pages:60},
+  'PSI.002': {title:'O corpo <em>guarda</em>',author:'Bessel van der Kolk',synopsis:'Trauma não é evento — é o que sobra no corpo depois dele. Como a neurociência atual entende e trata o trauma de forma somática.',key:'"O corpo carrega a história que a mente esqueceu."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'22 min',pages:48},
+  'PSI.003': {title:'Em busca de <em>sentido</em>',author:'Viktor Frankl',synopsis:'Sobreviver a Auschwitz e fundar a logoterapia: a busca por sentido como a força motriz mais profunda do humano.',key:'"Quando não podemos mudar a situação, somos desafiados a mudar a nós mesmos."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'25 min',pages:54},
+  'PSI.004': {title:'A coragem de <em>ser</em> imperfeito',author:'Brené Brown',synopsis:'Vulnerabilidade não é fraqueza — é o berço da criatividade, da pertença e do amor. Pesquisa de duas décadas em primeira pessoa.',key:'"O que torna alguém vulnerável é o que o torna belo."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'20 min',pages:46},
+  'CIE.001': {title:'Sapiens',author:'Yuval N. Harari',synopsis:'70 mil anos de Homo sapiens em 60 páginas. Cognitiva, agrícola, científica — as três revoluções que nos fizeram quem somos.',key:'"Não há justiça na história. Mas há ficções que dominam o mundo."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'30 min',pages:62},
+  'CIE.002': {title:'O gene <em>egoísta</em>',author:'Richard Dawkins',synopsis:'A reformulação radical da evolução: organismos como máquinas a serviço de seus genes. O conceito de meme cunhado aqui.',key:'"Somos máquinas de sobrevivência — autômatos cegamente programados para preservar moléculas egoístas chamadas genes."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'24 min',pages:50},
+  'CIE.003': {title:'Uma breve história do <em>tempo</em>',author:'Stephen Hawking',synopsis:'Big Bang, buracos negros, relatividade. Hawking convida o leitor não-cientista para o palco da cosmologia moderna.',key:'"Pra onde quer que olhemos, o universo distante recede."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'28 min',pages:58},
+  'CIE.004': {title:'A ordem do <em>tempo</em>',author:'Carlo Rovelli',synopsis:'Por que o tempo passa? E passa mesmo? Um físico convida você a duvidar do mais certo dos sentidos.',key:'"O tempo é o lugar onde o ser se torna."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'21 min',pages:44},
+  'FIC.001': {title:'1984, <em>relido</em>',author:'George Orwell',synopsis:'Chaves de leitura para a distopia mais influente do século XX. Big Brother, novilíngua, duplipensar — como tudo virou pauta política em 2026.',key:'"Quem controla o passado controla o futuro. Quem controla o presente controla o passado."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'19 min',pages:40},
+  'FIC.002': {title:'Cem anos de <em>solidão</em>',author:'G. G. Márquez',synopsis:'Macondo e os Buendía em sete gerações. Realismo mágico, tempo circular, solidão como condição. Guia de leitura.',key:'"As estirpes condenadas a cem anos de solidão não tinham uma segunda oportunidade sobre a terra."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'25 min',pages:46},
+  'FIC.003': {title:'O sol é para <em>todos</em>',author:'Harper Lee',synopsis:'Inocência, justiça e a moral de uma menina vendo o mundo do alto de uma macieira. As lições de Atticus Finch para hoje.',key:'"Você nunca entende uma pessoa até considerar as coisas do ponto de vista dela."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'22 min',pages:52},
+  'FIC.004': {title:'A <em>metamorfose</em>',author:'Franz Kafka',synopsis:'Gregor Samsa acorda inseto. Por trás do absurdo, uma anatomia clínica do trabalho, da família e da alienação moderna.',key:'"Quando Gregor Samsa acordou de sonhos inquietos, encontrou-se em sua cama transformado num inseto monstruoso."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'20 min',pages:48}
+};
+
+const pop = $('#bookPop');
+const POP_DWELL_MS = 550;
+let popTimer = null;
+
+function positionPop(card){
+  if (!pop) return;
+  const r = card.getBoundingClientRect();
+  // measure popover (force reflow first)
+  pop.style.visibility = 'hidden';
+  pop.style.opacity = '0';
+  pop.classList.add('show');
+  const pw = pop.offsetWidth || 340;
+  const ph = pop.offsetHeight || 380;
+  pop.classList.remove('show');
+  pop.style.visibility = '';
+  pop.style.opacity = '';
+
+  const gap = 16;
+  let left = r.right + gap;
+  if (left + pw > window.innerWidth - gap) left = r.left - pw - gap;
+  if (left < gap) {
+    // not enough side space: stack above or below
+    left = Math.max(gap, Math.min(window.innerWidth - pw - gap, r.left + (r.width - pw) / 2));
+    let top = r.bottom + gap;
+    if (top + ph > window.innerHeight - gap) top = r.top - ph - gap;
+    if (top < gap) top = gap;
+    pop.style.left = left + 'px';
+    pop.style.top = top + 'px';
+    return;
+  }
+  let top = r.top + (r.height - ph) / 2;
+  if (top < gap) top = gap;
+  if (top + ph > window.innerHeight - gap) top = window.innerHeight - ph - gap;
+  pop.style.left = left + 'px';
+  pop.style.top = top + 'px';
+}
+
+function showPopFor(card){
+  const sku = card.dataset.sku || (card.querySelector('.bc-meta span') && card.querySelector('.bc-meta span').textContent.trim());
+  const d = sku && BOOK_DETAILS[sku];
+  if (!d || !pop) return;
+  $('#bpTitle').innerHTML = d.title;
+  $('#bpAuthor').textContent = d.author;
+  $('#bpSynopsis').textContent = d.synopsis;
+  $('#bpKey').textContent = d.key;
+  $('#bpMeta').innerHTML = `<span>${d.time}</span><span>${d.pages} páginas</span><span><strong>R$ ${d.price}</strong></span>`;
+  $('#bpEyeText').textContent = sku + ' · ' + d.label;
+  $('#bpEye').className = 'bp-eye ' + d.tier;
+  $('#bpCtaLabel').textContent = 'Comprar por R$ ' + d.price;
+  const buyUrl = (window.BREVIA_LINKS && window.BREVIA_LINKS[sku]) || '#pricing';
+  $('#bpCta').href = buyUrl;
+  positionPop(card);
+  // trigger animation after a frame so transitions kick
+  pop.classList.remove('show');
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => pop.classList.add('show'));
+  });
+}
+function hidePop(){ if (pop) pop.classList.remove('show'); }
+
+$$('.book-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    clearTimeout(popTimer);
+    popTimer = setTimeout(() => showPopFor(card), POP_DWELL_MS);
+  });
+  card.addEventListener('mouseleave', e => {
+    clearTimeout(popTimer);
+    // give a small grace period so moving into popover doesn't hide it
+    setTimeout(() => {
+      const hovered = document.querySelector(':hover');
+      if (!hovered) { hidePop(); return; }
+      if (!hovered.closest('.book-popover') && !hovered.closest('.book-card')) hidePop();
+    }, 80);
+  });
+});
+if (pop) {
+  pop.addEventListener('mouseleave', hidePop);
+}
+window.addEventListener('scroll', hidePop, {passive:true});
 
 /* ========== BOOT ========== */
 window.addEventListener('load', runLoader);
