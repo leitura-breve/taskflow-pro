@@ -575,7 +575,35 @@ img{max-width:100%;display:block}
 }
 .bc-foot-info h4{font-family:'Fraunces',serif;font-weight:500;font-size:1.02rem;line-height:1.1;letter-spacing:-.01em;margin-bottom:.25rem}
 .bc-foot-info p{font-size:.78rem;color:var(--mute)}
-.bc-price{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;white-space:nowrap}
+.bc-price{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;white-space:nowrap;position:relative}
+.bc-price[data-tier]::before{
+  content:attr(data-tier);display:inline-block;margin-right:.5rem;
+  width:18px;height:18px;line-height:18px;text-align:center;border-radius:50%;
+  font-family:'Inter',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:0;
+  text-transform:uppercase;vertical-align:1px;
+}
+.bc-price[data-tier="a"]::before{background:var(--mute);color:var(--cream)}
+.bc-price[data-tier="b"]::before{background:var(--accent-2);color:var(--cream)}
+.bc-price[data-tier="c"]::before{background:var(--accent);color:var(--cream)}
+
+/* Tier badge on cover (top corner) */
+.book-card[data-tier-card="c"] .book-card-cover::after{background:var(--accent)}
+.book-card[data-tier-card="b"] .book-card-cover::after{background:var(--accent-2)}
+.book-card[data-tier-card="a"] .book-card-cover::after{background:var(--gold)}
+
+/* Tier legend strip */
+.tier-legend{
+  display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;
+  margin:0 0 2.6rem;padding:1rem 1.2rem;border:1px solid var(--line);border-radius:14px;
+  background:var(--paper);font-size:.78rem;
+}
+.tier-legend strong{font-family:'Fraunces',serif;font-weight:500;letter-spacing:.04em;font-size:.85rem;margin-right:.4rem}
+.tier-chip{display:inline-flex;align-items:center;gap:.5rem;color:var(--ink-soft)}
+.tier-chip i{width:14px;height:14px;border-radius:50%;display:inline-block}
+.tier-chip.a i{background:var(--gold)}
+.tier-chip.b i{background:var(--accent-2)}
+.tier-chip.c i{background:var(--accent)}
+.tier-chip em{font-family:'Fraunces',serif;font-style:normal;font-weight:500;color:var(--ink);margin-left:.2rem}
 
 /* ============================================================
    PREVIEW / 3D PDF
@@ -899,6 +927,134 @@ footer{
 .reveal-3{transition-delay:.25s}
 .reveal-4{transition-delay:.35s}
 
+/* ============================================================
+   SCROLL PROGRESS INDICATOR (side rail)
+   ============================================================ */
+.rail{
+  position:fixed;top:50%;right:1.4rem;transform:translateY(-50%);z-index:150;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1.2rem;
+  font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;
+  mix-blend-mode:difference;color:#F8F5EC;
+}
+.rail-item{
+  display:flex;align-items:center;gap:.7rem;cursor:none;opacity:.4;
+  transition:opacity .4s var(--easing), color .4s;
+}
+.rail-item.active{opacity:1}
+.rail-item span{transform:translateX(0);transition:transform .5s var(--easing), opacity .5s}
+.rail-item:not(.active) span{transform:translateX(8px);opacity:0;pointer-events:none}
+.rail-item .tick{
+  width:18px;height:1px;background:currentColor;display:inline-block;transition:width .4s var(--easing);
+}
+.rail-item.active .tick{width:38px}
+@media(max-width:980px){.rail{display:none}}
+
+/* Top scroll progress bar */
+.scroll-bar{
+  position:fixed;top:0;left:0;right:0;height:2px;z-index:201;background:transparent;
+  pointer-events:none;
+}
+.scroll-bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .12s linear}
+
+/* ============================================================
+   SHOWCASE — pinned 3D scrolling scene
+   ============================================================ */
+.showcase{
+  position:relative;background:var(--ink);color:var(--cream);
+  height:340vh;overflow:visible;
+}
+.showcase-sticky{
+  position:sticky;top:0;height:100vh;width:100%;
+  display:flex;align-items:center;justify-content:center;
+  perspective:1800px;overflow:hidden;
+}
+.showcase-sticky::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255,78,29,.12), transparent 50%),
+    radial-gradient(circle at 75% 30%, rgba(14,92,58,.1), transparent 45%),
+    linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.4));
+  pointer-events:none;
+}
+.showcase-head{
+  position:absolute;top:6rem;left:clamp(1.2rem,3vw,2.5rem);right:clamp(1.2rem,3vw,2.5rem);
+  display:flex;justify-content:space-between;align-items:flex-end;z-index:3;
+  pointer-events:none;
+}
+.showcase-eye{
+  font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(248,245,236,.55);
+}
+.showcase-title{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(1.6rem,2.6vw,2.8rem);line-height:1;letter-spacing:-.02em;
+  max-width:520px;text-align:right;
+}
+.showcase-title em{font-family:'Instrument Serif',serif;color:var(--accent)}
+
+.showcase-stage{
+  position:relative;width:min(90vw,1100px);aspect-ratio:1.6/1;
+  transform-style:preserve-3d;
+}
+.shelf-book{
+  position:absolute;left:50%;top:50%;
+  width:170px;aspect-ratio:.7/1;border-radius:6px;
+  background:linear-gradient(135deg, var(--c1,#1a1a17) 0%, var(--c2,#0e0e0c) 100%);
+  box-shadow:0 30px 80px -30px rgba(0,0,0,.7), inset 12px 0 24px rgba(0,0,0,.4);
+  transform-style:preserve-3d;
+  transform:translate(-50%,-50%) translate3d(var(--tx,0),var(--ty,0),var(--tz,0))
+    rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg));
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:.9rem 1rem .9rem 1.2rem;color:var(--cream);overflow:hidden;
+  will-change:transform;
+}
+.shelf-book::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:1px;background:rgba(255,255,255,.1)}
+.shelf-book::after{content:'';position:absolute;right:0;top:0;width:6px;height:36%;background:var(--accent)}
+.shelf-book .sb-meta{font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;opacity:.5}
+.shelf-book .sb-title{font-family:'Fraunces',serif;font-weight:400;font-size:.92rem;line-height:1.05}
+.shelf-book .sb-title em{font-family:'Instrument Serif',serif;color:var(--gold);font-style:italic}
+.shelf-book .sb-author{font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;opacity:.5}
+
+.showcase-foot{
+  position:absolute;bottom:5rem;left:50%;transform:translateX(-50%);z-index:3;
+  font-family:'Fraunces',serif;letter-spacing:.25em;text-transform:uppercase;color:rgba(248,245,236,.5);
+  display:flex;align-items:flex-end;gap:1rem;
+}
+.showcase-foot .pgnum{
+  font-size:2.4rem;font-weight:300;color:var(--cream);letter-spacing:-.02em;font-feature-settings:"tnum" 1;line-height:1;
+}
+.showcase-foot .of{font-size:.7rem;letter-spacing:.3em;padding-bottom:.3rem}
+
+/* ============================================================
+   PARALLAX BG WORD LAYERS
+   ============================================================ */
+.depth-bg{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;
+}
+.depth-bg .layer{
+  position:absolute;font-family:'Instrument Serif',serif;font-style:italic;
+  font-weight:400;color:rgba(255,78,29,.06);font-size:clamp(8rem,16vw,18rem);
+  white-space:nowrap;letter-spacing:-.04em;line-height:1;
+  will-change:transform;
+}
+.depth-bg .layer.a{top:8%;left:-6%;color:rgba(14,14,12,.04)}
+.depth-bg .layer.b{bottom:6%;right:-10%;color:rgba(255,78,29,.05)}
+
+/* Book card buy overlay */
+.book-card a.bc-buy{
+  position:absolute;left:0;right:0;top:0;bottom:30%;
+  display:flex;align-items:flex-end;justify-content:center;
+  padding-bottom:1rem;color:var(--cream);font-size:.7rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+  background:linear-gradient(to top, rgba(14,14,12,.7) 0%, rgba(14,14,12,0) 60%);
+  opacity:0;transition:opacity .4s var(--easing);
+  border-radius:6px;z-index:2;
+}
+.book-card:hover a.bc-buy{opacity:1}
+.book-card a.bc-buy span{
+  display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .9rem;
+  background:var(--accent);border-radius:999px;color:var(--cream);
+}
+
 /* prefers reduced motion */
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
@@ -925,15 +1081,30 @@ footer{
 <!-- ========== CUSTOM CURSOR ========== -->
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 
+<!-- ========== TOP SCROLL PROGRESS BAR ========== -->
+<div class="scroll-bar" aria-hidden="true"><i id="scrollBar"></i></div>
+
+<!-- ========== SIDE RAIL NAV ========== -->
+<aside class="rail" id="rail" aria-hidden="true">
+  <a class="rail-item" href="#hero" data-target="hero"><span>Início</span><i class="tick"></i></a>
+  <a class="rail-item" href="#manifesto" data-target="manifesto"><span>Manifesto</span><i class="tick"></i></a>
+  <a class="rail-item" href="#how" data-target="how"><span>Processo</span><i class="tick"></i></a>
+  <a class="rail-item" href="#showcase" data-target="showcase"><span>Coleção</span><i class="tick"></i></a>
+  <a class="rail-item" href="#cats" data-target="cats"><span>Catálogo</span><i class="tick"></i></a>
+  <a class="rail-item" href="#preview" data-target="preview"><span>Preview</span><i class="tick"></i></a>
+  <a class="rail-item" href="#pricing" data-target="pricing"><span>Planos</span><i class="tick"></i></a>
+  <a class="rail-item" href="#faq" data-target="faq"><span>FAQ</span><i class="tick"></i></a>
+</aside>
+
 <!-- ========== NAVIGATION ========== -->
 <nav class="nav" id="nav">
   <a href="#" class="brand">BREVIA<span class="brand-dot"></span></a>
   <div class="nav-menu">
     <a href="#manifesto" data-link>Manifesto</a>
-    <a href="#how" data-link>Como funciona</a>
+    <a href="#how" data-link>Processo</a>
+    <a href="#showcase" data-link>Coleção</a>
     <a href="#cats" data-link>Catálogo</a>
     <a href="#pricing" data-link>Planos</a>
-    <a href="#faq" data-link>FAQ</a>
   </div>
   <a href="#pricing" class="nav-cta" data-link>Começar →</a>
 </nav>
@@ -1067,6 +1238,62 @@ footer{
   </div>
 </section>
 
+<!-- ========== SHOWCASE (pinned 3D scroll scene) ========== -->
+<section class="showcase" id="showcase">
+  <div class="showcase-sticky">
+    <div class="showcase-head">
+      <div class="showcase-eye">— A biblioteca, em vôo</div>
+      <h2 class="showcase-title">Cada livro<br>vira um <em>pensamento</em><br>que cabe no bolso.</h2>
+    </div>
+    <div class="showcase-stage" id="showcaseStage">
+      <div class="shelf-book" style="--c1:#2C1810;--c2:#0e0e0c" data-i="0">
+        <div class="sb-meta">FIL.001 · TIER C</div>
+        <div class="sb-title">Meditações <em>essenciais</em></div>
+        <div class="sb-author">MARCO AURÉLIO</div>
+      </div>
+      <div class="shelf-book" style="--c1:#1A3030;--c2:#0e0e0c" data-i="1">
+        <div class="sb-meta">HAB.001 · TIER B</div>
+        <div class="sb-title">Hábitos <em>atômicos</em></div>
+        <div class="sb-author">JAMES CLEAR</div>
+      </div>
+      <div class="shelf-book" style="--c1:#1B2C3A;--c2:#0e0e0c" data-i="2">
+        <div class="sb-meta">CIE.001 · TIER C</div>
+        <div class="sb-title">Sapiens, <em>breve</em></div>
+        <div class="sb-author">YUVAL N. HARARI</div>
+      </div>
+      <div class="shelf-book" style="--c1:#2A1B33;--c2:#0e0e0c" data-i="3">
+        <div class="sb-meta">PSI.001 · TIER C</div>
+        <div class="sb-title">Rápido e <em>devagar</em></div>
+        <div class="sb-author">DANIEL KAHNEMAN</div>
+      </div>
+      <div class="shelf-book" style="--c1:#1F2A3D;--c2:#0e0e0c" data-i="4">
+        <div class="sb-meta">NEG.001 · TIER B</div>
+        <div class="sb-title">Zero a <em>um</em></div>
+        <div class="sb-author">PETER THIEL</div>
+      </div>
+      <div class="shelf-book" style="--c1:#33231F;--c2:#0e0e0c" data-i="5">
+        <div class="sb-meta">PSI.003 · TIER C</div>
+        <div class="sb-title">Em busca de <em>sentido</em></div>
+        <div class="sb-author">VIKTOR FRANKL</div>
+      </div>
+      <div class="shelf-book" style="--c1:#2E1F2E;--c2:#0e0e0c" data-i="6">
+        <div class="sb-meta">HAB.002 · TIER B</div>
+        <div class="sb-title">Trabalho <em>profundo</em></div>
+        <div class="sb-author">CAL NEWPORT</div>
+      </div>
+      <div class="shelf-book" style="--c1:#1A1E36;--c2:#0e0e0c" data-i="7">
+        <div class="sb-meta">FIC.001 · TIER B</div>
+        <div class="sb-title">1984, <em>relido</em></div>
+        <div class="sb-author">GEORGE ORWELL</div>
+      </div>
+    </div>
+    <div class="showcase-foot">
+      <span class="pgnum" id="showcaseNum">01</span>
+      <span class="of">de 08 títulos em destaque</span>
+    </div>
+  </div>
+</section>
+
 <!-- ========== CATALOG / TABS ========== -->
 <section class="cats" id="cats">
   <div class="cats-head">
@@ -1084,10 +1311,18 @@ footer{
     <span class="tab-pill" id="tabPill"></span>
   </div>
 
+  <!-- Tier legend -->
+  <div class="tier-legend">
+    <strong>Precificação por relevância editorial:</strong>
+    <span class="tier-chip a"><i></i> Tier A <em>· R$ 11,99</em> — leitura essencial</span>
+    <span class="tier-chip b"><i></i> Tier B <em>· R$ 14,99</em> — curado com conexões</span>
+    <span class="tier-chip c"><i></i> Tier C <em>· R$ 16,99</em> — clássico canônico</span>
+  </div>
+
   <!-- Panel: Filosofia -->
   <div class="cat-panel active" id="panel-filosofia" role="tabpanel">
     <div class="book-grid">
-      <article class="book-card" style="--c1:#2C1810;--c2:#0e0e0c">
+      <article data-tier-card="c" class="book-card" style="--c1:#2C1810;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.001</span><span>52 PG</span></div>
@@ -1097,11 +1332,11 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Meditações essenciais</h4><p>Marco Aurélio</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
 
-      <article class="book-card" style="--c1:#1B2E2A;--c2:#0e0e0c">
+      <article data-tier-card="a" class="book-card" style="--c1:#1B2E2A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.002</span><span>48 PG</span></div>
@@ -1111,11 +1346,11 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>O suficiente basta?</h4><p>Sêneca</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
 
-      <article class="book-card" style="--c1:#2D1E3A;--c2:#0e0e0c">
+      <article data-tier-card="c" class="book-card" style="--c1:#2D1E3A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.003</span><span>64 PG</span></div>
@@ -1125,11 +1360,11 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>A caverna, de novo</h4><p>Platão</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
 
-      <article class="book-card" style="--c1:#3A1F1F;--c2:#0e0e0c">
+      <article data-tier-card="b" class="book-card" style="--c1:#3A1F1F;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.004</span><span>56 PG</span></div>
@@ -1139,7 +1374,7 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Sobre o eterno retorno</h4><p>Nietzsche</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
     </div>
@@ -1148,7 +1383,7 @@ footer{
   <!-- Panel: Negócios -->
   <div class="cat-panel" id="panel-negocios" role="tabpanel">
     <div class="book-grid">
-      <article class="book-card" style="--c1:#1F2A3D;--c2:#0e0e0c">
+      <article data-tier-card="b" class="book-card" style="--c1:#1F2A3D;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.001</span><span>46 PG</span></div>
@@ -1158,10 +1393,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Zero a um</h4><p>Peter Thiel</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#27331E;--c2:#0e0e0c">
+      <article data-tier-card="b" class="book-card" style="--c1:#27331E;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.002</span><span>52 PG</span></div>
@@ -1171,10 +1406,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>O dilema da inovação</h4><p>C. Christensen</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#3A2B1A;--c2:#0e0e0c">
+      <article data-tier-card="a" class="book-card" style="--c1:#3A2B1A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.003</span><span>40 PG</span></div>
@@ -1184,10 +1419,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Bom para ótimo</h4><p>Jim Collins</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#1F3A36;--c2:#0e0e0c">
+      <article data-tier-card="a" class="book-card" style="--c1:#1F3A36;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.004</span><span>58 PG</span></div>
@@ -1197,7 +1432,7 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>A estratégia do oceano</h4><p>Kim & Mauborgne</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
     </div>
@@ -1206,7 +1441,7 @@ footer{
   <!-- Panel: Hábitos -->
   <div class="cat-panel" id="panel-habitos" role="tabpanel">
     <div class="book-grid">
-      <article class="book-card" style="--c1:#1A3030;--c2:#0e0e0c">
+      <article data-tier-card="b" class="book-card" style="--c1:#1A3030;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.001</span><span>44 PG</span></div>
@@ -1216,10 +1451,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Hábitos atômicos</h4><p>James Clear</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#2E1F2E;--c2:#0e0e0c">
+      <article data-tier-card="b" class="book-card" style="--c1:#2E1F2E;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.002</span><span>50 PG</span></div>
@@ -1229,10 +1464,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Trabalho profundo</h4><p>Cal Newport</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#36211B;--c2:#0e0e0c">
+      <article data-tier-card="a" class="book-card" style="--c1:#36211B;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.003</span><span>38 PG</span></div>
@@ -1242,10 +1477,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Faça a cama</h4><p>W. McRaven</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#27292E;--c2:#0e0e0c">
+      <article data-tier-card="b" class="book-card" style="--c1:#27292E;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.004</span><span>42 PG</span></div>
@@ -1255,7 +1490,7 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Mindset</h4><p>Carol Dweck</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
     </div>
@@ -1264,7 +1499,7 @@ footer{
   <!-- Panel: Psicologia -->
   <div class="cat-panel" id="panel-psico" role="tabpanel">
     <div class="book-grid">
-      <article class="book-card" style="--c1:#2A1B33;--c2:#0e0e0c">
+      <article data-tier-card="c" class="book-card" style="--c1:#2A1B33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.001</span><span>60 PG</span></div>
@@ -1274,10 +1509,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Rápido e devagar</h4><p>Daniel Kahneman</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#1B1F33;--c2:#0e0e0c">
+      <article data-tier-card="b" class="book-card" style="--c1:#1B1F33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.002</span><span>48 PG</span></div>
@@ -1287,10 +1522,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>O corpo guarda</h4><p>B. van der Kolk</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#33231F;--c2:#0e0e0c">
+      <article data-tier-card="c" class="book-card" style="--c1:#33231F;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.003</span><span>54 PG</span></div>
@@ -1300,10 +1535,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Em busca de sentido</h4><p>Viktor Frankl</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#1F3326;--c2:#0e0e0c">
+      <article data-tier-card="a" class="book-card" style="--c1:#1F3326;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.004</span><span>46 PG</span></div>
@@ -1313,7 +1548,7 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>A coragem de ser imperfeito</h4><p>Brené Brown</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
     </div>
@@ -1322,7 +1557,7 @@ footer{
   <!-- Panel: Ciência -->
   <div class="cat-panel" id="panel-ciencia" role="tabpanel">
     <div class="book-grid">
-      <article class="book-card" style="--c1:#1B2C3A;--c2:#0e0e0c">
+      <article data-tier-card="c" class="book-card" style="--c1:#1B2C3A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.001</span><span>62 PG</span></div>
@@ -1332,10 +1567,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Sapiens</h4><p>Yuval N. Harari</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#1F362C;--c2:#0e0e0c">
+      <article data-tier-card="b" class="book-card" style="--c1:#1F362C;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.002</span><span>50 PG</span></div>
@@ -1345,10 +1580,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>O gene egoísta</h4><p>Richard Dawkins</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#36251F;--c2:#0e0e0c">
+      <article data-tier-card="c" class="book-card" style="--c1:#36251F;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.003</span><span>58 PG</span></div>
@@ -1358,10 +1593,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Uma breve história do tempo</h4><p>Stephen Hawking</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#2C1F36;--c2:#0e0e0c">
+      <article data-tier-card="a" class="book-card" style="--c1:#2C1F36;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.004</span><span>44 PG</span></div>
@@ -1371,7 +1606,7 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>A ordem do tempo</h4><p>Carlo Rovelli</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
     </div>
@@ -1380,7 +1615,7 @@ footer{
   <!-- Panel: Ficção -->
   <div class="cat-panel" id="panel-ficcao" role="tabpanel">
     <div class="book-grid">
-      <article class="book-card" style="--c1:#1A1E36;--c2:#0e0e0c">
+      <article data-tier-card="b" class="book-card" style="--c1:#1A1E36;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.001</span><span>40 PG</span></div>
@@ -1390,10 +1625,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>1984</h4><p>George Orwell</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#1F3320;--c2:#0e0e0c">
+      <article data-tier-card="c" class="book-card" style="--c1:#1F3320;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.002</span><span>46 PG</span></div>
@@ -1403,10 +1638,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>Cem anos de solidão</h4><p>G. G. Márquez</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#33261B;--c2:#0e0e0c">
+      <article data-tier-card="a" class="book-card" style="--c1:#33261B;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.003</span><span>52 PG</span></div>
@@ -1416,10 +1651,10 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>O sol é para todos</h4><p>Harper Lee</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article class="book-card" style="--c1:#241F33;--c2:#0e0e0c">
+      <article data-tier-card="a" class="book-card" style="--c1:#241F33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.004</span><span>48 PG</span></div>
@@ -1429,7 +1664,7 @@ footer{
         </div>
         <div class="book-card-foot">
           <div class="bc-foot-info"><h4>A metamorfose</h4><p>Franz Kafka</p></div>
-          <div class="bc-price">R$ 19</div>
+          <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
     </div>
@@ -1540,7 +1775,7 @@ footer{
   <div class="plans">
     <article class="plan">
       <div class="plan-name">Avulso</div>
-      <div class="plan-price">R$ 19<small>/ título</small></div>
+      <div class="plan-price">R$ 11,99<small>a partir de · por título</small></div>
       <p class="plan-desc">Pegue exatamente o que você quer ler. Sem assinatura, sem amarras.</p>
       <ul class="plan-feats">
         <li class="plan-feat">1 PDF de sua escolha</li>
@@ -1920,6 +2155,120 @@ if (pdf && pdfStage && !matchMedia('(hover:none)').matches) {
   });
   pdfStage.addEventListener('mouseleave', () => { pdf.style.transform = ''; });
 }
+
+/* ========== SCROLL PROGRESS BAR ========== */
+const scrollBar = $('#scrollBar');
+function updateScrollBar(){
+  const h = document.documentElement;
+  const max = h.scrollHeight - h.clientHeight;
+  const p = max > 0 ? (window.scrollY / max) : 0;
+  if (scrollBar) scrollBar.style.width = (p * 100) + '%';
+}
+window.addEventListener('scroll', updateScrollBar, {passive:true});
+updateScrollBar();
+
+/* ========== SIDE RAIL ACTIVE SECTION ========== */
+const railItems = $$('.rail-item');
+const railSections = railItems.map(a => document.getElementById(a.dataset.target)).filter(Boolean);
+function updateRail(){
+  const y = window.scrollY + window.innerHeight * .4;
+  let activeIdx = 0;
+  railSections.forEach((sec, i) => {
+    if (sec && sec.offsetTop <= y) activeIdx = i;
+  });
+  railItems.forEach((it, i) => it.classList.toggle('active', i === activeIdx));
+}
+window.addEventListener('scroll', updateRail, {passive:true});
+updateRail();
+
+/* ========== HERO SCROLL-OUT (book rotates/zooms out + content fades) ========== */
+const heroEl = $('#hero');
+const heroContent = $('.hero-content');
+const heroStageEl = $('#heroStage');
+function updateHero(){
+  if (!heroEl) return;
+  const r = heroEl.getBoundingClientRect();
+  const vh = window.innerHeight;
+  const p = Math.max(0, Math.min(1, -r.top / vh));
+  if (heroContent) heroContent.style.transform = `translateY(${p * -40}px)`;
+  if (heroContent) heroContent.style.opacity = String(1 - p * .7);
+  if (heroStageEl && !heroStageEl.matches(':hover')) {
+    heroStageEl.style.transform = `translateY(${p * -80}px) scale(${1 - p * .12}) rotateZ(${p * 6}deg)`;
+    heroStageEl.style.opacity = String(1 - p * .5);
+  }
+}
+window.addEventListener('scroll', updateHero, {passive:true});
+updateHero();
+
+/* ========== SHOWCASE — pinned 3D scroll scene ========== */
+const showcase = $('#showcase');
+const shelfBooks = $$('.shelf-book');
+const showcaseNum = $('#showcaseNum');
+function updateShowcase(){
+  if (!showcase || shelfBooks.length === 0) return;
+  const r = showcase.getBoundingClientRect();
+  const total = showcase.offsetHeight - window.innerHeight;
+  const p = Math.max(0, Math.min(1, -r.top / total));
+  // active index based on progress
+  const active = Math.min(shelfBooks.length - 1, Math.floor(p * shelfBooks.length * .99));
+  if (showcaseNum) showcaseNum.textContent = String(active + 1).padStart(2, '0');
+
+  // each book arranged in 3D, stacked, with the active one centered/forward
+  shelfBooks.forEach((b, i) => {
+    const offset = i - p * (shelfBooks.length - 1);
+    // distribute around a 3D arc
+    const tx = offset * 90; // horizontal spread
+    const tz = -Math.abs(offset) * 220; // depth (farther = behind)
+    const ty = Math.abs(offset) * 18; // slight lift on edges
+    const ry = offset * -14; // rotate Y toward camera
+    const rx = 6;
+    const opacity = Math.max(.15, 1 - Math.abs(offset) * .28);
+    b.style.setProperty('--tx', tx + 'px');
+    b.style.setProperty('--tz', tz + 'px');
+    b.style.setProperty('--ty', ty + 'px');
+    b.style.setProperty('--ry', ry + 'deg');
+    b.style.setProperty('--rx', rx + 'deg');
+    b.style.opacity = String(opacity);
+    b.style.zIndex = String(100 - Math.abs(Math.round(offset)));
+  });
+}
+window.addEventListener('scroll', updateShowcase, {passive:true});
+window.addEventListener('resize', updateShowcase);
+updateShowcase();
+
+/* ========== MAGNETIC BUTTONS ========== */
+$$('.btn, .btn-ghost').forEach(btn => {
+  if (matchMedia('(hover:none)').matches) return;
+  btn.addEventListener('mousemove', e => {
+    const r = btn.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width - .5;
+    const py = (e.clientY - r.top) / r.height - .5;
+    btn.style.transform = `translate(${px * 8}px, ${py * 8}px)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+  });
+});
+
+/* ========== BOOK CARDS — payment link injection ==========
+   If a global BREVIA_LINKS map exists (set after Stripe setup),
+   each card .book-card gets a buy overlay pointing to the right link.
+   Until populated, links default to #pricing (graceful fallback). */
+(function setupBookLinks(){
+  const map = window.BREVIA_LINKS || {};
+  $$('.book-card').forEach(card => {
+    const metaEl = card.querySelector('.bc-meta span:first-child');
+    if (!metaEl) return;
+    const sku = metaEl.textContent.trim(); // e.g. FIL.001
+    const url = map[sku] || '#pricing';
+    const a = document.createElement('a');
+    a.className = 'bc-buy';
+    a.href = url;
+    a.dataset.link = '';
+    a.innerHTML = '<span>Comprar PDF →</span>';
+    card.appendChild(a);
+  });
+})();
 
 /* ========== BOOT ========== */
 window.addEventListener('load', runLoader);
