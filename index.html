@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>BREVIA — Livros inteiros em 20 minutos.</title>
-<meta name="description" content="BREVIA: resumos editoriais em PDF dos livros que estão moldando o pensamento contemporâneo. Curados, ilustrados, prontos para abrir caminho.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D0D0D'/><text x='50' y='68' font-family='Georgia,serif' font-size='62' font-weight='900' fill='%23F5F2EC' text-anchor='middle'>B</text></svg>">
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D0D0D'/><text x='50' y='68' font-family='Georgia,serif' font-size='62' font-weight='900' fill='%23F5F2EC' text-anchor='middle'>B</text></svg>">
+<title>LEITURA BREVE — Livros inteiros em 20 minutos.</title>
+<meta name="description" content="LEITURA BREVE: resumos editoriais em PDF dos livros que estão moldando o pensamento contemporâneo. Curados, ilustrados, prontos para abrir caminho.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D0D0D'/><text x='50' y='66' font-family='Georgia,serif' font-size='44' font-weight='700' fill='%23F5F2EC' text-anchor='middle' letter-spacing='-2'>LB</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D0D0D'/><text x='50' y='66' font-family='Georgia,serif' font-size='44' font-weight='700' fill='%23F5F2EC' text-anchor='middle' letter-spacing='-2'>LB</text></svg>">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <meta name="theme-color" content="#0D0D0D">
-<meta name="apple-mobile-web-app-title" content="BREVIA">
-<meta name="application-name" content="BREVIA">
+<meta name="apple-mobile-web-app-title" content="Leitura Breve">
+<meta name="application-name" content="Leitura Breve">
 <meta name="format-detection" content="telephone=no">
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -21,7 +21,7 @@
 
 <style>
 /* ============================================================
-   BREVIA — Editorial minimalist landing
+   LEITURA BREVE — Editorial minimalist landing
    ============================================================ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:hidden}
@@ -619,6 +619,51 @@ img{max-width:100%;display:block}
 .tier-chip em{font-family:'Fraunces',serif;font-style:normal;font-weight:500;color:var(--ink);margin-left:.2rem}
 
 /* ============================================================
+   BOOK CARD — real cover image variant (LEITURA BREVE volumes)
+   ============================================================ */
+.book-card.live .book-card-inner{
+  background:var(--paper);
+  box-shadow:0 16px 36px -14px rgba(14,14,12,.45), inset 8px 0 16px rgba(0,0,0,.18);
+}
+.book-card.live .book-card-cover{
+  background-image:var(--cover);background-size:cover;background-position:center;
+  background-color:#F0E8D7;
+  padding:0;
+}
+.book-card.live .book-card-cover::before,
+.book-card.live .book-card-cover::after{display:none}
+.book-card.live .bc-meta,
+.book-card.live .bc-title,
+.book-card.live .bc-bottom{display:none}
+
+/* "Disponível" badge on live cards */
+.book-card.live::before{
+  content:'DISPONÍVEL';
+  position:absolute;top:.8rem;left:.8rem;z-index:5;
+  font-size:.55rem;letter-spacing:.25em;font-weight:700;
+  padding:.32rem .55rem;border-radius:999px;
+  background:var(--accent);color:var(--cream);
+  box-shadow:0 4px 10px -2px rgba(255,78,29,.45);
+  pointer-events:none;
+}
+.book-card.live .book-card-inner:hover{
+  box-shadow:0 28px 60px -16px rgba(14,14,12,.55), inset 8px 0 16px rgba(0,0,0,.18);
+}
+
+/* "Em breve" placeholder cards */
+.book-card.soon::before{
+  content:'EM BREVE';
+  position:absolute;top:.8rem;left:.8rem;z-index:5;
+  font-size:.55rem;letter-spacing:.25em;font-weight:700;
+  padding:.32rem .55rem;border-radius:999px;
+  background:var(--ink);color:var(--cream);opacity:.85;
+  pointer-events:none;
+}
+.book-card.soon .book-card-inner{filter:grayscale(.4) brightness(.92)}
+.book-card.soon .bc-price{opacity:.55}
+.book-card.soon a.bc-buy{display:none!important}
+
+/* ============================================================
    PREVIEW / 3D PDF
    ============================================================ */
 .preview{
@@ -1115,8 +1160,13 @@ footer{
   padding:.9rem 1rem .9rem 1.2rem;color:var(--cream);overflow:hidden;
   will-change:transform;
 }
-.shelf-book::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:1px;background:rgba(255,255,255,.1)}
-.shelf-book::after{content:'';position:absolute;right:0;top:0;width:6px;height:36%;background:var(--accent)}
+.shelf-book::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:1px;background:rgba(255,255,255,.1);z-index:2}
+.shelf-book::after{content:'';position:absolute;right:0;top:0;width:6px;height:36%;background:var(--accent);z-index:2}
+.shelf-book.real{
+  background-image:var(--cover);background-size:cover;background-position:center;
+  background-color:#F0E8D7;padding:0;
+}
+.shelf-book.real::before,.shelf-book.real::after{display:none}
 .shelf-book .sb-meta{font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;opacity:.5}
 .shelf-book .sb-title{font-family:'Fraunces',serif;font-weight:400;font-size:.92rem;line-height:1.05}
 .shelf-book .sb-title em{font-family:'Instrument Serif',serif;color:var(--gold);font-style:italic}
@@ -1178,7 +1228,7 @@ footer{
 
 <!-- ========== LOADER ========== -->
 <div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-brand">BREVIA<span class="brand-dot" style="margin-left:.4rem"></span></div>
+  <div class="loader-brand">LEITURA BREVE<span class="brand-dot" style="margin-left:.4rem"></span></div>
   <div class="loader-counter" id="loaderCount">00</div>
   <div class="loader-meta">
     Carregando<br>biblioteca essencial<br>vol. MMXXVI
@@ -1207,7 +1257,7 @@ footer{
 
 <!-- ========== NAVIGATION ========== -->
 <nav class="nav" id="nav">
-  <a href="#" class="brand">BREVIA<span class="brand-dot"></span></a>
+  <a href="#" class="brand">LEITURA BREVE<span class="brand-dot"></span></a>
   <div class="nav-menu">
     <a href="#manifesto" data-link>Manifesto</a>
     <a href="#how" data-link>Processo</a>
@@ -1256,7 +1306,7 @@ footer{
       <div class="book-spine"></div>
       <div class="book-face">
         <div class="book-mark"></div>
-        <div class="book-num">№ 001 · BREVIA EDITIONS</div>
+        <div class="book-num">№ 001 · LEITURA BREVE</div>
         <div>
           <div class="book-title">Pensamentos<br><em>condensados.</em></div>
         </div>
@@ -1300,7 +1350,7 @@ footer{
   <p class="manifesto-text" data-stagger>
     <span>Tempo</span> <span>é</span> <span>a</span> <span>nova</span> <span>biblioteca.</span>
     <span>Lemos</span> <span>para</span> <em><span>entender</span></em>, <span>não</span> <span>para</span>
-    <span>acumular</span> <span>páginas.</span> <span>BREVIA</span> <span>destila</span>
+    <span>acumular</span> <span>páginas.</span> <span>LEITURA BREVE</span> <span>destila</span>
     <span>cada</span> <span>livro</span> <span>até</span> <span>a</span> <em><span>idéia</span></em> <span>que</span>
     <span>fica.</span>
   </p>
@@ -1348,54 +1398,19 @@ footer{
 <section class="showcase" id="showcase">
   <div class="showcase-sticky">
     <div class="showcase-head">
-      <div class="showcase-eye">— A biblioteca, em vôo</div>
-      <h2 class="showcase-title">Cada livro<br>vira um <em>pensamento</em><br>que cabe no bolso.</h2>
+      <div class="showcase-eye">— Lançamentos · maio MMXXVI</div>
+      <h2 class="showcase-title">Cinco volumes,<br><em>disponíveis</em> agora.<br>Para começar hoje.</h2>
     </div>
     <div class="showcase-stage" id="showcaseStage">
-      <div class="shelf-book" style="--c1:#2C1810;--c2:#0e0e0c" data-i="0">
-        <div class="sb-meta">FIL.001 · TIER C</div>
-        <div class="sb-title">Meditações <em>essenciais</em></div>
-        <div class="sb-author">MARCO AURÉLIO</div>
-      </div>
-      <div class="shelf-book" style="--c1:#1A3030;--c2:#0e0e0c" data-i="1">
-        <div class="sb-meta">HAB.001 · TIER B</div>
-        <div class="sb-title">Hábitos <em>atômicos</em></div>
-        <div class="sb-author">JAMES CLEAR</div>
-      </div>
-      <div class="shelf-book" style="--c1:#1B2C3A;--c2:#0e0e0c" data-i="2">
-        <div class="sb-meta">CIE.001 · TIER C</div>
-        <div class="sb-title">Sapiens, <em>breve</em></div>
-        <div class="sb-author">YUVAL N. HARARI</div>
-      </div>
-      <div class="shelf-book" style="--c1:#2A1B33;--c2:#0e0e0c" data-i="3">
-        <div class="sb-meta">PSI.001 · TIER C</div>
-        <div class="sb-title">Rápido e <em>devagar</em></div>
-        <div class="sb-author">DANIEL KAHNEMAN</div>
-      </div>
-      <div class="shelf-book" style="--c1:#1F2A3D;--c2:#0e0e0c" data-i="4">
-        <div class="sb-meta">NEG.001 · TIER B</div>
-        <div class="sb-title">Zero a <em>um</em></div>
-        <div class="sb-author">PETER THIEL</div>
-      </div>
-      <div class="shelf-book" style="--c1:#33231F;--c2:#0e0e0c" data-i="5">
-        <div class="sb-meta">PSI.003 · TIER C</div>
-        <div class="sb-title">Em busca de <em>sentido</em></div>
-        <div class="sb-author">VIKTOR FRANKL</div>
-      </div>
-      <div class="shelf-book" style="--c1:#2E1F2E;--c2:#0e0e0c" data-i="6">
-        <div class="sb-meta">HAB.002 · TIER B</div>
-        <div class="sb-title">Trabalho <em>profundo</em></div>
-        <div class="sb-author">CAL NEWPORT</div>
-      </div>
-      <div class="shelf-book" style="--c1:#1A1E36;--c2:#0e0e0c" data-i="7">
-        <div class="sb-meta">FIC.001 · TIER B</div>
-        <div class="sb-title">1984, <em>relido</em></div>
-        <div class="sb-author">GEORGE ORWELL</div>
-      </div>
+      <div class="shelf-book real" style="--cover:url('covers/poder-do-habito.jpg')" data-i="0" data-sku="LB.04"></div>
+      <div class="shelf-book real" style="--cover:url('covers/mindset.jpg')" data-i="1" data-sku="LB.05"></div>
+      <div class="shelf-book real" style="--cover:url('covers/milagre-da-manha.jpg')" data-i="2" data-sku="LB.06"></div>
+      <div class="shelf-book real" style="--cover:url('covers/pai-rico-pai-pobre.jpg')" data-i="3" data-sku="LB.07"></div>
+      <div class="shelf-book real" style="--cover:url('covers/sete-habitos.jpg')" data-i="4" data-sku="LB.08"></div>
     </div>
     <div class="showcase-foot">
       <span class="pgnum" id="showcaseNum">01</span>
-      <span class="of">de 08 títulos em destaque</span>
+      <span class="of">de 05 títulos · DISPONÍVEIS AGORA</span>
     </div>
   </div>
 </section>
@@ -1428,7 +1443,7 @@ footer{
   <!-- Panel: Filosofia -->
   <div class="cat-panel active" id="panel-filosofia" role="tabpanel">
     <div class="book-grid">
-      <article data-sku="FIL.001" data-tier-card="c" class="book-card" style="--c1:#2C1810;--c2:#0e0e0c">
+      <article data-sku="FIL.001" data-tier-card="c" class="book-card soon" style="--c1:#2C1810;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.001</span><span>52 PG</span></div>
@@ -1442,7 +1457,7 @@ footer{
         </div>
       </article>
 
-      <article data-sku="FIL.002" data-tier-card="a" class="book-card" style="--c1:#1B2E2A;--c2:#0e0e0c">
+      <article data-sku="FIL.002" data-tier-card="a" class="book-card soon" style="--c1:#1B2E2A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.002</span><span>48 PG</span></div>
@@ -1456,7 +1471,7 @@ footer{
         </div>
       </article>
 
-      <article data-sku="FIL.003" data-tier-card="c" class="book-card" style="--c1:#2D1E3A;--c2:#0e0e0c">
+      <article data-sku="FIL.003" data-tier-card="c" class="book-card soon" style="--c1:#2D1E3A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.003</span><span>64 PG</span></div>
@@ -1470,7 +1485,7 @@ footer{
         </div>
       </article>
 
-      <article data-sku="FIL.004" data-tier-card="b" class="book-card" style="--c1:#3A1F1F;--c2:#0e0e0c">
+      <article data-sku="FIL.004" data-tier-card="b" class="book-card soon" style="--c1:#3A1F1F;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIL.004</span><span>56 PG</span></div>
@@ -1489,7 +1504,16 @@ footer{
   <!-- Panel: Negócios -->
   <div class="cat-panel" id="panel-negocios" role="tabpanel">
     <div class="book-grid">
-      <article data-sku="NEG.001" data-tier-card="b" class="book-card" style="--c1:#1F2A3D;--c2:#0e0e0c">
+      <article data-sku="LB.07" data-tier-card="a" class="book-card live" style="--cover:url('covers/pai-rico-pai-pobre.jpg')">
+        <div class="book-card-inner tilt">
+          <div class="book-card-cover" role="img" aria-label="Capa Pai Rico, Pai Pobre"></div>
+        </div>
+        <div class="book-card-foot">
+          <div class="bc-foot-info"><h4>Pai Rico, Pai Pobre</h4><p>Robert T. Kiyosaki · Vol. 07</p></div>
+          <div class="bc-price" data-tier="a">R$ 11,99</div>
+        </div>
+      </article>
+      <article data-sku="NEG.001" data-tier-card="b" class="book-card soon" style="--c1:#1F2A3D;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.001</span><span>46 PG</span></div>
@@ -1502,7 +1526,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-sku="NEG.002" data-tier-card="b" class="book-card" style="--c1:#27331E;--c2:#0e0e0c">
+      <article data-sku="NEG.002" data-tier-card="b" class="book-card soon" style="--c1:#27331E;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.002</span><span>52 PG</span></div>
@@ -1515,7 +1539,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-sku="NEG.003" data-tier-card="a" class="book-card" style="--c1:#3A2B1A;--c2:#0e0e0c">
+      <article data-sku="NEG.003" data-tier-card="a" class="book-card soon" style="--c1:#3A2B1A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.003</span><span>40 PG</span></div>
@@ -1528,7 +1552,7 @@ footer{
           <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article data-sku="NEG.004" data-tier-card="a" class="book-card" style="--c1:#1F3A36;--c2:#0e0e0c">
+      <article data-sku="NEG.004" data-tier-card="a" class="book-card soon" style="--c1:#1F3A36;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>NEG.004</span><span>58 PG</span></div>
@@ -1547,7 +1571,34 @@ footer{
   <!-- Panel: Hábitos -->
   <div class="cat-panel" id="panel-habitos" role="tabpanel">
     <div class="book-grid">
-      <article data-sku="HAB.001" data-tier-card="b" class="book-card" style="--c1:#1A3030;--c2:#0e0e0c">
+      <article data-sku="LB.04" data-tier-card="b" class="book-card live" style="--cover:url('covers/poder-do-habito.jpg')">
+        <div class="book-card-inner tilt">
+          <div class="book-card-cover" role="img" aria-label="Capa O Poder do Hábito"></div>
+        </div>
+        <div class="book-card-foot">
+          <div class="bc-foot-info"><h4>O Poder do Hábito</h4><p>Charles Duhigg · Vol. 04</p></div>
+          <div class="bc-price" data-tier="b">R$ 14,99</div>
+        </div>
+      </article>
+      <article data-sku="LB.06" data-tier-card="a" class="book-card live" style="--cover:url('covers/milagre-da-manha.jpg')">
+        <div class="book-card-inner tilt">
+          <div class="book-card-cover" role="img" aria-label="Capa O Milagre da Manhã"></div>
+        </div>
+        <div class="book-card-foot">
+          <div class="bc-foot-info"><h4>O Milagre da Manhã</h4><p>Hal Elrod · Vol. 06</p></div>
+          <div class="bc-price" data-tier="a">R$ 11,99</div>
+        </div>
+      </article>
+      <article data-sku="LB.08" data-tier-card="a" class="book-card live" style="--cover:url('covers/sete-habitos.jpg')">
+        <div class="book-card-inner tilt">
+          <div class="book-card-cover" role="img" aria-label="Capa Os 7 Hábitos"></div>
+        </div>
+        <div class="book-card-foot">
+          <div class="bc-foot-info"><h4>Os 7 Hábitos</h4><p>Stephen R. Covey · Vol. 08</p></div>
+          <div class="bc-price" data-tier="a">R$ 11,99</div>
+        </div>
+      </article>
+      <article data-sku="HAB.001" data-tier-card="b" class="book-card soon" style="--c1:#1A3030;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.001</span><span>44 PG</span></div>
@@ -1560,7 +1611,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-sku="HAB.002" data-tier-card="b" class="book-card" style="--c1:#2E1F2E;--c2:#0e0e0c">
+      <article data-sku="HAB.002" data-tier-card="b" class="book-card soon" style="--c1:#2E1F2E;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.002</span><span>50 PG</span></div>
@@ -1573,7 +1624,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-sku="HAB.003" data-tier-card="a" class="book-card" style="--c1:#36211B;--c2:#0e0e0c">
+      <article data-sku="HAB.003" data-tier-card="a" class="book-card soon" style="--c1:#36211B;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>HAB.003</span><span>38 PG</span></div>
@@ -1586,26 +1637,22 @@ footer{
           <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article data-sku="HAB.004" data-tier-card="b" class="book-card" style="--c1:#27292E;--c2:#0e0e0c">
-        <div class="book-card-inner tilt">
-          <div class="book-card-cover">
-            <div class="bc-meta"><span>HAB.004</span><span>42 PG</span></div>
-            <div><div class="bc-title">Mindset:<br>a <em>nova</em> psicologia</div></div>
-            <div class="bc-bottom">Carol Dweck</div>
-          </div>
-        </div>
-        <div class="book-card-foot">
-          <div class="bc-foot-info"><h4>Mindset</h4><p>Carol Dweck</p></div>
-          <div class="bc-price data-tier="b">R$ 14,99</div>
-        </div>
-      </article>
-    </div>
+      </div>
   </div>
 
   <!-- Panel: Psicologia -->
   <div class="cat-panel" id="panel-psico" role="tabpanel">
     <div class="book-grid">
-      <article data-sku="PSI.001" data-tier-card="c" class="book-card" style="--c1:#2A1B33;--c2:#0e0e0c">
+      <article data-sku="LB.05" data-tier-card="a" class="book-card live" style="--cover:url('covers/mindset.jpg')">
+        <div class="book-card-inner tilt">
+          <div class="book-card-cover" role="img" aria-label="Capa Mindset, a nova psicologia"></div>
+        </div>
+        <div class="book-card-foot">
+          <div class="bc-foot-info"><h4>Mindset, a nova psicologia</h4><p>Carol S. Dweck · Vol. 05</p></div>
+          <div class="bc-price" data-tier="a">R$ 11,99</div>
+        </div>
+      </article>
+      <article data-sku="PSI.001" data-tier-card="c" class="book-card soon" style="--c1:#2A1B33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.001</span><span>60 PG</span></div>
@@ -1618,7 +1665,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-sku="PSI.002" data-tier-card="b" class="book-card" style="--c1:#1B1F33;--c2:#0e0e0c">
+      <article data-sku="PSI.002" data-tier-card="b" class="book-card soon" style="--c1:#1B1F33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.002</span><span>48 PG</span></div>
@@ -1631,7 +1678,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-sku="PSI.003" data-tier-card="c" class="book-card" style="--c1:#33231F;--c2:#0e0e0c">
+      <article data-sku="PSI.003" data-tier-card="c" class="book-card soon" style="--c1:#33231F;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.003</span><span>54 PG</span></div>
@@ -1644,7 +1691,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-sku="PSI.004" data-tier-card="a" class="book-card" style="--c1:#1F3326;--c2:#0e0e0c">
+      <article data-sku="PSI.004" data-tier-card="a" class="book-card soon" style="--c1:#1F3326;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>PSI.004</span><span>46 PG</span></div>
@@ -1663,7 +1710,7 @@ footer{
   <!-- Panel: Ciência -->
   <div class="cat-panel" id="panel-ciencia" role="tabpanel">
     <div class="book-grid">
-      <article data-sku="CIE.001" data-tier-card="c" class="book-card" style="--c1:#1B2C3A;--c2:#0e0e0c">
+      <article data-sku="CIE.001" data-tier-card="c" class="book-card soon" style="--c1:#1B2C3A;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.001</span><span>62 PG</span></div>
@@ -1676,7 +1723,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-sku="CIE.002" data-tier-card="b" class="book-card" style="--c1:#1F362C;--c2:#0e0e0c">
+      <article data-sku="CIE.002" data-tier-card="b" class="book-card soon" style="--c1:#1F362C;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.002</span><span>50 PG</span></div>
@@ -1689,7 +1736,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-sku="CIE.003" data-tier-card="c" class="book-card" style="--c1:#36251F;--c2:#0e0e0c">
+      <article data-sku="CIE.003" data-tier-card="c" class="book-card soon" style="--c1:#36251F;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.003</span><span>58 PG</span></div>
@@ -1702,7 +1749,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-sku="CIE.004" data-tier-card="a" class="book-card" style="--c1:#2C1F36;--c2:#0e0e0c">
+      <article data-sku="CIE.004" data-tier-card="a" class="book-card soon" style="--c1:#2C1F36;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>CIE.004</span><span>44 PG</span></div>
@@ -1721,7 +1768,7 @@ footer{
   <!-- Panel: Ficção -->
   <div class="cat-panel" id="panel-ficcao" role="tabpanel">
     <div class="book-grid">
-      <article data-sku="FIC.001" data-tier-card="b" class="book-card" style="--c1:#1A1E36;--c2:#0e0e0c">
+      <article data-sku="FIC.001" data-tier-card="b" class="book-card soon" style="--c1:#1A1E36;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.001</span><span>40 PG</span></div>
@@ -1734,7 +1781,7 @@ footer{
           <div class="bc-price data-tier="b">R$ 14,99</div>
         </div>
       </article>
-      <article data-sku="FIC.002" data-tier-card="c" class="book-card" style="--c1:#1F3320;--c2:#0e0e0c">
+      <article data-sku="FIC.002" data-tier-card="c" class="book-card soon" style="--c1:#1F3320;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.002</span><span>46 PG</span></div>
@@ -1747,7 +1794,7 @@ footer{
           <div class="bc-price data-tier="c">R$ 16,99</div>
         </div>
       </article>
-      <article data-sku="FIC.003" data-tier-card="a" class="book-card" style="--c1:#33261B;--c2:#0e0e0c">
+      <article data-sku="FIC.003" data-tier-card="a" class="book-card soon" style="--c1:#33261B;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.003</span><span>52 PG</span></div>
@@ -1760,7 +1807,7 @@ footer{
           <div class="bc-price data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article data-sku="FIC.004" data-tier-card="a" class="book-card" style="--c1:#241F33;--c2:#0e0e0c">
+      <article data-sku="FIC.004" data-tier-card="a" class="book-card soon" style="--c1:#241F33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
             <div class="bc-meta"><span>FIC.004</span><span>48 PG</span></div>
@@ -1783,7 +1830,7 @@ footer{
     <div class="preview-head">
       <div class="section-num">04 — Preview</div>
       <h2 class="preview-title">Cada PDF é<br>um <em>objeto</em><br>de leitura.</h2>
-      <p class="preview-body">Não vendemos textos enfileirados. Cada resumo BREVIA é diagramado como um livro autônomo: capa, sumário, marginalia, citações destacadas, conexões e referências. Para abrir no celular e voltar uma semana depois sem perder o fio.</p>
+      <p class="preview-body">Não vendemos textos enfileirados. Cada resumo LEITURA BREVE é diagramado como um livro autônomo: capa, sumário, marginalia, citações destacadas, conexões e referências. Para abrir no celular e voltar uma semana depois sem perder o fio.</p>
       <ul class="feat-list">
         <li><span class="ic">✓</span> Diagramação em tipografia premium</li>
         <li><span class="ic">✓</span> Citações marcadas e referenciadas</li>
@@ -1803,7 +1850,7 @@ footer{
       <div class="pdf-doc" id="pdfDoc">
         <div class="pdf-head">
           <h5>Meditações,<br>essenciais</h5>
-          <span>BREVIA — № 001</span>
+          <span>LEITURA BREVE — № 001</span>
         </div>
         <div class="pdf-line h"></div>
         <div class="pdf-line"></div>
@@ -1823,7 +1870,7 @@ footer{
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <defs><path id="circ" d="M 100, 100 m -78, 0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" fill="none"/></defs>
           <text fill="currentColor" font-family="Fraunces, serif" font-size="13" letter-spacing="3">
-            <textPath href="#circ">BREVIA EDITIONS · ESSENCIAL · CURADO · SEM DRM ·</textPath>
+            <textPath href="#circ">LEITURA BREVE · ESSENCIAL · CURADO · SEM DRM ·</textPath>
           </text>
         </svg>
         <span style="font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;letter-spacing:.1em">NOVO</span>
@@ -1835,20 +1882,20 @@ footer{
 <!-- ========== STATS ========== -->
 <section class="stats" id="stats">
   <div class="stat">
-    <div class="stat-num" data-count="120" data-suffix="+">0</div>
-    <div class="stat-lbl">títulos<br>publicados</div>
+    <div class="stat-num" data-count="5" data-suffix="">0</div>
+    <div class="stat-lbl">volumes<br>disponíveis agora</div>
   </div>
   <div class="stat">
-    <div class="stat-num"><em>20</em><small style="font-family:'Fraunces',serif;font-weight:300">min</small></div>
-    <div class="stat-lbl">leitura<br>média / título</div>
+    <div class="stat-num"><em>22</em><small style="font-family:'Fraunces',serif;font-weight:300">min</small></div>
+    <div class="stat-lbl">leitura<br>média / volume</div>
   </div>
   <div class="stat">
-    <div class="stat-num" data-count="38" data-suffix="k">0</div>
-    <div class="stat-lbl">leitores<br>ativos</div>
+    <div class="stat-num" data-count="25" data-suffix="">0</div>
+    <div class="stat-lbl">páginas<br>diagramadas / volume</div>
   </div>
   <div class="stat">
-    <div class="stat-num" data-count="98" data-suffix="%">0</div>
-    <div class="stat-lbl">recomendariam<br>a um amigo</div>
+    <div class="stat-num">R$ <em>11</em><small style="font-family:'Fraunces',serif;font-weight:300">,99</small></div>
+    <div class="stat-lbl">a partir de<br>por volume</div>
   </div>
 </section>
 
@@ -1856,18 +1903,18 @@ footer{
 <section class="quotes" id="quotes">
   <div class="quotes-head">
     <div class="section-num">05 — Leitores</div>
-    <h2 class="quotes-title">Quem lê BREVIA<br><em>volta</em> aos livros<br>com outros olhos.</h2>
+    <h2 class="quotes-title">Quem lê LEITURA BREVE<br><em>volta</em> aos livros<br>com outros olhos.</h2>
   </div>
   <div class="quotes-track">
-    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Voltei a ler livros inteiros depois do BREVIA. O resumo me deu a confiança de saber onde investir tempo."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#FF4E1D;--ac2:#0E5C3A">MA</div><div><div class="qc-name">Maria Andrade</div><div class="qc-role">Editora · Rio de Janeiro</div></div></div></div>
+    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Voltei a ler livros inteiros depois do LEITURA BREVE. O resumo me deu a confiança de saber onde investir tempo."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#FF4E1D;--ac2:#0E5C3A">MA</div><div><div class="qc-name">Maria Andrade</div><div class="qc-role">Editora · Rio de Janeiro</div></div></div></div>
     <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"A diagramação é absurda. Os PDFs são quase pequenos livros de arte. Imprimi alguns para a estante."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#C9A24B;--ac2:#3B1F2B">LF</div><div><div class="qc-name">Lucas Ferraz</div><div class="qc-role">Designer · São Paulo</div></div></div></div>
-    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Como CEO, ler tudo é impossível. BREVIA virou meu filtro: decido o que mereço aprofundar em um café."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#0E5C3A;--ac2:#FF4E1D">RP</div><div><div class="qc-name">Renata Pinheiro</div><div class="qc-role">Fundadora · Curitiba</div></div></div></div>
+    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Como CEO, ler tudo é impossível. LEITURA BREVE virou meu filtro: decido o que mereço aprofundar em um café."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#0E5C3A;--ac2:#FF4E1D">RP</div><div><div class="qc-name">Renata Pinheiro</div><div class="qc-role">Fundadora · Curitiba</div></div></div></div>
     <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Não é apenas resumo. É como se um amigo culto te explicasse o livro num jantar — com referências e provocações."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#3B1F2B;--ac2:#C9A24B">JG</div><div><div class="qc-name">Júlio Garcia</div><div class="qc-role">Professor · Lisboa</div></div></div></div>
-    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Cancelei três assinaturas para sobrar pro BREVIA. Em três meses, li mais (em essência) do que em três anos."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#FF4E1D;--ac2:#1A1E36">CN</div><div><div class="qc-name">Camila Nakamura</div><div class="qc-role">Médica · Florianópolis</div></div></div></div>
+    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Cancelei três assinaturas para sobrar pro LEITURA BREVE. Em três meses, li mais (em essência) do que em três anos."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#FF4E1D;--ac2:#1A1E36">CN</div><div><div class="qc-name">Camila Nakamura</div><div class="qc-role">Médica · Florianópolis</div></div></div></div>
     <!-- duplicate for seamless loop -->
-    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Voltei a ler livros inteiros depois do BREVIA. O resumo me deu a confiança de saber onde investir tempo."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#FF4E1D;--ac2:#0E5C3A">MA</div><div><div class="qc-name">Maria Andrade</div><div class="qc-role">Editora · Rio de Janeiro</div></div></div></div>
+    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Voltei a ler livros inteiros depois do LEITURA BREVE. O resumo me deu a confiança de saber onde investir tempo."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#FF4E1D;--ac2:#0E5C3A">MA</div><div><div class="qc-name">Maria Andrade</div><div class="qc-role">Editora · Rio de Janeiro</div></div></div></div>
     <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"A diagramação é absurda. Os PDFs são quase pequenos livros de arte. Imprimi alguns para a estante."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#C9A24B;--ac2:#3B1F2B">LF</div><div><div class="qc-name">Lucas Ferraz</div><div class="qc-role">Designer · São Paulo</div></div></div></div>
-    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Como CEO, ler tudo é impossível. BREVIA virou meu filtro: decido o que mereço aprofundar em um café."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#0E5C3A;--ac2:#FF4E1D">RP</div><div><div class="qc-name">Renata Pinheiro</div><div class="qc-role">Fundadora · Curitiba</div></div></div></div>
+    <div class="quote-card"><div class="qc-stars">★★★★★</div><p class="qc-text">"Como CEO, ler tudo é impossível. LEITURA BREVE virou meu filtro: decido o que mereço aprofundar em um café."</p><div class="qc-author"><div class="qc-avatar" style="--ac1:#0E5C3A;--ac2:#FF4E1D">RP</div><div><div class="qc-name">Renata Pinheiro</div><div class="qc-role">Fundadora · Curitiba</div></div></div></div>
   </div>
 </section>
 
@@ -1896,7 +1943,7 @@ footer{
       <div class="plan-badge">Mais escolhido</div>
       <div class="plan-name">Biblioteca · Anual</div>
       <div class="plan-price">R$ 49,99<small>/ ano · acesso a tudo</small></div>
-      <p class="plan-desc">Acesso vitalício a todo o catálogo BREVIA por um ano. Cada novo título lançado entra na sua estante automaticamente.</p>
+      <p class="plan-desc">Acesso vitalício a todo o catálogo LEITURA BREVE por um ano. Cada novo título lançado entra na sua estante automaticamente.</p>
       <ul class="plan-feats">
         <li class="plan-feat">Catálogo completo (24 títulos e contando)</li>
         <li class="plan-feat">Lançamentos novos a cada semana</li>
@@ -1918,7 +1965,7 @@ footer{
 
   <div class="faq-item">
     <button class="faq-q">Resumo substitui o livro?<span class="faq-icon"></span></button>
-    <div class="faq-a"><div class="faq-a-inner">Não. BREVIA é uma porta de entrada — uma forma de você decidir quais livros merecem ser lidos por inteiro. Em muitos casos, é o resumo que faz você buscar a obra original; em outros, é o suficiente para internalizar a idéia central. Nunca substituirá a experiência integral de leitura, mas amplia muito o que cabe na sua semana.</div></div>
+    <div class="faq-a"><div class="faq-a-inner">Não. LEITURA BREVE é uma porta de entrada — uma forma de você decidir quais livros merecem ser lidos por inteiro. Em muitos casos, é o resumo que faz você buscar a obra original; em outros, é o suficiente para internalizar a idéia central. Nunca substituirá a experiência integral de leitura, mas amplia muito o que cabe na sua semana.</div></div>
   </div>
   <div class="faq-item">
     <button class="faq-q">Quem escreve os resumos?<span class="faq-icon"></span></button>
@@ -1959,7 +2006,7 @@ footer{
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand">BREVIA<em>.</em></div>
+      <div class="foot-brand">LEITURA BREVE<em>.</em></div>
       <p class="foot-desc">Editora de resumos editoriais. Curadoria de livros essenciais, diagramados como objetos de leitura. São Paulo · Lisboa · MMXXVI.</p>
     </div>
     <div class="foot-col">
@@ -1973,7 +2020,7 @@ footer{
       </ul>
     </div>
     <div class="foot-col">
-      <h6>BREVIA</h6>
+      <h6>A Editora</h6>
       <ul>
         <li><a href="#manifesto" data-link>Manifesto</a></li>
         <li><a href="#how" data-link>Processo</a></li>
@@ -1984,7 +2031,7 @@ footer{
     <div class="foot-col">
       <h6>Contato</h6>
       <ul>
-        <li><a href="mailto:contato@brevia.co">contato@brevia.co</a></li>
+        <li><a href="mailto:contato@leiturabreve.com.br">contato@leiturabreve.com.br</a></li>
         <li><a href="#">Imprensa</a></li>
         <li><a href="#">Termos</a></li>
         <li><a href="#">Privacidade</a></li>
@@ -1997,15 +2044,15 @@ footer{
       <span class="fc-eye">— Curtiu o site?</span>
       <h5 class="fc-line">Fale com a gente. A gente <em>responde</em>.</h5>
     </div>
-    <a href="mailto:contato@brevia.co?subject=Olá%20BREVIA" class="fc-cta">
-      contato@brevia.co
+    <a href="mailto:contato@leiturabreve.com.br?subject=Olá%20Leitura%20Breve" class="fc-cta">
+      contato@leiturabreve.com.br
       <span class="btn-arrow">→</span>
     </a>
   </div>
 
   <div class="foot-bottom">
-    <span>© MMXXVI BREVIA Editions. Todos os direitos reservados.</span>
-    <span>contato@brevia.co</span>
+    <span>© MMXXVI Leitura Breve. Todos os direitos reservados.</span>
+    <span>contato@leiturabreve.com.br</span>
   </div>
 </footer>
 
@@ -2414,11 +2461,11 @@ $$('.btn, .btn-ghost').forEach(btn => {
 });
 
 /* ========== BOOK CARDS — payment link injection ==========
-   If a global BREVIA_LINKS map exists (set after Stripe setup),
+   If a global LB_LINKS map exists (set after Stripe setup),
    each card .book-card gets a buy overlay pointing to the right link.
    Until populated, links default to #pricing (graceful fallback). */
 (function setupBookLinks(){
-  const map = window.BREVIA_LINKS || {};
+  const map = window.LB_LINKS || {};
   $$('.book-card').forEach(card => {
     const metaEl = card.querySelector('.bc-meta span:first-child');
     if (!metaEl) return;
@@ -2447,30 +2494,37 @@ updateRailVis();
 
 /* ========== BOOK DETAIL POPOVER (hover dwell) ========== */
 const BOOK_DETAILS = {
-  'FIL.001': {title:'Meditações <em>essenciais</em>',author:'Marco Aurélio · Estoicismo',synopsis:'Como um imperador-filósofo destilou disciplina e virtude em frases para si mesmo. Reagrupado em 12 frentes — de coragem à morte —, abre o estoicismo sem floreios.',key:'"Você tem poder sobre sua mente — não sobre eventos externos. Perceba isso e encontrará força."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'24 min',pages:52},
-  'FIL.002': {title:'O suficiente <em>basta?</em>',author:'Sêneca · Cartas a Lucílio',synopsis:'Sêneca conversa com Lucílio sobre tempo, prazer, dor e a brevidade da vida. Viver bem é querer pouco.',key:'"Não é que tenhamos pouco tempo, é que perdemos muito dele."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'22 min',pages:48},
-  'FIL.003': {title:'A caverna, <em>de novo</em>',author:'Platão · República, livro VII',synopsis:'O mito da caverna lido com olhos contemporâneos: o que sai à luz quando algoritmos fabricam nossa visão? Síntese do Livro VII da República.',key:'"A educação não consiste em dar visão ao olho — mas em virá-lo na direção certa."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'30 min',pages:64},
-  'FIL.004': {title:'Sobre o <em>eterno retorno</em>',author:'Nietzsche · Zaratustra',synopsis:'Zaratustra explicado em prosa direta: o teste do eterno retorno como bússola de vida. O que você desejaria viver de novo, idêntico?',key:'"Tornar-se aquilo que se é."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'26 min',pages:56},
-  'NEG.001': {title:'Zero a <em>um</em>',author:'Peter Thiel · Startups',synopsis:'Como criar do nada o que ainda não existe. Monopólios, segredos, segredos contraintuitivos — o manual contraculturalista do Vale do Silício.',key:'"Qual verdade importante poucas pessoas concordam com você?"',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'21 min',pages:46},
-  'NEG.002': {title:'O dilema da <em>inovação</em>',author:'Clayton Christensen',synopsis:'Por que empresas excelentes falham. A teoria do innovator’s dilemma: tecnologias disruptivas começam piores e vencem por baixo.',key:'"Servir bem clientes atuais é o motivo pelo qual organizações maduras perdem."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'24 min',pages:52},
-  'NEG.003': {title:'Bom para <em>ótimo</em>',author:'Jim Collins',synopsis:'O salto: o que faz empresas medianas se tornarem extraordinárias. Liderança nível 5, conceito do ouriço, flywheel.',key:'"Confronte os fatos brutais — mas nunca perca a fé."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'18 min',pages:40},
-  'NEG.004': {title:'A estratégia do <em>oceano</em>',author:'Kim & Mauborgne',synopsis:'Em vez de competir em mercados saturados (oceano vermelho), criar espaços inexplorados (oceano azul). A matriz eliminar/reduzir/levantar/criar.',key:'"O melhor competidor é aquele que recusa competir."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'27 min',pages:58},
-  'HAB.001': {title:'Hábitos <em>atômicos</em>',author:'James Clear',synopsis:'Mudanças de 1% que se acumulam. As 4 leis: torne óbvio, atraente, fácil, satisfatório. Sistemas em vez de objetivos.',key:'"Você não sobe ao nível dos seus objetivos. Cai ao nível dos seus sistemas."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'20 min',pages:44},
-  'HAB.002': {title:'Trabalho <em>profundo</em>',author:'Cal Newport',synopsis:'A habilidade rara e valiosa: concentração sem distração. Como projetar rotinas que produzem trabalho denso num mundo raso.',key:'"O foco é o novo QI."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'23 min',pages:50},
-  'HAB.003': {title:'Faça a <em>cama</em>',author:'William McRaven',synopsis:'10 lições do treinamento Navy SEAL para viver — começando por uma tarefa simples cumprida pela manhã.',key:'"Se quer mudar o mundo, comece arrumando sua cama."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'17 min',pages:38},
-  'HAB.004': {title:'Mindset',author:'Carol Dweck',synopsis:'Mentalidade fixa versus mentalidade de crescimento. Como suas crenças sobre habilidade moldam o que você se torna.',key:'"O esforço é o que torna você inteligente."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'19 min',pages:42},
-  'PSI.001': {title:'Rápido e <em>devagar</em>',author:'Daniel Kahneman',synopsis:'Os dois sistemas que pensam por você. Sistema 1 é intuitivo e rápido; Sistema 2 é lento e racional. As armadilhas cognitivas que isso cria.',key:'"Nada na vida é tão importante quanto você pensa que é, enquanto está pensando nele."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'28 min',pages:60},
-  'PSI.002': {title:'O corpo <em>guarda</em>',author:'Bessel van der Kolk',synopsis:'Trauma não é evento — é o que sobra no corpo depois dele. Como a neurociência atual entende e trata o trauma de forma somática.',key:'"O corpo carrega a história que a mente esqueceu."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'22 min',pages:48},
-  'PSI.003': {title:'Em busca de <em>sentido</em>',author:'Viktor Frankl',synopsis:'Sobreviver a Auschwitz e fundar a logoterapia: a busca por sentido como a força motriz mais profunda do humano.',key:'"Quando não podemos mudar a situação, somos desafiados a mudar a nós mesmos."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'25 min',pages:54},
-  'PSI.004': {title:'A coragem de <em>ser</em> imperfeito',author:'Brené Brown',synopsis:'Vulnerabilidade não é fraqueza — é o berço da criatividade, da pertença e do amor. Pesquisa de duas décadas em primeira pessoa.',key:'"O que torna alguém vulnerável é o que o torna belo."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'20 min',pages:46},
-  'CIE.001': {title:'Sapiens',author:'Yuval N. Harari',synopsis:'70 mil anos de Homo sapiens em 60 páginas. Cognitiva, agrícola, científica — as três revoluções que nos fizeram quem somos.',key:'"Não há justiça na história. Mas há ficções que dominam o mundo."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'30 min',pages:62},
-  'CIE.002': {title:'O gene <em>egoísta</em>',author:'Richard Dawkins',synopsis:'A reformulação radical da evolução: organismos como máquinas a serviço de seus genes. O conceito de meme cunhado aqui.',key:'"Somos máquinas de sobrevivência — autômatos cegamente programados para preservar moléculas egoístas chamadas genes."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'24 min',pages:50},
-  'CIE.003': {title:'Uma breve história do <em>tempo</em>',author:'Stephen Hawking',synopsis:'Big Bang, buracos negros, relatividade. Hawking convida o leitor não-cientista para o palco da cosmologia moderna.',key:'"Pra onde quer que olhemos, o universo distante recede."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'28 min',pages:58},
-  'CIE.004': {title:'A ordem do <em>tempo</em>',author:'Carlo Rovelli',synopsis:'Por que o tempo passa? E passa mesmo? Um físico convida você a duvidar do mais certo dos sentidos.',key:'"O tempo é o lugar onde o ser se torna."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'21 min',pages:44},
-  'FIC.001': {title:'1984, <em>relido</em>',author:'George Orwell',synopsis:'Chaves de leitura para a distopia mais influente do século XX. Big Brother, novilíngua, duplipensar — como tudo virou pauta política em 2026.',key:'"Quem controla o passado controla o futuro. Quem controla o presente controla o passado."',tier:'b',label:'CURADO COM CONEXÕES',price:'14,99',time:'19 min',pages:40},
-  'FIC.002': {title:'Cem anos de <em>solidão</em>',author:'G. G. Márquez',synopsis:'Macondo e os Buendía em sete gerações. Realismo mágico, tempo circular, solidão como condição. Guia de leitura.',key:'"As estirpes condenadas a cem anos de solidão não tinham uma segunda oportunidade sobre a terra."',tier:'c',label:'CLÁSSICO CANÔNICO',price:'16,99',time:'25 min',pages:46},
-  'FIC.003': {title:'O sol é para <em>todos</em>',author:'Harper Lee',synopsis:'Inocência, justiça e a moral de uma menina vendo o mundo do alto de uma macieira. As lições de Atticus Finch para hoje.',key:'"Você nunca entende uma pessoa até considerar as coisas do ponto de vista dela."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'22 min',pages:52},
-  'FIC.004': {title:'A <em>metamorfose</em>',author:'Franz Kafka',synopsis:'Gregor Samsa acorda inseto. Por trás do absurdo, uma anatomia clínica do trabalho, da família e da alienação moderna.',key:'"Quando Gregor Samsa acordou de sonhos inquietos, encontrou-se em sua cama transformado num inseto monstruoso."',tier:'a',label:'LEITURA ESSENCIAL',price:'11,99',time:'20 min',pages:48}
+  /* ===== Volumes disponíveis ===== */
+  'LB.04': {title:'O Poder do <em>Hábito</em>',author:'Charles Duhigg · Vol. 04',synopsis:'O ciclo do hábito — deixa, rotina, recompensa — explicado com os casos clássicos: Pepsodent, Starbucks, Phelps, Alcoa. Como diagnosticar e reescrever seus loops pessoais e organizacionais.',key:'"A vida toda, tal como a conhecemos, é uma massa de hábitos."',tier:'b',label:'CURADO · DISPONÍVEL AGORA',price:'14,99',time:'24 min',pages:26},
+  'LB.05': {title:'Mindset, <em>a nova</em> psicologia',author:'Carol S. Dweck · Vol. 05',synopsis:'Mentalidade fixa versus mentalidade de crescimento. A pesquisa da psicóloga de Stanford, com exemplos do esporte, da educação e dos negócios. Protocolo para virar a chave incluído.',key:'"O passe que você consegue dar não é mais importante do que o passe que você ainda não consegue dar."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
+  'LB.06': {title:'O <em>Milagre</em> da Manhã',author:'Hal Elrod · Vol. 06',synopsis:'A rotina SAVERS — Silêncio, Afirmações, Visualização, Exercício, Leitura e Escrita. Conquistar a primeira hora é conquistar o resto do dia. Método de implantação em 30 dias incluído.',key:'"O nível de sucesso que você alcança raramente ultrapassa o nível do seu desenvolvimento pessoal."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
+  'LB.07': {title:'Pai Rico, <em>Pai Pobre</em>',author:'Robert T. Kiyosaki · Vol. 07',synopsis:'A distinção entre ativos e passivos, as seis lições do pai rico, o quadrante do fluxo de caixa, e o roteiro prático para sair da corrida do rato.',key:'"Os ricos compram ativos. Os pobres só têm despesas. A classe média compra passivos que acha que são ativos."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
+  'LB.08': {title:'Os 7 <em>Hábitos</em>',author:'Stephen R. Covey · Vol. 08',synopsis:'Os três hábitos da vitória privada (eu), os três da vitória pública (com outros), e o sétimo da renovação. Eficácia construída por princípios universais — não por técnica.',key:'"Entre estímulo e resposta há um espaço. Nesse espaço está a nossa liberdade."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
+
+  /* ===== Próximos lançamentos (placeholders) ===== */
+  'FIL.001': {title:'Meditações <em>essenciais</em>',author:'Marco Aurélio · Estoicismo',synopsis:'Como um imperador-filósofo destilou disciplina e virtude em frases para si mesmo. Reagrupado em 12 frentes — de coragem à morte —, abre o estoicismo sem floreios.',key:'"Você tem poder sobre sua mente — não sobre eventos externos. Perceba isso e encontrará força."',tier:'c',label:'CLÁSSICO · EM BREVE',price:'16,99',time:'24 min',pages:52},
+  'FIL.002': {title:'O suficiente <em>basta?</em>',author:'Sêneca · Cartas a Lucílio',synopsis:'Sêneca conversa com Lucílio sobre tempo, prazer, dor e a brevidade da vida. Viver bem é querer pouco.',key:'"Não é que tenhamos pouco tempo, é que perdemos muito dele."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'22 min',pages:48},
+  'FIL.003': {title:'A caverna, <em>de novo</em>',author:'Platão · República, livro VII',synopsis:'O mito da caverna lido com olhos contemporâneos: o que sai à luz quando algoritmos fabricam nossa visão? Síntese do Livro VII da República.',key:'"A educação não consiste em dar visão ao olho — mas em virá-lo na direção certa."',tier:'c',label:'CLÁSSICO CANÔNICO · EM BREVE',price:'16,99',time:'30 min',pages:64},
+  'FIL.004': {title:'Sobre o <em>eterno retorno</em>',author:'Nietzsche · Zaratustra',synopsis:'Zaratustra explicado em prosa direta: o teste do eterno retorno como bússola de vida. O que você desejaria viver de novo, idêntico?',key:'"Tornar-se aquilo que se é."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'26 min',pages:56},
+  'NEG.001': {title:'Zero a <em>um</em>',author:'Peter Thiel · Startups',synopsis:'Como criar do nada o que ainda não existe. Monopólios, segredos, segredos contraintuitivos — o manual contraculturalista do Vale do Silício.',key:'"Qual verdade importante poucas pessoas concordam com você?"',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'21 min',pages:46},
+  'NEG.002': {title:'O dilema da <em>inovação</em>',author:'Clayton Christensen',synopsis:'Por que empresas excelentes falham. A teoria do innovator’s dilemma: tecnologias disruptivas começam piores e vencem por baixo.',key:'"Servir bem clientes atuais é o motivo pelo qual organizações maduras perdem."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'24 min',pages:52},
+  'NEG.003': {title:'Bom para <em>ótimo</em>',author:'Jim Collins',synopsis:'O salto: o que faz empresas medianas se tornarem extraordinárias. Liderança nível 5, conceito do ouriço, flywheel.',key:'"Confronte os fatos brutais — mas nunca perca a fé."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'18 min',pages:40},
+  'NEG.004': {title:'A estratégia do <em>oceano</em>',author:'Kim & Mauborgne',synopsis:'Em vez de competir em mercados saturados (oceano vermelho), criar espaços inexplorados (oceano azul). A matriz eliminar/reduzir/levantar/criar.',key:'"O melhor competidor é aquele que recusa competir."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'27 min',pages:58},
+  'HAB.001': {title:'Hábitos <em>atômicos</em>',author:'James Clear',synopsis:'Mudanças de 1% que se acumulam. As 4 leis: torne óbvio, atraente, fácil, satisfatório. Sistemas em vez de objetivos.',key:'"Você não sobe ao nível dos seus objetivos. Cai ao nível dos seus sistemas."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'20 min',pages:44},
+  'HAB.002': {title:'Trabalho <em>profundo</em>',author:'Cal Newport',synopsis:'A habilidade rara e valiosa: concentração sem distração. Como projetar rotinas que produzem trabalho denso num mundo raso.',key:'"O foco é o novo QI."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'23 min',pages:50},
+  'HAB.003': {title:'Faça a <em>cama</em>',author:'William McRaven',synopsis:'10 lições do treinamento Navy SEAL para viver — começando por uma tarefa simples cumprida pela manhã.',key:'"Se quer mudar o mundo, comece arrumando sua cama."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'17 min',pages:38},
+  'PSI.001': {title:'Rápido e <em>devagar</em>',author:'Daniel Kahneman',synopsis:'Os dois sistemas que pensam por você. Sistema 1 é intuitivo e rápido; Sistema 2 é lento e racional. As armadilhas cognitivas que isso cria.',key:'"Nada na vida é tão importante quanto você pensa que é, enquanto está pensando nele."',tier:'c',label:'CLÁSSICO CANÔNICO · EM BREVE',price:'16,99',time:'28 min',pages:60},
+  'PSI.002': {title:'O corpo <em>guarda</em>',author:'Bessel van der Kolk',synopsis:'Trauma não é evento — é o que sobra no corpo depois dele. Como a neurociência atual entende e trata o trauma de forma somática.',key:'"O corpo carrega a história que a mente esqueceu."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'22 min',pages:48},
+  'PSI.003': {title:'Em busca de <em>sentido</em>',author:'Viktor Frankl',synopsis:'Sobreviver a Auschwitz e fundar a logoterapia: a busca por sentido como a força motriz mais profunda do humano.',key:'"Quando não podemos mudar a situação, somos desafiados a mudar a nós mesmos."',tier:'c',label:'CLÁSSICO CANÔNICO · EM BREVE',price:'16,99',time:'25 min',pages:54},
+  'PSI.004': {title:'A coragem de <em>ser</em> imperfeito',author:'Brené Brown',synopsis:'Vulnerabilidade não é fraqueza — é o berço da criatividade, da pertença e do amor. Pesquisa de duas décadas em primeira pessoa.',key:'"O que torna alguém vulnerável é o que o torna belo."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'20 min',pages:46},
+  'CIE.001': {title:'Sapiens',author:'Yuval N. Harari',synopsis:'70 mil anos de Homo sapiens em 60 páginas. Cognitiva, agrícola, científica — as três revoluções que nos fizeram quem somos.',key:'"Não há justiça na história. Mas há ficções que dominam o mundo."',tier:'c',label:'CLÁSSICO CANÔNICO · EM BREVE',price:'16,99',time:'30 min',pages:62},
+  'CIE.002': {title:'O gene <em>egoísta</em>',author:'Richard Dawkins',synopsis:'A reformulação radical da evolução: organismos como máquinas a serviço de seus genes. O conceito de meme cunhado aqui.',key:'"Somos máquinas de sobrevivência — autômatos cegamente programados para preservar moléculas egoístas chamadas genes."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'24 min',pages:50},
+  'CIE.003': {title:'Uma breve história do <em>tempo</em>',author:'Stephen Hawking',synopsis:'Big Bang, buracos negros, relatividade. Hawking convida o leitor não-cientista para o palco da cosmologia moderna.',key:'"Pra onde quer que olhemos, o universo distante recede."',tier:'c',label:'CLÁSSICO CANÔNICO · EM BREVE',price:'16,99',time:'28 min',pages:58},
+  'CIE.004': {title:'A ordem do <em>tempo</em>',author:'Carlo Rovelli',synopsis:'Por que o tempo passa? E passa mesmo? Um físico convida você a duvidar do mais certo dos sentidos.',key:'"O tempo é o lugar onde o ser se torna."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'21 min',pages:44},
+  'FIC.001': {title:'1984, <em>relido</em>',author:'George Orwell',synopsis:'Chaves de leitura para a distopia mais influente do século XX. Big Brother, novilíngua, duplipensar — como tudo virou pauta política em 2026.',key:'"Quem controla o passado controla o futuro. Quem controla o presente controla o passado."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'19 min',pages:40},
+  'FIC.002': {title:'Cem anos de <em>solidão</em>',author:'G. G. Márquez',synopsis:'Macondo e os Buendía em sete gerações. Realismo mágico, tempo circular, solidão como condição. Guia de leitura.',key:'"As estirpes condenadas a cem anos de solidão não tinham uma segunda oportunidade sobre a terra."',tier:'c',label:'CLÁSSICO CANÔNICO · EM BREVE',price:'16,99',time:'25 min',pages:46},
+  'FIC.003': {title:'O sol é para <em>todos</em>',author:'Harper Lee',synopsis:'Inocência, justiça e a moral de uma menina vendo o mundo do alto de uma macieira. As lições de Atticus Finch para hoje.',key:'"Você nunca entende uma pessoa até considerar as coisas do ponto de vista dela."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'22 min',pages:52},
+  'FIC.004': {title:'A <em>metamorfose</em>',author:'Franz Kafka',synopsis:'Gregor Samsa acorda inseto. Por trás do absurdo, uma anatomia clínica do trabalho, da família e da alienação moderna.',key:'"Quando Gregor Samsa acordou de sonhos inquietos, encontrou-se em sua cama transformado num inseto monstruoso."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'20 min',pages:48}
 };
 
 const pop = $('#bookPop');
@@ -2534,7 +2588,7 @@ function showPopFor(card){
   $('#bpEyeText').textContent = sku + ' · ' + d.label;
   $('#bpEye').className = 'bp-eye ' + d.tier;
   $('#bpCtaLabel').textContent = 'Comprar por R$ ' + d.price;
-  const buyUrl = (window.BREVIA_LINKS && window.BREVIA_LINKS[sku]) || '#pricing';
+  const buyUrl = (window.LB_LINKS && window.LB_LINKS[sku]) || '#pricing';
   $('#bpCta').href = buyUrl;
   positionPop(card);
   // restart entry animation by toggling .show
