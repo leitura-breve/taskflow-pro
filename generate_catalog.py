@@ -1054,12 +1054,12 @@ def build_catalog(books_full):
         c.setFont("Helvetica-Bold", 8); c.setFillColor(ink); c.setCharSpace(3)
         c.drawString(MARGIN_L, PAGE_H - 1.25*cm, "CATÁLOGO · COLEÇÃO COMPLETA")
         c.drawRightString(PAGE_W - MARGIN_R, PAGE_H - 1.25*cm, "ED. MAIO 2026"); c.setCharSpace(0)
-        # numero "18" grande
+        # numero "38" grande
         c.setFont("Helvetica-Bold", 230); c.setFillColor(HexColor("#EBE7DA"))
-        c.setCharSpace(-8); c.drawString(MARGIN_L - 0.3*cm, PAGE_H - 11*cm, "18"); c.setCharSpace(0)
+        c.setCharSpace(-8); c.drawString(MARGIN_L - 0.3*cm, PAGE_H - 11*cm, "38"); c.setCharSpace(0)
         # kicker
         c.setFont("Helvetica-Bold", 9); c.setFillColor(accent); c.setCharSpace(2.2)
-        c.drawString(MARGIN_L, PAGE_H - 12.3*cm, "RESUMOS · DESENVOLVIMENTO · LITERATURA")
+        c.drawString(MARGIN_L, PAGE_H - 12.3*cm, "RESUMOS · DESENVOLVIMENTO · LITERATURA · FILOSOFIA")
         c.setCharSpace(0)
         # título
         c.setFont("Helvetica-Bold", 60); c.setFillColor(ink)
@@ -1067,7 +1067,7 @@ def build_catalog(books_full):
         c.drawString(MARGIN_L, PAGE_H - 16.5*cm, "Breve.")
         # subtítulo
         c.setFont("Times-Italic", 14); c.setFillColor(subink)
-        c.drawString(MARGIN_L, PAGE_H - 17.6*cm, "Catálogo dos 18 volumes lançados — bestsellers brasileiros")
+        c.drawString(MARGIN_L, PAGE_H - 17.6*cm, "Catálogo dos 38 volumes lançados — bestsellers, clássicos")
         c.drawString(MARGIN_L, PAGE_H - 18.2*cm, "resumidos para uma sessão de leitura.")
         # rule
         c.setStrokeColor(accent); c.setLineWidth(1.4)
@@ -1081,7 +1081,7 @@ def build_catalog(books_full):
         c.setStrokeColor(ink); c.setLineWidth(0.5)
         c.line(MARGIN_L, 2.3*cm, PAGE_W - MARGIN_R, 2.3*cm)
         c.setFont("Helvetica-Bold", 7.5); c.setFillColor(muted); c.setCharSpace(2.5)
-        c.drawString(MARGIN_L, 1.7*cm, "CATÁLOGO COMPLETO  ·  COLEÇÃO LEITURA BREVE  ·  VOL. 01–18")
+        c.drawString(MARGIN_L, 1.7*cm, "CATÁLOGO COMPLETO  ·  COLEÇÃO LEITURA BREVE  ·  VOL. 01–38")
         c.drawRightString(PAGE_W - MARGIN_R, 1.7*cm, "FORMATO A4"); c.setCharSpace(0)
 
     def _body(c, doc):
@@ -1126,7 +1126,7 @@ def build_catalog(books_full):
     story.append(Paragraph("Sobre esta coleção.", section))
     story.append(HLine(fw, thickness=0.6, color=ink, space_after=12))
     story.append(Paragraph(
-        "Coleção dos 18 volumes lançados pela <b>Leitura Breve</b> — resumos editoriais "
+        "Coleção dos 38 volumes lançados pela <b>Leitura Breve</b> — resumos editoriais "
         "completos dos bestsellers que mais venderam no Brasil nas últimas décadas. "
         "Cada volume foi pensado para ser lido em uma única sessão e funciona como "
         "caderno de leitura: contém ficha técnica, resumo capítulo a capítulo, "
@@ -1135,7 +1135,7 @@ def build_catalog(books_full):
 
     # Estatística da coleção
     stats = [
-        ["Volumes",        f"18"],
+        ["Volumes",        f"38"],
         ["Categorias",     "Comportamento · Negócios · Filosofia · Literatura · Finanças"],
         ["Páginas no total", f"≈ {sum(b['pages_count'] for b in books_full)} páginas"],
         ["Autores",        ", ".join(sorted(set(b['author'].split()[-1] for b in books_full)))[:80] + "..."],
@@ -1160,7 +1160,7 @@ def build_catalog(books_full):
 
     # ═══ ÍNDICE DOS VOLUMES ═══
     story.append(Paragraph("ÍNDICE", label))
-    story.append(Paragraph("Os 18 volumes em uma página.", section))
+    story.append(Paragraph("Os 38 volumes em duas páginas.", section))
     story.append(HLine(fw, thickness=0.6, color=ink, space_after=12))
 
     toc_main = ParagraphStyle("tcm", fontName="Helvetica-Bold", fontSize=10, leading=14, textColor=ink)
@@ -2137,12 +2137,19 @@ BOOKS = [
 # ═══════════════════════════════════════════════════════
 
 def load_more_books():
-    """Carrega os Vols. 08-18 do módulo books_data."""
+    """Carrega os Vols. 08-18 + 19-38."""
+    result = []
     try:
         import books_data
-        return books_data.MORE_BOOKS
+        result.extend(books_data.MORE_BOOKS)
     except ImportError:
-        return []
+        pass
+    try:
+        import books_data_2
+        result.extend(books_data_2.MORE_BOOKS_2)
+    except ImportError:
+        pass
+    return result
 
 
 # ═══════════════════════════════════════════════════════
