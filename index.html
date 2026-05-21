@@ -1114,7 +1114,13 @@ footer{
    ============================================================ */
 .showcase{
   position:relative;background:var(--ink);color:var(--cream);
-  height:340vh;overflow:visible;
+  height:260vh;overflow:visible;
+}
+/* Seamless transition to next section (avoids "black empty void" feel) */
+.showcase::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:30vh;
+  background:linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+  pointer-events:none;z-index:1;
 }
 .showcase-sticky{
   position:sticky;top:0;height:100vh;width:100%;
@@ -1399,18 +1405,23 @@ footer{
   <div class="showcase-sticky">
     <div class="showcase-head">
       <div class="showcase-eye">— Lançamentos · maio MMXXVI</div>
-      <h2 class="showcase-title">Cinco volumes,<br><em>disponíveis</em> agora.<br>Para começar hoje.</h2>
+      <h2 class="showcase-title">Dez volumes,<br><em>disponíveis</em> agora.<br>Para começar hoje.</h2>
     </div>
     <div class="showcase-stage" id="showcaseStage">
-      <div class="shelf-book real" style="--cover:url('covers/poder-do-habito.jpg')" data-i="0" data-sku="LB.04"></div>
-      <div class="shelf-book real" style="--cover:url('covers/mindset.jpg')" data-i="1" data-sku="LB.05"></div>
-      <div class="shelf-book real" style="--cover:url('covers/milagre-da-manha.jpg')" data-i="2" data-sku="LB.06"></div>
-      <div class="shelf-book real" style="--cover:url('covers/pai-rico-pai-pobre.jpg')" data-i="3" data-sku="LB.07"></div>
-      <div class="shelf-book real" style="--cover:url('covers/sete-habitos.jpg')" data-i="4" data-sku="LB.08"></div>
+      <div class="shelf-book real" style="--cover:url('covers/poder-do-habito.jpg')"        data-i="0" data-sku="LB.04"></div>
+      <div class="shelf-book real" style="--cover:url('covers/mindset.jpg')"                data-i="1" data-sku="LB.05"></div>
+      <div class="shelf-book real" style="--cover:url('covers/milagre-da-manha.jpg')"       data-i="2" data-sku="LB.06"></div>
+      <div class="shelf-book real" style="--cover:url('covers/pai-rico-pai-pobre.jpg')"     data-i="3" data-sku="LB.07"></div>
+      <div class="shelf-book real" style="--cover:url('covers/sete-habitos.jpg')"           data-i="4" data-sku="LB.08"></div>
+      <div class="shelf-book real" style="--cover:url('covers/como-fazer-amigos.jpg')"      data-i="5" data-sku="LB.09"></div>
+      <div class="shelf-book real" style="--cover:url('covers/homem-da-babilonia.jpg')"     data-i="6" data-sku="LB.10"></div>
+      <div class="shelf-book real" style="--cover:url('covers/monge-e-executivo.jpg')"      data-i="7" data-sku="LB.11"></div>
+      <div class="shelf-book real" style="--cover:url('covers/inteligencia-emocional.jpg')" data-i="8" data-sku="LB.12"></div>
+      <div class="shelf-book real" style="--cover:url('covers/rapido-e-devagar.jpg')"       data-i="9" data-sku="LB.13"></div>
     </div>
     <div class="showcase-foot">
       <span class="pgnum" id="showcaseNum">01</span>
-      <span class="of">de 05 títulos · DISPONÍVEIS AGORA</span>
+      <span class="of">de 10 títulos · DISPONÍVEIS AGORA</span>
     </div>
   </div>
 </section>
@@ -1513,6 +1524,34 @@ footer{
           <div class="bc-price" data-tier="a">R$ 11,99</div>
         </div>
       </article>
+      <article data-sku="LB.09" data-tier-card="a" class="book-card live" style="--cover:url('covers/como-fazer-amigos.jpg')">
+        <div class="book-card-inner tilt">
+          <div class="book-card-cover" role="img" aria-label="Capa Como Fazer Amigos"></div>
+        </div>
+        <div class="book-card-foot">
+          <div class="bc-foot-info"><h4>Como Fazer Amigos</h4><p>Dale Carnegie · Vol. 09</p></div>
+          <div class="bc-price" data-tier="a">R$ 11,99</div>
+        </div>
+      </article>
+      <article data-sku="LB.10" data-tier-card="a" class="book-card live" style="--cover:url('covers/homem-da-babilonia.jpg')">
+        <div class="book-card-inner tilt">
+          <div class="book-card-cover" role="img" aria-label="Capa O Homem da Babilônia"></div>
+        </div>
+        <div class="book-card-foot">
+          <div class="bc-foot-info"><h4>O Homem da Babilônia</h4><p>George S. Clason · Vol. 10</p></div>
+          <div class="bc-price" data-tier="a">R$ 11,99</div>
+        </div>
+      </article>
+      <article data-sku="LB.11" data-tier-card="a" class="book-card live" style="--cover:url('covers/monge-e-executivo.jpg')">
+        <div class="book-card-inner tilt">
+          <div class="book-card-cover" role="img" aria-label="Capa O Monge e o Executivo"></div>
+        </div>
+        <div class="book-card-foot">
+          <div class="bc-foot-info"><h4>O Monge e o Executivo</h4><p>James C. Hunter · Vol. 11</p></div>
+          <div class="bc-price" data-tier="a">R$ 11,99</div>
+        </div>
+      </article>
+
       <article data-sku="NEG.001" data-tier-card="b" class="book-card soon" style="--c1:#1F2A3D;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
@@ -1652,19 +1691,25 @@ footer{
           <div class="bc-price" data-tier="a">R$ 11,99</div>
         </div>
       </article>
-      <article data-sku="PSI.001" data-tier-card="c" class="book-card soon" style="--c1:#2A1B33;--c2:#0e0e0c">
+      <article data-sku="LB.12" data-tier-card="a" class="book-card live" style="--cover:url('covers/inteligencia-emocional.jpg')">
         <div class="book-card-inner tilt">
-          <div class="book-card-cover">
-            <div class="bc-meta"><span>PSI.001</span><span>60 PG</span></div>
-            <div><div class="bc-title">Rápido e<br><em>devagar</em></div></div>
-            <div class="bc-bottom">Daniel Kahneman</div>
-          </div>
+          <div class="book-card-cover" role="img" aria-label="Capa Inteligência Emocional"></div>
         </div>
         <div class="book-card-foot">
-          <div class="bc-foot-info"><h4>Rápido e devagar</h4><p>Daniel Kahneman</p></div>
-          <div class="bc-price data-tier="c">R$ 16,99</div>
+          <div class="bc-foot-info"><h4>Inteligência Emocional</h4><p>Daniel Goleman · Vol. 12</p></div>
+          <div class="bc-price" data-tier="a">R$ 11,99</div>
         </div>
       </article>
+      <article data-sku="LB.13" data-tier-card="a" class="book-card live" style="--cover:url('covers/rapido-e-devagar.jpg')">
+        <div class="book-card-inner tilt">
+          <div class="book-card-cover" role="img" aria-label="Capa Rápido e Devagar"></div>
+        </div>
+        <div class="book-card-foot">
+          <div class="bc-foot-info"><h4>Rápido e Devagar</h4><p>Daniel Kahneman · Vol. 13</p></div>
+          <div class="bc-price" data-tier="a">R$ 11,99</div>
+        </div>
+      </article>
+
       <article data-sku="PSI.002" data-tier-card="b" class="book-card soon" style="--c1:#1B1F33;--c2:#0e0e0c">
         <div class="book-card-inner tilt">
           <div class="book-card-cover">
@@ -1882,7 +1927,7 @@ footer{
 <!-- ========== STATS ========== -->
 <section class="stats" id="stats">
   <div class="stat">
-    <div class="stat-num" data-count="5" data-suffix="">0</div>
+    <div class="stat-num" data-count="10" data-suffix="">0</div>
     <div class="stat-lbl">volumes<br>disponíveis agora</div>
   </div>
   <div class="stat">
@@ -2240,13 +2285,17 @@ function updateTimeline(){
   if (!tl) return;
   const r = tl.getBoundingClientRect();
   const view = window.innerHeight;
-  const total = r.height;
-  const start = -r.top + view * .35;
-  const ratio = Math.max(0, Math.min(1, start / total));
+  // "anchor" is the y-line in the viewport that the progress bar tracks
+  // (mid-screen). It maps:
+  //   - top of timeline at mid-screen → ratio 0
+  //   - bottom of timeline at mid-screen → ratio 1
+  const anchor = view * 0.5;
+  const ratio = Math.max(0, Math.min(1, (anchor - r.top) / Math.max(1, r.height)));
   if (tlProg) tlProg.style.height = (ratio * 100) + '%';
+  // a step "actives" when its top crosses the anchor line
   steps.forEach(s => {
     const sr = s.getBoundingClientRect();
-    if (sr.top < view * .75 && sr.bottom > view * .25) s.classList.add('in');
+    s.classList.toggle('in', sr.top < anchor + 40);
   });
 }
 window.addEventListener('scroll', updateTimeline, {passive:true});
@@ -2500,6 +2549,11 @@ const BOOK_DETAILS = {
   'LB.06': {title:'O <em>Milagre</em> da Manhã',author:'Hal Elrod · Vol. 06',synopsis:'A rotina SAVERS — Silêncio, Afirmações, Visualização, Exercício, Leitura e Escrita. Conquistar a primeira hora é conquistar o resto do dia. Método de implantação em 30 dias incluído.',key:'"O nível de sucesso que você alcança raramente ultrapassa o nível do seu desenvolvimento pessoal."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
   'LB.07': {title:'Pai Rico, <em>Pai Pobre</em>',author:'Robert T. Kiyosaki · Vol. 07',synopsis:'A distinção entre ativos e passivos, as seis lições do pai rico, o quadrante do fluxo de caixa, e o roteiro prático para sair da corrida do rato.',key:'"Os ricos compram ativos. Os pobres só têm despesas. A classe média compra passivos que acha que são ativos."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
   'LB.08': {title:'Os 7 <em>Hábitos</em>',author:'Stephen R. Covey · Vol. 08',synopsis:'Os três hábitos da vitória privada (eu), os três da vitória pública (com outros), e o sétimo da renovação. Eficácia construída por princípios universais — não por técnica.',key:'"Entre estímulo e resposta há um espaço. Nesse espaço está a nossa liberdade."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
+  'LB.09': {title:'Como Fazer <em>Amigos</em>',author:'Dale Carnegie · Vol. 09',synopsis:'Os princípios para tratar pessoas, fazer amizades, persuadir sem ofender e liderar sem ferir. Publicado em 1936 — e ainda surpreendentemente atual.',key:'"Você pode fazer mais amigos em dois meses interessando-se pelos outros do que em dois anos tentando que os outros se interessem por você."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
+  'LB.10': {title:'O Homem da <em>Babilônia</em>',author:'George S. Clason · Vol. 10',synopsis:'Os princípios universais do enriquecimento pessoal contados como parábola: pague-se primeiro, controle gastos, faça o ouro multiplicar. Sabedoria de 1926 que ainda regula a vida financeira.',key:'"Uma parte de tudo o que você ganha é sua para guardar."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
+  'LB.11': {title:'O Monge e o <em>Executivo</em>',author:'James C. Hunter · Vol. 11',synopsis:'Um executivo em crise passa uma semana num mosteiro e descobre, com um monge improvável, que liderar é servir. A liderança servidora destilada em parábola.',key:'"Liderar é identificar e satisfazer as necessidades legítimas das pessoas e remover os obstáculos para que se sobressaiam."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
+  'LB.12': {title:'Inteligência <em>Emocional</em>',author:'Daniel Goleman · Vol. 12',synopsis:'Os cinco pilares (autoconsciência, autorregulação, motivação, empatia, habilidade social), o sequestro da amígdala e a tese central: QE pode importar mais que QI.',key:'"Em um sentido muito real, todos nós temos duas mentes — uma que pensa e outra que sente."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
+  'LB.13': {title:'Rápido e <em>Devagar</em>',author:'Daniel Kahneman · Vol. 13',synopsis:'Os dois sistemas de pensamento, principais heurísticas e vieses, e o que isso significa para decisões pessoais e financeiras. Obra-síntese do Nobel.',key:'"Confiança não é um índice de acurácia. É um índice de coerência."',tier:'a',label:'ESSENCIAL · DISPONÍVEL AGORA',price:'11,99',time:'22 min',pages:25},
 
   /* ===== Próximos lançamentos (placeholders) ===== */
   'FIL.001': {title:'Meditações <em>essenciais</em>',author:'Marco Aurélio · Estoicismo',synopsis:'Como um imperador-filósofo destilou disciplina e virtude em frases para si mesmo. Reagrupado em 12 frentes — de coragem à morte —, abre o estoicismo sem floreios.',key:'"Você tem poder sobre sua mente — não sobre eventos externos. Perceba isso e encontrará força."',tier:'c',label:'CLÁSSICO · EM BREVE',price:'16,99',time:'24 min',pages:52},
@@ -2513,7 +2567,6 @@ const BOOK_DETAILS = {
   'HAB.001': {title:'Hábitos <em>atômicos</em>',author:'James Clear',synopsis:'Mudanças de 1% que se acumulam. As 4 leis: torne óbvio, atraente, fácil, satisfatório. Sistemas em vez de objetivos.',key:'"Você não sobe ao nível dos seus objetivos. Cai ao nível dos seus sistemas."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'20 min',pages:44},
   'HAB.002': {title:'Trabalho <em>profundo</em>',author:'Cal Newport',synopsis:'A habilidade rara e valiosa: concentração sem distração. Como projetar rotinas que produzem trabalho denso num mundo raso.',key:'"O foco é o novo QI."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'23 min',pages:50},
   'HAB.003': {title:'Faça a <em>cama</em>',author:'William McRaven',synopsis:'10 lições do treinamento Navy SEAL para viver — começando por uma tarefa simples cumprida pela manhã.',key:'"Se quer mudar o mundo, comece arrumando sua cama."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'17 min',pages:38},
-  'PSI.001': {title:'Rápido e <em>devagar</em>',author:'Daniel Kahneman',synopsis:'Os dois sistemas que pensam por você. Sistema 1 é intuitivo e rápido; Sistema 2 é lento e racional. As armadilhas cognitivas que isso cria.',key:'"Nada na vida é tão importante quanto você pensa que é, enquanto está pensando nele."',tier:'c',label:'CLÁSSICO CANÔNICO · EM BREVE',price:'16,99',time:'28 min',pages:60},
   'PSI.002': {title:'O corpo <em>guarda</em>',author:'Bessel van der Kolk',synopsis:'Trauma não é evento — é o que sobra no corpo depois dele. Como a neurociência atual entende e trata o trauma de forma somática.',key:'"O corpo carrega a história que a mente esqueceu."',tier:'b',label:'CURADO COM CONEXÕES · EM BREVE',price:'14,99',time:'22 min',pages:48},
   'PSI.003': {title:'Em busca de <em>sentido</em>',author:'Viktor Frankl',synopsis:'Sobreviver a Auschwitz e fundar a logoterapia: a busca por sentido como a força motriz mais profunda do humano.',key:'"Quando não podemos mudar a situação, somos desafiados a mudar a nós mesmos."',tier:'c',label:'CLÁSSICO CANÔNICO · EM BREVE',price:'16,99',time:'25 min',pages:54},
   'PSI.004': {title:'A coragem de <em>ser</em> imperfeito',author:'Brené Brown',synopsis:'Vulnerabilidade não é fraqueza — é o berço da criatividade, da pertença e do amor. Pesquisa de duas décadas em primeira pessoa.',key:'"O que torna alguém vulnerável é o que o torna belo."',tier:'a',label:'LEITURA ESSENCIAL · EM BREVE',price:'11,99',time:'20 min',pages:46},
