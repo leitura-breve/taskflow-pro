@@ -2629,13 +2629,14 @@ $$('.btn, .btn-ghost').forEach(btn => {
 (function setupBookLinks(){
   const map = window.LB_LINKS || {};
   $$('.book-card').forEach(card => {
-    const metaEl = card.querySelector('.bc-meta span:first-child');
-    if (!metaEl) return;
-    const sku = metaEl.textContent.trim(); // e.g. FIL.001
+    const sku = (card.dataset.sku || card.querySelector('.bc-meta span:first-child')?.textContent || '').trim();
+    if (!sku) return;
     const url = map[sku] || '#pricing';
     const a = document.createElement('a');
     a.className = 'bc-buy';
     a.href = url;
+    if (url !== '#pricing') a.target = '_blank';
+    a.rel = 'noopener';
     a.dataset.link = '';
     a.innerHTML = '<span>Comprar PDF →</span>';
     card.appendChild(a);
