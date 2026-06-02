@@ -3,3 +3,5 @@ __pycache__/
 .env
 .env.local
 *.secret
+leitura_breve.db
+webhook.log
