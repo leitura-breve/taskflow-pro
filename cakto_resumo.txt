@@ -1,0 +1,87 @@
+======================================================================
+COLECAO LEITURA BREVE — RESUMO PARA CAKTO
+======================================================================
+
+Total de produtos: 55
+  - 53 livros individuais
+  - 2 planos de assinatura
+
+Precos:
+  - Cada livro: R$ 19,90
+  - Assinatura mensal: R$ 19,90
+  - Assinatura anual: R$ 149,00 (37% off)
+
+----------------------------------------------------------------------
+LIVROS
+----------------------------------------------------------------------
+Vol. 01  Vol. 01 · Hábitos Atômicos — Resumo Leitura Breve        211 KB  Habitos_Atomicos_Resumo.pdf
+Vol. 02  Vol. 02 · O Alquimista — Resumo Leitura Breve             63 KB  O_Alquimista_Resumo.pdf
+Vol. 03  Vol. 03 · A Sutil Arte de Ligar o F*da-Se — Resumo Leit   41 KB  A_Sutil_Arte_Resumo.pdf
+Vol. 04  Vol. 04 · O Poder do Hábito — Resumo Leitura Breve        47 KB  Vol_04_poder_habito.pdf
+Vol. 05  Vol. 05 · Mindset — Resumo Leitura Breve                  45 KB  Vol_05_mindset.pdf
+Vol. 06  Vol. 06 · O Milagre da Manhã — Resumo Leitura Breve       43 KB  Vol_06_milagre_manha.pdf
+Vol. 07  Vol. 07 · Pai Rico, Pai Pobre — Resumo Leitura Breve      45 KB  Vol_07_pai_rico.pdf
+Vol. 08  Vol. 08 · Os 7 Hábitos das Pessoas Altamente Eficazes —   44 KB  Vol_08_sete_habitos.pdf
+Vol. 09  Vol. 09 · Como Fazer Amigos e Influenciar Pessoas — Res   44 KB  Vol_09_amigos.pdf
+Vol. 10  Vol. 10 · O Homem Mais Rico da Babilônia — Resumo Leitu   44 KB  Vol_10_babilonia.pdf
+Vol. 11  Vol. 11 · O Monge e o Executivo — Resumo Leitura Breve    43 KB  Vol_11_monge.pdf
+Vol. 12  Vol. 12 · Inteligência Emocional — Resumo Leitura Breve   44 KB  Vol_12_ie.pdf
+Vol. 13  Vol. 13 · Rápido e Devagar — Resumo Leitura Breve         44 KB  Vol_13_rapido_devagar.pdf
+Vol. 14  Vol. 14 · Trabalhe 4 Horas por Semana — Resumo Leitura    43 KB  Vol_14_trabalhe4h.pdf
+Vol. 15  Vol. 15 · Os Segredos da Mente Milionária — Resumo Leit   46 KB  Vol_15_mente_milionaria.pdf
+Vol. 16  Vol. 16 · Dom Casmurro — Resumo Leitura Breve             46 KB  Vol_16_dom_casmurro.pdf
+Vol. 17  Vol. 17 · Capitães da Areia — Resumo Leitura Breve        47 KB  Vol_17_capitaes_areia.pdf
+Vol. 18  Vol. 18 · O Pequeno Príncipe — Resumo Leitura Breve       46 KB  Vol_18_pequeno_principe.pdf
+Vol. 19  Vol. 19 · Comece pelo Porquê — Resumo Leitura Breve       43 KB  Vol_19_comece_porque.pdf
+Vol. 20  Vol. 20 · A Coragem de Ser Imperfeito — Resumo Leitura    43 KB  Vol_20_coragem_imperfeito.pdf
+Vol. 21  Vol. 21 · Essencialismo — Resumo Leitura Breve            42 KB  Vol_21_essencialismo.pdf
+Vol. 22  Vol. 22 · Antifrágil — Resumo Leitura Breve               43 KB  Vol_22_antifragil.pdf
+Vol. 23  Vol. 23 · A Arte da Guerra — Resumo Leitura Breve         45 KB  Vol_23_arte_guerra.pdf
+Vol. 24  Vol. 24 · Meditações — Resumo Leitura Breve               45 KB  Vol_24_meditacoes.pdf
+Vol. 25  Vol. 25 · As 48 Leis do Poder — Resumo Leitura Breve      46 KB  Vol_25_leis_poder.pdf
+Vol. 26  Vol. 26 · A Estratégia do Oceano Azul — Resumo Leitura    44 KB  Vol_26_oceano_azul.pdf
+Vol. 27  Vol. 27 · De Zero a Um — Resumo Leitura Breve             43 KB  Vol_27_zero_a_um.pdf
+Vol. 28  Vol. 28 · Tudo é F*da — Resumo Leitura Breve              42 KB  Vol_28_tudo_foda.pdf
+Vol. 29  Vol. 29 · O Homem em Busca de Sentido — Resumo Leitura    43 KB  Vol_29_busca_sentido.pdf
+Vol. 30  Vol. 30 · Vidas Secas — Resumo Leitura Breve              45 KB  Vol_30_vidas_secas.pdf
+Vol. 31  Vol. 31 · Memórias Póstumas de Brás Cubas — Resumo Leit   46 KB  Vol_31_bras_cubas.pdf
+Vol. 32  Vol. 32 · A Hora da Estrela — Resumo Leitura Breve        45 KB  Vol_32_hora_estrela.pdf
+Vol. 33  Vol. 33 · Quarto de Despejo — Resumo Leitura Breve        45 KB  Vol_33_quarto_despejo.pdf
+Vol. 34  Vol. 34 · Cem Anos de Solidão — Resumo Leitura Breve      46 KB  Vol_34_cem_anos.pdf
+Vol. 35  Vol. 35 · 1984 — Resumo Leitura Breve                     44 KB  Vol_35_1984.pdf
+Vol. 36  Vol. 36 · O Diário de Anne Frank — Resumo Leitura Breve   45 KB  Vol_36_anne_frank.pdf
+Vol. 37  Vol. 37 · A Revolução dos Bichos — Resumo Leitura Breve   45 KB  Vol_37_revolucao_bichos.pdf
+Vol. 38  Vol. 38 · Sapiens — Resumo Leitura Breve                  46 KB  Vol_38_sapiens.pdf
+Vol. 39  Vol. 39 · O Poder do Agora — Resumo Leitura Breve         44 KB  Vol_39_poder_agora.pdf
+Vol. 40  Vol. 40 · Quem Pensa Enriquece — Resumo Leitura Breve     44 KB  Vol_40_pense_enriqueca.pdf
+Vol. 41  Vol. 41 · As Cinco Linguagens do Amor — Resumo Leitura    44 KB  Vol_41_linguagens_amor.pdf
+Vol. 42  Vol. 42 · Comunicação Não-Violenta — Resumo Leitura Bre   45 KB  Vol_42_cnv.pdf
+Vol. 43  Vol. 43 · A Coragem de Não Agradar — Resumo Leitura Bre   45 KB  Vol_43_coragem_nao_agradar.pdf
+Vol. 44  Vol. 44 · 12 Regras para a Vida — Resumo Leitura Breve    44 KB  Vol_44_12_regras.pdf
+Vol. 45  Vol. 45 · Garra — Resumo Leitura Breve                    45 KB  Vol_45_garra.pdf
+Vol. 46  Vol. 46 · Ansiedade — O Mal do Século — Resumo Leitura    45 KB  Vol_46_ansiedade_cury.pdf
+Vol. 47  Vol. 47 · Mulheres que Correm com os Lobos — Resumo Lei   47 KB  Vol_47_mulheres_lobos.pdf
+Vol. 48  Vol. 48 · A Menina que Roubava Livros — Resumo Leitura    45 KB  Vol_48_menina_livros.pdf
+Vol. 49  Vol. 49 · A Cabana — Resumo Leitura Breve                 45 KB  Vol_49_cabana.pdf
+Vol. 50  Vol. 50 · O Cortiço — Resumo Leitura Breve                46 KB  Vol_50_cortico.pdf
+Vol. 51  Vol. 51 · Triste Fim de Policarpo Quaresma — Resumo Lei   46 KB  Vol_51_policarpo.pdf
+Vol. 52  Vol. 52 · Crime e Castigo — Resumo Leitura Breve          47 KB  Vol_52_crime_castigo.pdf
+Vol. 53  Vol. 53 · A Metamorfose — Resumo Leitura Breve            46 KB  Vol_53_metamorfose.pdf
+
+----------------------------------------------------------------------
+ASSINATURAS
+----------------------------------------------------------------------
+  Assinatura Leitura Breve — Mensal  (monthly)  R$ 19,90
+  Assinatura Leitura Breve — Anual (37% off)  (yearly)  R$ 149,00
+
+======================================================================
+PASSO A PASSO NA CAKTO
+======================================================================
+1. Entre em https://app.cakto.com.br/
+2. Crie cada um dos 38 produtos digitais individuais usando os textos
+   prontos em cakto_textos_venda.md (copie/cole campo a campo).
+3. No upload de arquivo, use o PDF correspondente (coluna 'Arquivo' do CSV).
+4. Crie os 2 planos de assinatura (mensal e anual) — eles usam o mesmo
+   acervo (todos os 38 PDFs anexados a area de membros).
+5. Use cakto_import.csv como referencia para configurar precos, categorias
+   e tags. Se a Cakto tiver importacao em massa, use direto.

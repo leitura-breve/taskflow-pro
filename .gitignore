@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+.env.local
+*.secret
+leitura_breve.db
+webhook.log
