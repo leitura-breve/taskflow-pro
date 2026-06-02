@@ -59,6 +59,21 @@ BOOKS_META = [
     ("36", "anne_frank",          "O Diário de Anne Frank",                        "Anne Frank",                 "Holocausto · Memória · Adolescência",             "Humanidade não desaparece — é apagada.", "Apesar de tudo, eu ainda acredito que as pessoas são, no fundo, boas.", "Vol_36_anne_frank.pdf"),
     ("37", "revolucao_bichos",    "A Revolução dos Bichos",                        "George Orwell",              "Alegoria · Política · Revolução",                 "Toda revolução fala em igualdade enquanto faz; algumas, depois, traduzem 'iguais' por 'mais iguais'.", "Todos os animais são iguais. Mas alguns animais são mais iguais que outros.", "Vol_37_revolucao_bichos.pdf"),
     ("38", "sapiens",             "Sapiens",                                       "Yuval Noah Harari",          "História · Antropologia · Big history",            "Sapiens domina o planeta por uma habilidade única: contar histórias em que muita gente acredita ao mesmo tempo.", "Há 70 mil anos, sapiens era um primata insignificante.", "Vol_38_sapiens.pdf"),
+    ("39", "poder_agora",         "O Poder do Agora",                              "Eckhart Tolle",              "Presença · Espiritualidade · Mente",               "Você não é a sua mente. Todo sofrimento real acontece quando você abandona o agora.", "Perceba profundamente que o momento presente é tudo o que você sempre terá.", "Vol_39_poder_agora.pdf"),
+    ("40", "pense_enriqueca",     "Quem Pensa Enriquece",                          "Napoleon Hill",              "Riqueza · Mentalidade · Clássico americano",        "Riqueza começa como estado mental: desejo definido, fé, plano e persistência.", "Tudo o que a mente pode conceber e acreditar, ela pode alcançar.", "Vol_40_pense_enriqueca.pdf"),
+    ("41", "linguagens_amor",     "As Cinco Linguagens do Amor",                   "Gary Chapman",               "Amor · Casal · Comunicação",                       "As pessoas falam línguas de amor diferentes. Quase todo casamento em crise é dois monolíngues gritando.", "O amor que você sente não chega ao outro se for entregue na língua errada.", "Vol_41_linguagens_amor.pdf"),
+    ("42", "cnv",                 "Comunicação Não-Violenta",                      "Marshall Rosenberg",         "Comunicação · Empatia · Conflito",                  "Por trás de toda agressão há uma necessidade não atendida falando errado.", "Toda crítica é a expressão trágica de uma necessidade não atendida.", "Vol_42_cnv.pdf"),
+    ("43", "coragem_nao_agradar", "A Coragem de Não Agradar",                      "Ichiro Kishimi & Fumitake Koga", "Liberdade · Psicologia de Adler · Diálogo",     "Toda liberdade começa quando você aceita a possibilidade de não ser aprovado.", "A liberdade é ser capaz de ser detestado por outras pessoas.", "Vol_43_coragem_nao_agradar.pdf"),
+    ("44", "12_regras",           "12 Regras para a Vida",                         "Jordan B. Peterson",         "Ordem · Responsabilidade · Sentido",                "A resposta ao sofrimento é assumir a maior carga de responsabilidade que você consegue carregar.", "Compare-se com quem você era ontem, não com quem outra pessoa é hoje.", "Vol_44_12_regras.pdf"),
+    ("45", "garra",               "Garra",                                         "Angela Duckworth",           "Perseverança · Talento · Esforço",                  "Talento conta uma vez; esforço conta duas. Garra prevê quem chega melhor do que QI ou dom.", "Nosso potencial é uma coisa. O que fazemos com ele é outra completamente diferente.", "Vol_45_garra.pdf"),
+    ("46", "ansiedade_cury",      "Ansiedade — O Mal do Século",                   "Augusto Cury",               "Ansiedade · Mente · Autor brasileiro",              "A ansiedade moderna não é falta de calma — é excesso de pensamento.", "Não somos vítimas dos nossos pensamentos. Somos os autores — que esqueceram que podem editar.", "Vol_46_ansiedade_cury.pdf"),
+    ("47", "mulheres_lobos",      "Mulheres que Correm com os Lobos",              "Clarissa Pinkola Estés",     "Arquétipos · Psicologia junguiana · Feminino",      "Dentro de toda mulher vive uma natureza instintiva e selvagem que a civilização ensinou a domesticar.", "Agradar aos outros exige que nos exilemos de nós mesmas.", "Vol_47_mulheres_lobos.pdf"),
+    ("48", "menina_livros",       "A Menina que Roubava Livros",                   "Markus Zusak",               "Romance · Guerra · Narrado pela Morte",             "As mesmas palavras que Hitler usou para destruir, uma menina usou para sobreviver.", "Eu odiei as palavras e as amei.", "Vol_48_menina_livros.pdf"),
+    ("49", "cabana",              "A Cabana",                                      "William P. Young",           "Fé · Luto · Perdão",                                "A pergunta do livro não é 'Deus existe?'. É 'onde Deus estava quando aconteceu o pior?'", "Dor tem um jeito de cortar nossas asas e nos impedir de voar.", "Vol_49_cabana.pdf"),
+    ("50", "cortico",             "O Cortiço",                                     "Aluísio Azevedo",            "Naturalismo · Brasil do século XIX · Clássico",     "O protagonista não é uma pessoa — é o cortiço. O meio devora o indivíduo e o dinheiro devora a todos.", "Era um mundo, uma coisa viva.", "Vol_50_cortico.pdf"),
+    ("51", "policarpo",           "Triste Fim de Policarpo Quaresma",              "Lima Barreto",               "Pré-modernismo · Patriotismo · Tragédia",           "Policarpo amou o Brasil em três atos — e foi punido pelos três.", "A pátria que quisera ter era um mito.", "Vol_51_policarpo.pdf"),
+    ("52", "crime_castigo",       "Crime e Castigo",                               "Fiódor Dostoiévski",         "Literatura russa · Culpa · Consciência",            "O castigo não vem da polícia — vem de dentro. O romance é a anatomia dessa punição interna.", "Não foi a velha que eu matei. Foi a mim mesmo.", "Vol_52_crime_castigo.pdf"),
+    ("53", "metamorfose",         "A Metamorfose",                                 "Franz Kafka",                "Kafka · Absurdo · Modernidade",                     "O horror não é o homem virar inseto. É a família descobrir, aliviada, que pode viver sem ele.", "Quando Gregor Samsa despertou, encontrou-se metamorfoseado num inseto monstruoso.", "Vol_53_metamorfose.pdf"),
 ]
 
 
@@ -101,7 +116,7 @@ def long_description(book):
 
 <blockquote>"{quote}" — {autor}</blockquote>
 
-<p>Parte da <strong>Coleção Leitura Breve</strong> — 38 volumes editoriais sobre os bestsellers que mais venderam no Brasil. Cada volume é um caderno completo, pensado para uma única sessão de leitura.</p>"""
+<p>Parte da <strong>Coleção Leitura Breve</strong> — 53 volumes editoriais sobre os bestsellers que mais venderam no Brasil. Cada volume é um caderno completo, pensado para uma única sessão de leitura.</p>"""
 
 
 def get_products():
@@ -127,7 +142,7 @@ def get_products():
         "type": "subscription",
         "external_id": "leitura_breve_assinatura_mensal",
         "name": "Assinatura Leitura Breve — Mensal",
-        "short_description": "Acesso a todos os 38 volumes da Coleção Leitura Breve + novos volumes que forem lançados.",
+        "short_description": "Acesso a todos os 53 volumes da Coleção Leitura Breve + novos volumes que forem lançados.",
         "long_description": ASSINATURA_DESCRICAO,
         "price_cents": PRECO_ASSINATURA_MENSAL,
         "billing_cycle": "monthly",
@@ -139,7 +154,7 @@ def get_products():
         "type": "subscription",
         "external_id": "leitura_breve_assinatura_anual",
         "name": "Assinatura Leitura Breve — Anual (37% off)",
-        "short_description": "Acesso a todos os 38 volumes + novos lançamentos. Cobrança anual com desconto.",
+        "short_description": "Acesso a todos os 53 volumes + novos lançamentos. Cobrança anual com desconto.",
         "long_description": ASSINATURA_DESCRICAO,
         "price_cents": PRECO_ASSINATURA_ANUAL,
         "billing_cycle": "yearly",
@@ -151,17 +166,17 @@ def get_products():
 
 
 ASSINATURA_DESCRICAO = """<h2>Assinatura Leitura Breve</h2>
-<p>Acesso completo a <strong>todos os 38 volumes</strong> da Coleção Leitura Breve, mais os novos volumes que forem lançados durante a sua assinatura.</p>
+<p>Acesso completo a <strong>todos os 53 volumes</strong> da Coleção Leitura Breve, mais os novos volumes que forem lançados durante a sua assinatura.</p>
 
 <h3>O que você recebe</h3>
 <ul>
-  <li><strong>38 resumos editoriais</strong> em PDF (formato A4 minimalista) dos bestsellers que mais venderam no Brasil</li>
+  <li><strong>53 resumos editoriais</strong> em PDF (formato A4 minimalista) dos bestsellers que mais venderam no Brasil</li>
   <li><strong>Catálogo completo</strong> com fichas e índice navegável</li>
   <li><strong>Novos volumes</strong> incluídos automaticamente enquanto a assinatura estiver ativa</li>
   <li><strong>Atualizações</strong> dos volumes existentes (versões revisadas)</li>
 </ul>
 
-<h3>Coleção atual (38 volumes)</h3>
+<h3>Coleção atual (53 volumes)</h3>
 <p>Desenvolvimento pessoal · Negócios · Filosofia · Estoicismo · Literatura brasileira · Literatura mundial · Antropologia · História.</p>
 
 <ul>
@@ -177,6 +192,11 @@ ASSINATURA_DESCRICAO = """<h2>Assinatura Leitura Breve</h2>
   <li>Em Busca de Sentido · Vidas Secas · Brás Cubas</li>
   <li>A Hora da Estrela · Quarto de Despejo · Cem Anos de Solidão</li>
   <li>1984 · Diário de Anne Frank · A Revolução dos Bichos · Sapiens</li>
+  <li>O Poder do Agora · Quem Pensa Enriquece · As 5 Linguagens do Amor</li>
+  <li>Comunicação Não-Violenta · A Coragem de Não Agradar · 12 Regras para a Vida</li>
+  <li>Garra · Ansiedade (Cury) · Mulheres que Correm com os Lobos</li>
+  <li>A Menina que Roubava Livros · A Cabana · O Cortiço</li>
+  <li>Policarpo Quaresma · Crime e Castigo · A Metamorfose</li>
 </ul>
 
 <h3>Como funciona</h3>

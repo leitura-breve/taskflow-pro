@@ -87,6 +87,21 @@ PRODUCT_TO_PDF = {
     "leitura_breve_vol_36": "Vol_36_anne_frank.pdf",
     "leitura_breve_vol_37": "Vol_37_revolucao_bichos.pdf",
     "leitura_breve_vol_38": "Vol_38_sapiens.pdf",
+    "leitura_breve_vol_39": "Vol_39_poder_agora.pdf",
+    "leitura_breve_vol_40": "Vol_40_pense_enriqueca.pdf",
+    "leitura_breve_vol_41": "Vol_41_linguagens_amor.pdf",
+    "leitura_breve_vol_42": "Vol_42_cnv.pdf",
+    "leitura_breve_vol_43": "Vol_43_coragem_nao_agradar.pdf",
+    "leitura_breve_vol_44": "Vol_44_12_regras.pdf",
+    "leitura_breve_vol_45": "Vol_45_garra.pdf",
+    "leitura_breve_vol_46": "Vol_46_ansiedade_cury.pdf",
+    "leitura_breve_vol_47": "Vol_47_mulheres_lobos.pdf",
+    "leitura_breve_vol_48": "Vol_48_menina_livros.pdf",
+    "leitura_breve_vol_49": "Vol_49_cabana.pdf",
+    "leitura_breve_vol_50": "Vol_50_cortico.pdf",
+    "leitura_breve_vol_51": "Vol_51_policarpo.pdf",
+    "leitura_breve_vol_52": "Vol_52_crime_castigo.pdf",
+    "leitura_breve_vol_53": "Vol_53_metamorfose.pdf",
 }
 
 # Para assinatura: todos os PDFs disponiveis

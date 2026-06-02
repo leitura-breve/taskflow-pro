@@ -2,8 +2,8 @@
 COLECAO LEITURA BREVE — RESUMO PARA CAKTO
 ======================================================================
 
-Total de produtos: 40
-  - 38 livros individuais
+Total de produtos: 55
+  - 53 livros individuais
   - 2 planos de assinatura
 
 Precos:
@@ -52,6 +52,21 @@ Vol. 35  Vol. 35 · 1984 — Resumo Leitura Breve                     44 KB  Vol
 Vol. 36  Vol. 36 · O Diário de Anne Frank — Resumo Leitura Breve   45 KB  Vol_36_anne_frank.pdf
 Vol. 37  Vol. 37 · A Revolução dos Bichos — Resumo Leitura Breve   45 KB  Vol_37_revolucao_bichos.pdf
 Vol. 38  Vol. 38 · Sapiens — Resumo Leitura Breve                  46 KB  Vol_38_sapiens.pdf
+Vol. 39  Vol. 39 · O Poder do Agora — Resumo Leitura Breve         44 KB  Vol_39_poder_agora.pdf
+Vol. 40  Vol. 40 · Quem Pensa Enriquece — Resumo Leitura Breve     44 KB  Vol_40_pense_enriqueca.pdf
+Vol. 41  Vol. 41 · As Cinco Linguagens do Amor — Resumo Leitura    44 KB  Vol_41_linguagens_amor.pdf
+Vol. 42  Vol. 42 · Comunicação Não-Violenta — Resumo Leitura Bre   45 KB  Vol_42_cnv.pdf
+Vol. 43  Vol. 43 · A Coragem de Não Agradar — Resumo Leitura Bre   45 KB  Vol_43_coragem_nao_agradar.pdf
+Vol. 44  Vol. 44 · 12 Regras para a Vida — Resumo Leitura Breve    44 KB  Vol_44_12_regras.pdf
+Vol. 45  Vol. 45 · Garra — Resumo Leitura Breve                    45 KB  Vol_45_garra.pdf
+Vol. 46  Vol. 46 · Ansiedade — O Mal do Século — Resumo Leitura    45 KB  Vol_46_ansiedade_cury.pdf
+Vol. 47  Vol. 47 · Mulheres que Correm com os Lobos — Resumo Lei   47 KB  Vol_47_mulheres_lobos.pdf
+Vol. 48  Vol. 48 · A Menina que Roubava Livros — Resumo Leitura    45 KB  Vol_48_menina_livros.pdf
+Vol. 49  Vol. 49 · A Cabana — Resumo Leitura Breve                 45 KB  Vol_49_cabana.pdf
+Vol. 50  Vol. 50 · O Cortiço — Resumo Leitura Breve                46 KB  Vol_50_cortico.pdf
+Vol. 51  Vol. 51 · Triste Fim de Policarpo Quaresma — Resumo Lei   46 KB  Vol_51_policarpo.pdf
+Vol. 52  Vol. 52 · Crime e Castigo — Resumo Leitura Breve          47 KB  Vol_52_crime_castigo.pdf
+Vol. 53  Vol. 53 · A Metamorfose — Resumo Leitura Breve            46 KB  Vol_53_metamorfose.pdf
 
 ----------------------------------------------------------------------
 ASSINATURAS

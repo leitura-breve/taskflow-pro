@@ -2,7 +2,7 @@
 
 Cria um site estatico (HTML/CSS/JS vanilla) usando os dados de cakto_products.py.
 Inclui:
-  - Landing page com hero, sobre a colecao, galeria interativa dos 38 livros,
+  - Landing page com hero, sobre a colecao, galeria interativa dos 53 livros,
     planos de assinatura, FAQ e footer
   - Estilos coerentes com a identidade editorial da colecao
   - Links pro checkout Cakto (placeholders ate o usuario subir os produtos no painel)
@@ -61,6 +61,21 @@ BOOK_PALETTES = {
     "36": {"paper": "#EEEBE0", "accent": "#7A2025"},
     "37": {"paper": "#EDE9DC", "accent": "#A52A2A"},
     "38": {"paper": "#EFEDE3", "accent": "#6B3F1F"},
+    "39": {"paper": "#EFF2EC", "accent": "#4A7A5C"},
+    "40": {"paper": "#F2EDDD", "accent": "#8C6F1A"},
+    "41": {"paper": "#F5EDE8", "accent": "#B85C6B"},
+    "42": {"paper": "#EDF1F2", "accent": "#3E7C8C"},
+    "43": {"paper": "#F4F0E9", "accent": "#C2542C"},
+    "44": {"paper": "#EDEDE9", "accent": "#34506B"},
+    "45": {"paper": "#F3EFE6", "accent": "#C26B1F"},
+    "46": {"paper": "#EEF0F3", "accent": "#5B6FA8"},
+    "47": {"paper": "#F0E9E2", "accent": "#A0522D"},
+    "48": {"paper": "#EDEAE3", "accent": "#8B3A3A"},
+    "49": {"paper": "#EBEEE7", "accent": "#5E7A4A"},
+    "50": {"paper": "#EFE8D8", "accent": "#A66A2C"},
+    "51": {"paper": "#EDE9DA", "accent": "#5C7A2E"},
+    "52": {"paper": "#E9E7E2", "accent": "#7A3B2E"},
+    "53": {"paper": "#E8E8E4", "accent": "#6B4226"},
 }
 
 # Placeholder URLs do Cakto — o usuario substitui depois de criar os produtos no painel
@@ -603,8 +618,8 @@ def render_landing():
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Leitura Breve — 38 bestsellers em resumos editoriais</title>
-<meta name="description" content="38 resumos editoriais de bestsellers (Hábitos Atômicos, O Alquimista, 1984, Cem Anos de Solidão e mais). PDFs com tese, capítulos comentados, citações e caderno de leitura.">
-<meta property="og:title" content="Leitura Breve — Coleção de 38 resumos editoriais">
+<meta name="description" content="53 resumos editoriais de bestsellers (Hábitos Atômicos, O Alquimista, 1984, Cem Anos de Solidão e mais). PDFs com tese, capítulos comentados, citações e caderno de leitura.">
+<meta property="og:title" content="Leitura Breve — Coleção de 53 resumos editoriais">
 <meta property="og:description" content="Os bestsellers que mais venderam no Brasil em resumos editoriais de 25 a 39 páginas.">
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;circle cx='50' cy='50' r='44' fill='none' stroke='%231B4D3E' stroke-width='6'/&gt;&lt;circle cx='50' cy='50' r='10' fill='%231B4D3E'/&gt;&lt;/svg&gt;">
 <link rel="stylesheet" href="styles.css">
@@ -627,16 +642,16 @@ def render_landing():
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="hero-eyebrow">38 volumes · Coleção 2026</div>
+      <div class="hero-eyebrow">53 volumes · Coleção 2026</div>
       <h1 class="hero-title">Os bestsellers,<br><em>em uma sessão</em><br>de leitura.</h1>
       <p class="hero-sub">Resumos editoriais de 25 a 39 páginas dos livros que mais venderam no Brasil. Tese central, capítulos comentados, citações em destaque e caderno de leitura — em PDF minimalista.</p>
       <div class="hero-ctas">
         <a href="#planos" class="btn-primary">Assinar coleção →</a>
-        <a href="#galeria" class="btn-secondary">Ver os 38 livros</a>
+        <a href="#galeria" class="btn-secondary">Ver os 53 livros</a>
       </div>
       <div class="hero-stats">
-        <div><div class="stat-num">38</div><div class="stat-label">Volumes lançados</div></div>
-        <div><div class="stat-num">980+</div><div class="stat-label">Páginas editoriais</div></div>
+        <div><div class="stat-num">53</div><div class="stat-label">Volumes lançados</div></div>
+        <div><div class="stat-num">1.350+</div><div class="stat-label">Páginas editoriais</div></div>
         <div><div class="stat-num">7</div><div class="stat-label">Categorias</div></div>
       </div>
     </div>
@@ -665,7 +680,7 @@ def render_landing():
     <div>
       <div class="about-eyebrow">A coleção</div>
       <h2>Para quem lê com pouco tempo<br>e não quer perder o <em>essencial</em>.</h2>
-      <p>A <em>Leitura Breve</em> reúne 38 dos bestsellers mais influentes do Brasil em resumos editoriais autorais. Cada volume foi pensado para ser <em>lido em uma única sessão</em>, e ao mesmo tempo servir como caderno de estudo permanente.</p>
+      <p>A <em>Leitura Breve</em> reúne 53 dos bestsellers mais influentes do Brasil em resumos editoriais autorais. Cada volume foi pensado para ser <em>lido em uma única sessão</em>, e ao mesmo tempo servir como caderno de estudo permanente.</p>
       <p>Não são fichamentos secos. São documentos editoriais com identidade visual própria — paleta, tipografia e símbolo distintos por livro — que cabem tanto na sua estante quanto no seu tablet.</p>
     </div>
     <div>
@@ -696,7 +711,7 @@ def render_landing():
     <div class="section-head">
       <div class="left">
         <div class="section-eyebrow">A coleção completa</div>
-        <h2>Os 38 <em>volumes</em>.</h2>
+        <h2>Os 53 <em>volumes</em>.</h2>
       </div>
     </div>
     <div class="filters">
@@ -712,7 +727,7 @@ def render_landing():
   <div class="wrap">
     <div class="plans-head">
       <div class="section-eyebrow">Assinatura</div>
-      <h2>Acesso completo aos <em>38 volumes</em>.</h2>
+      <h2>Acesso completo aos <em>53 volumes</em>.</h2>
       <p>Ou compre individualmente por {price_brl(PRECO_INDIVIDUAL)}. Quem assina, ganha também os próximos lançamentos.</p>
     </div>
     <div class="plans-grid">
@@ -725,7 +740,7 @@ def render_landing():
         </div>
         <div class="plan-savings">Ideal para experimentar</div>
         <ul class="plan-features">
-          <li><span>Acesso imediato aos 38 volumes em PDF</span></li>
+          <li><span>Acesso imediato aos 53 volumes em PDF</span></li>
           <li><span>Novos volumes incluídos durante a assinatura</span></li>
           <li><span>Catálogo navegável com índice completo</span></li>
           <li><span>Cancele a qualquer momento, sem multa</span></li>
@@ -742,7 +757,7 @@ def render_landing():
         </div>
         <div class="plan-savings">≈ {price_brl(PRECO_ASSINATURA_ANUAL // 12)}/mês</div>
         <ul class="plan-features">
-          <li><span>Acesso imediato aos 38 volumes em PDF</span></li>
+          <li><span>Acesso imediato aos 53 volumes em PDF</span></li>
           <li><span>Novos volumes incluídos durante o ano</span></li>
           <li><span>Catálogo navegável com índice completo</span></li>
           <li><span>Versões revisadas dos volumes existentes</span></li>
@@ -783,7 +798,7 @@ def render_landing():
       </details>
       <details class="faq-item">
         <summary>Como funciona a assinatura?</summary>
-        <p>Você ganha acesso aos 38 volumes existentes + todos os próximos lançamentos enquanto a assinatura estiver ativa. Cancele quando quiser, sem multa. A renovação é automática (mensal ou anual).</p>
+        <p>Você ganha acesso aos 53 volumes existentes + todos os próximos lançamentos enquanto a assinatura estiver ativa. Cancele quando quiser, sem multa. A renovação é automática (mensal ou anual).</p>
       </details>
       <details class="faq-item">
         <summary>Que livros vocês resumem?</summary>
@@ -798,12 +813,12 @@ def render_landing():
     <div class="footer-grid">
       <div>
         <div class="logo">Leitura Breve</div>
-        <p>Resumos editoriais autorais dos bestsellers que mais venderam no Brasil. 38 volumes para uma sessão de leitura inteligente.</p>
+        <p>Resumos editoriais autorais dos bestsellers que mais venderam no Brasil. 53 volumes para uma sessão de leitura inteligente.</p>
       </div>
       <div>
         <h3>Coleção</h3>
         <ul>
-          <li><a href="#galeria">Os 38 livros</a></li>
+          <li><a href="#galeria">Os 53 livros</a></li>
           <li><a href="#planos">Assinatura</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#faq">FAQ</a></li>

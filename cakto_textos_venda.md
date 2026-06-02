@@ -3120,6 +3120,1236 @@ História, Antropologia, Big history, Yuval Noah Harari, Leitura Breve, Resumo
 
 ---
 
+## Vol. 39 — O Poder do Agora
+
+**Autor:** Eckhart Tolle  
+**Categoria:** Presença · Espiritualidade · Mente  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_39_poder_agora.pdf`  
+
+### Nome do produto
+```
+Vol. 39 · O Poder do Agora — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+O Poder do Agora em uma sessão de leitura · Vol. 39
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "O Poder do Agora" (Eckhart Tolle). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "O Poder do Agora" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Perceba profundamente que o momento presente é tudo o que você sempre terá."*
+>
+> — Eckhart Tolle
+
+### Tese central
+> Você não é a sua mente. Todo sofrimento real acontece quando você abandona o agora.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>O Poder do Agora</em></h2>
+<p><strong>Autor:</strong> Eckhart Tolle<br>
+<strong>Categoria:</strong> Presença · Espiritualidade · Mente<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 39</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>Você não é a sua mente. Todo sofrimento real acontece quando você abandona o agora.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "O Poder do Agora" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Perceba profundamente que o momento presente é tudo o que você sempre terá." — Eckhart Tolle</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Presença, Espiritualidade, Mente, Eckhart Tolle, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 40 — Quem Pensa Enriquece
+
+**Autor:** Napoleon Hill  
+**Categoria:** Riqueza · Mentalidade · Clássico americano  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_40_pense_enriqueca.pdf`  
+
+### Nome do produto
+```
+Vol. 40 · Quem Pensa Enriquece — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+Quem Pensa Enriquece em uma sessão de leitura · Vol. 40
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "Quem Pensa Enriquece" (Napoleon Hill). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "Quem Pensa Enriquece" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Tudo o que a mente pode conceber e acreditar, ela pode alcançar."*
+>
+> — Napoleon Hill
+
+### Tese central
+> Riqueza começa como estado mental: desejo definido, fé, plano e persistência.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>Quem Pensa Enriquece</em></h2>
+<p><strong>Autor:</strong> Napoleon Hill<br>
+<strong>Categoria:</strong> Riqueza · Mentalidade · Clássico americano<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 40</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>Riqueza começa como estado mental: desejo definido, fé, plano e persistência.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "Quem Pensa Enriquece" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Tudo o que a mente pode conceber e acreditar, ela pode alcançar." — Napoleon Hill</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Riqueza, Mentalidade, Clássico americano, Napoleon Hill, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 41 — As Cinco Linguagens do Amor
+
+**Autor:** Gary Chapman  
+**Categoria:** Amor · Casal · Comunicação  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_41_linguagens_amor.pdf`  
+
+### Nome do produto
+```
+Vol. 41 · As Cinco Linguagens do Amor — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+As Cinco Linguagens do Amor em uma sessão de leitura · Vol. 41
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "As Cinco Linguagens do Amor" (Gary Chapman). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "As Cinco Linguagens do Amor" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"O amor que você sente não chega ao outro se for entregue na língua errada."*
+>
+> — Gary Chapman
+
+### Tese central
+> As pessoas falam línguas de amor diferentes. Quase todo casamento em crise é dois monolíngues gritando.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>As Cinco Linguagens do Amor</em></h2>
+<p><strong>Autor:</strong> Gary Chapman<br>
+<strong>Categoria:</strong> Amor · Casal · Comunicação<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 41</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>As pessoas falam línguas de amor diferentes. Quase todo casamento em crise é dois monolíngues gritando.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "As Cinco Linguagens do Amor" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"O amor que você sente não chega ao outro se for entregue na língua errada." — Gary Chapman</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Amor, Casal, Comunicação, Gary Chapman, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 42 — Comunicação Não-Violenta
+
+**Autor:** Marshall Rosenberg  
+**Categoria:** Comunicação · Empatia · Conflito  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_42_cnv.pdf`  
+
+### Nome do produto
+```
+Vol. 42 · Comunicação Não-Violenta — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+Comunicação Não-Violenta em uma sessão de leitura · Vol. 42
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "Comunicação Não-Violenta" (Marshall Rosenberg). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "Comunicação Não-Violenta" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Toda crítica é a expressão trágica de uma necessidade não atendida."*
+>
+> — Marshall Rosenberg
+
+### Tese central
+> Por trás de toda agressão há uma necessidade não atendida falando errado.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>Comunicação Não-Violenta</em></h2>
+<p><strong>Autor:</strong> Marshall Rosenberg<br>
+<strong>Categoria:</strong> Comunicação · Empatia · Conflito<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 42</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>Por trás de toda agressão há uma necessidade não atendida falando errado.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "Comunicação Não-Violenta" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Toda crítica é a expressão trágica de uma necessidade não atendida." — Marshall Rosenberg</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Comunicação, Empatia, Conflito, Marshall Rosenberg, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 43 — A Coragem de Não Agradar
+
+**Autor:** Ichiro Kishimi & Fumitake Koga  
+**Categoria:** Liberdade · Psicologia de Adler · Diálogo  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_43_coragem_nao_agradar.pdf`  
+
+### Nome do produto
+```
+Vol. 43 · A Coragem de Não Agradar — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+A Coragem de Não Agradar em uma sessão de leitura · Vol. 43
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "A Coragem de Não Agradar" (Ichiro Kishimi & Fumitake Koga). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "A Coragem de Não Agradar" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"A liberdade é ser capaz de ser detestado por outras pessoas."*
+>
+> — Ichiro Kishimi & Fumitake Koga
+
+### Tese central
+> Toda liberdade começa quando você aceita a possibilidade de não ser aprovado.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>A Coragem de Não Agradar</em></h2>
+<p><strong>Autor:</strong> Ichiro Kishimi & Fumitake Koga<br>
+<strong>Categoria:</strong> Liberdade · Psicologia de Adler · Diálogo<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 43</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>Toda liberdade começa quando você aceita a possibilidade de não ser aprovado.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "A Coragem de Não Agradar" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"A liberdade é ser capaz de ser detestado por outras pessoas." — Ichiro Kishimi & Fumitake Koga</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Liberdade, Psicologia de Adler, Diálogo, Ichiro Kishimi & Fumitake Koga, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 44 — 12 Regras para a Vida
+
+**Autor:** Jordan B. Peterson  
+**Categoria:** Ordem · Responsabilidade · Sentido  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_44_12_regras.pdf`  
+
+### Nome do produto
+```
+Vol. 44 · 12 Regras para a Vida — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+12 Regras para a Vida em uma sessão de leitura · Vol. 44
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "12 Regras para a Vida" (Jordan B. Peterson). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "12 Regras para a Vida" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Compare-se com quem você era ontem, não com quem outra pessoa é hoje."*
+>
+> — Jordan B. Peterson
+
+### Tese central
+> A resposta ao sofrimento é assumir a maior carga de responsabilidade que você consegue carregar.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>12 Regras para a Vida</em></h2>
+<p><strong>Autor:</strong> Jordan B. Peterson<br>
+<strong>Categoria:</strong> Ordem · Responsabilidade · Sentido<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 44</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>A resposta ao sofrimento é assumir a maior carga de responsabilidade que você consegue carregar.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "12 Regras para a Vida" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Compare-se com quem você era ontem, não com quem outra pessoa é hoje." — Jordan B. Peterson</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Ordem, Responsabilidade, Sentido, Jordan B. Peterson, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 45 — Garra
+
+**Autor:** Angela Duckworth  
+**Categoria:** Perseverança · Talento · Esforço  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_45_garra.pdf`  
+
+### Nome do produto
+```
+Vol. 45 · Garra — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+Garra em uma sessão de leitura · Vol. 45
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "Garra" (Angela Duckworth). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "Garra" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Nosso potencial é uma coisa. O que fazemos com ele é outra completamente diferente."*
+>
+> — Angela Duckworth
+
+### Tese central
+> Talento conta uma vez; esforço conta duas. Garra prevê quem chega melhor do que QI ou dom.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>Garra</em></h2>
+<p><strong>Autor:</strong> Angela Duckworth<br>
+<strong>Categoria:</strong> Perseverança · Talento · Esforço<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 45</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>Talento conta uma vez; esforço conta duas. Garra prevê quem chega melhor do que QI ou dom.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "Garra" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Nosso potencial é uma coisa. O que fazemos com ele é outra completamente diferente." — Angela Duckworth</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Perseverança, Talento, Esforço, Angela Duckworth, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 46 — Ansiedade — O Mal do Século
+
+**Autor:** Augusto Cury  
+**Categoria:** Ansiedade · Mente · Autor brasileiro  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_46_ansiedade_cury.pdf`  
+
+### Nome do produto
+```
+Vol. 46 · Ansiedade — O Mal do Século — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+Ansiedade — O Mal do Século em uma sessão de leitura · Vol. 46
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "Ansiedade — O Mal do Século" (Augusto Cury). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "Ansiedade — O Mal do Século" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Não somos vítimas dos nossos pensamentos. Somos os autores — que esqueceram que podem editar."*
+>
+> — Augusto Cury
+
+### Tese central
+> A ansiedade moderna não é falta de calma — é excesso de pensamento.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>Ansiedade — O Mal do Século</em></h2>
+<p><strong>Autor:</strong> Augusto Cury<br>
+<strong>Categoria:</strong> Ansiedade · Mente · Autor brasileiro<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 46</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>A ansiedade moderna não é falta de calma — é excesso de pensamento.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "Ansiedade — O Mal do Século" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Não somos vítimas dos nossos pensamentos. Somos os autores — que esqueceram que podem editar." — Augusto Cury</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Ansiedade, Mente, Autor brasileiro, Augusto Cury, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 47 — Mulheres que Correm com os Lobos
+
+**Autor:** Clarissa Pinkola Estés  
+**Categoria:** Arquétipos · Psicologia junguiana · Feminino  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_47_mulheres_lobos.pdf`  
+
+### Nome do produto
+```
+Vol. 47 · Mulheres que Correm com os Lobos — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+Mulheres que Correm com os Lobos em uma sessão de leitura · Vol. 47
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "Mulheres que Correm com os Lobos" (Clarissa Pinkola Estés). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "Mulheres que Correm com os Lobos" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Agradar aos outros exige que nos exilemos de nós mesmas."*
+>
+> — Clarissa Pinkola Estés
+
+### Tese central
+> Dentro de toda mulher vive uma natureza instintiva e selvagem que a civilização ensinou a domesticar.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>Mulheres que Correm com os Lobos</em></h2>
+<p><strong>Autor:</strong> Clarissa Pinkola Estés<br>
+<strong>Categoria:</strong> Arquétipos · Psicologia junguiana · Feminino<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 47</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>Dentro de toda mulher vive uma natureza instintiva e selvagem que a civilização ensinou a domesticar.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "Mulheres que Correm com os Lobos" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Agradar aos outros exige que nos exilemos de nós mesmas." — Clarissa Pinkola Estés</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Arquétipos, Psicologia junguiana, Feminino, Clarissa Pinkola Estés, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 48 — A Menina que Roubava Livros
+
+**Autor:** Markus Zusak  
+**Categoria:** Romance · Guerra · Narrado pela Morte  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_48_menina_livros.pdf`  
+
+### Nome do produto
+```
+Vol. 48 · A Menina que Roubava Livros — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+A Menina que Roubava Livros em uma sessão de leitura · Vol. 48
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "A Menina que Roubava Livros" (Markus Zusak). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "A Menina que Roubava Livros" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Eu odiei as palavras e as amei."*
+>
+> — Markus Zusak
+
+### Tese central
+> As mesmas palavras que Hitler usou para destruir, uma menina usou para sobreviver.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>A Menina que Roubava Livros</em></h2>
+<p><strong>Autor:</strong> Markus Zusak<br>
+<strong>Categoria:</strong> Romance · Guerra · Narrado pela Morte<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 48</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>As mesmas palavras que Hitler usou para destruir, uma menina usou para sobreviver.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "A Menina que Roubava Livros" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Eu odiei as palavras e as amei." — Markus Zusak</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Romance, Guerra, Narrado pela Morte, Markus Zusak, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 49 — A Cabana
+
+**Autor:** William P. Young  
+**Categoria:** Fé · Luto · Perdão  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_49_cabana.pdf`  
+
+### Nome do produto
+```
+Vol. 49 · A Cabana — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+A Cabana em uma sessão de leitura · Vol. 49
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "A Cabana" (William P. Young). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "A Cabana" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Dor tem um jeito de cortar nossas asas e nos impedir de voar."*
+>
+> — William P. Young
+
+### Tese central
+> A pergunta do livro não é 'Deus existe?'. É 'onde Deus estava quando aconteceu o pior?'
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>A Cabana</em></h2>
+<p><strong>Autor:</strong> William P. Young<br>
+<strong>Categoria:</strong> Fé · Luto · Perdão<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 49</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>A pergunta do livro não é 'Deus existe?'. É 'onde Deus estava quando aconteceu o pior?'</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "A Cabana" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Dor tem um jeito de cortar nossas asas e nos impedir de voar." — William P. Young</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Fé, Luto, Perdão, William P. Young, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 50 — O Cortiço
+
+**Autor:** Aluísio Azevedo  
+**Categoria:** Naturalismo · Brasil do século XIX · Clássico  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_50_cortico.pdf`  
+
+### Nome do produto
+```
+Vol. 50 · O Cortiço — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+O Cortiço em uma sessão de leitura · Vol. 50
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "O Cortiço" (Aluísio Azevedo). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "O Cortiço" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Era um mundo, uma coisa viva."*
+>
+> — Aluísio Azevedo
+
+### Tese central
+> O protagonista não é uma pessoa — é o cortiço. O meio devora o indivíduo e o dinheiro devora a todos.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>O Cortiço</em></h2>
+<p><strong>Autor:</strong> Aluísio Azevedo<br>
+<strong>Categoria:</strong> Naturalismo · Brasil do século XIX · Clássico<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 50</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>O protagonista não é uma pessoa — é o cortiço. O meio devora o indivíduo e o dinheiro devora a todos.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "O Cortiço" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Era um mundo, uma coisa viva." — Aluísio Azevedo</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Naturalismo, Brasil do século XIX, Clássico, Aluísio Azevedo, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 51 — Triste Fim de Policarpo Quaresma
+
+**Autor:** Lima Barreto  
+**Categoria:** Pré-modernismo · Patriotismo · Tragédia  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_51_policarpo.pdf`  
+
+### Nome do produto
+```
+Vol. 51 · Triste Fim de Policarpo Quaresma — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+Triste Fim de Policarpo Quaresma em uma sessão de leitura · Vol. 51
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "Triste Fim de Policarpo Quaresma" (Lima Barreto). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "Triste Fim de Policarpo Quaresma" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"A pátria que quisera ter era um mito."*
+>
+> — Lima Barreto
+
+### Tese central
+> Policarpo amou o Brasil em três atos — e foi punido pelos três.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>Triste Fim de Policarpo Quaresma</em></h2>
+<p><strong>Autor:</strong> Lima Barreto<br>
+<strong>Categoria:</strong> Pré-modernismo · Patriotismo · Tragédia<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 51</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>Policarpo amou o Brasil em três atos — e foi punido pelos três.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "Triste Fim de Policarpo Quaresma" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"A pátria que quisera ter era um mito." — Lima Barreto</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Pré-modernismo, Patriotismo, Tragédia, Lima Barreto, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 52 — Crime e Castigo
+
+**Autor:** Fiódor Dostoiévski  
+**Categoria:** Literatura russa · Culpa · Consciência  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_52_crime_castigo.pdf`  
+
+### Nome do produto
+```
+Vol. 52 · Crime e Castigo — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+Crime e Castigo em uma sessão de leitura · Vol. 52
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "Crime e Castigo" (Fiódor Dostoiévski). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "Crime e Castigo" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Não foi a velha que eu matei. Foi a mim mesmo."*
+>
+> — Fiódor Dostoiévski
+
+### Tese central
+> O castigo não vem da polícia — vem de dentro. O romance é a anatomia dessa punição interna.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>Crime e Castigo</em></h2>
+<p><strong>Autor:</strong> Fiódor Dostoiévski<br>
+<strong>Categoria:</strong> Literatura russa · Culpa · Consciência<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 52</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>O castigo não vem da polícia — vem de dentro. O romance é a anatomia dessa punição interna.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "Crime e Castigo" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Não foi a velha que eu matei. Foi a mim mesmo." — Fiódor Dostoiévski</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Literatura russa, Culpa, Consciência, Fiódor Dostoiévski, Leitura Breve, Resumo
+```
+
+---
+
+## Vol. 53 — A Metamorfose
+
+**Autor:** Franz Kafka  
+**Categoria:** Kafka · Absurdo · Modernidade  
+**Preço sugerido:** R$ 19,90  
+**Arquivo:** `Vol_53_metamorfose.pdf`  
+
+### Nome do produto
+```
+Vol. 53 · A Metamorfose — Resumo Leitura Breve
+```
+
+### Headline / Slogan
+```
+A Metamorfose em uma sessão de leitura · Vol. 53
+```
+
+### Descrição curta (listagem)
+```
+Resumo editorial de "A Metamorfose" (Franz Kafka). 25-39 páginas com tese, capítulos comentados, citações e caderno de leitura.
+```
+
+### Bullets (página de venda)
+- Resumo editorial completo de "A Metamorfose" — 25-39 páginas em PDF A4
+- Tese central, capítulos comentados e citações em destaque
+- Aplicação prática + cronograma de 4 semanas para implantar as ideias
+- Caderno de leitura com espaço para anotações e provocações pessoais
+- Design minimalista moderno, formatado para impressão ou tablet
+
+### Frase de impacto (pull quote)
+> *"Quando Gregor Samsa despertou, encontrou-se metamorfoseado num inseto monstruoso."*
+>
+> — Franz Kafka
+
+### Tese central
+> O horror não é o homem virar inseto. É a família descobrir, aliviada, que pode viver sem ele.
+
+### Descrição longa (HTML — colar em editor rich-text)
+```html
+<h2>Resumo editorial de <em>A Metamorfose</em></h2>
+<p><strong>Autor:</strong> Franz Kafka<br>
+<strong>Categoria:</strong> Kafka · Absurdo · Modernidade<br>
+<strong>Coleção:</strong> Leitura Breve · Vol. 53</p>
+
+<h3>A tese, em uma frase</h3>
+<p><em>O horror não é o homem virar inseto. É a família descobrir, aliviada, que pode viver sem ele.</em></p>
+
+<h3>O que você recebe</h3>
+<ul>
+  <li>Resumo editorial completo de "A Metamorfose" — 25-39 páginas em PDF A4</li>
+  <li>Tese central, capítulos comentados e citações em destaque</li>
+  <li>Aplicação prática + cronograma de 4 semanas para implantar as ideias</li>
+  <li>Caderno de leitura com espaço para anotações e provocações pessoais</li>
+  <li>Design minimalista moderno, formatado para impressão ou tablet</li>
+</ul>
+
+<blockquote>"Quando Gregor Samsa despertou, encontrou-se metamorfoseado num inseto monstruoso." — Franz Kafka</blockquote>
+```
+
+### FAQ
+**Esse é o livro completo?**  
+Não. É um <strong>resumo editorial</strong> em PDF com a tese, capítulos comentados, citações, aplicação prática e caderno de leitura. Pensado pra você ler em uma sessão e voltar quando quiser revisitar.
+
+**Em quanto tempo recebo?**  
+Acesso imediato após confirmação do pagamento. PDF para download.
+
+**Posso imprimir?**  
+Sim. O PDF é em A4, otimizado para leitura digital e impressão doméstica.
+
+**Funciona em celular/tablet?**  
+Sim. PDF abre em qualquer leitor (Adobe, Apple Books, Google Drive, etc.).
+
+**Posso pedir reembolso?**  
+Sim, em até 7 dias após a compra, conforme o Código de Defesa do Consumidor.
+
+### Tags (separadas por vírgula)
+```
+Kafka, Absurdo, Modernidade, Franz Kafka, Leitura Breve, Resumo
+```
+
+---
+
 ## Assinatura Mensal — Coleção Leitura Breve
 
 **Preço:** R$ 19,90/mês  
