@@ -13,8 +13,8 @@ import json
 from cakto_products import BOOKS_META, PRECO_INDIVIDUAL, PRECO_ASSINATURA_MENSAL, PRECO_ASSINATURA_ANUAL
 
 OUT_DIR = "/home/user/taskflow-pro"
-SITE_DIR = os.path.join(OUT_DIR, "site")
-os.makedirs(SITE_DIR, exist_ok=True)
+# Site agora mora na raiz (index.html), com taskflow-legacy.html preservado.
+SITE_DIR = OUT_DIR
 
 
 def price_brl(cents):

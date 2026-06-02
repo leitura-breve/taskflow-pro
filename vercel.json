@@ -2,17 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/", "destination": "/site/index.html" }
-  ],
-  "redirects": [
-    { "source": "/assets/(.*)", "destination": "/site/$1", "permanent": false },
-    { "source": "/styles.css", "destination": "/site/styles.css", "permanent": false },
-    { "source": "/app.js", "destination": "/site/app.js", "permanent": false }
-  ],
   "headers": [
     {
-      "source": "/site/(.*)",
+      "source": "/(styles\\.css|app\\.js)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
       ]
